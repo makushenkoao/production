@@ -9,12 +9,12 @@ export enum ThemeButton {
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string
     children: ReactNode
-    theme: ThemeButton
+    theme?: ThemeButton
 }
 
 export const Button = (props: ButtonProps) => {
     const {
-        children, className = '', theme, type = 'button', ...rest
+        children, className, theme = ThemeButton.CLEAR, type = 'button', ...rest
     } = props;
 
     return (
