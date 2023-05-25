@@ -6,10 +6,10 @@ import MoonIcon from 'shared/assets/icons/moon.svg';
 import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
-    className?: string
+  className?: string;
 }
 
-export const ThemeSwitcher = ({ className = '' }: ThemeSwitcherProps) => {
+export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
     const { toggleTheme, theme } = useTheme();
 
     return (
@@ -18,13 +18,11 @@ export const ThemeSwitcher = ({ className = '' }: ThemeSwitcherProps) => {
             className={classNames(cls.ThemeSwitcher, {}, [className])}
             theme={ThemeButton.CLEAR}
         >
-            {theme === Theme.LIGHT
-                ? (
-                    <MoonIcon className={cls.icon} />
-                )
-                : (
-                    <SunIcon className={cls.icon} />
-                )}
+            {theme === Theme.DARK ? (
+                <SunIcon className={cls.icon} />
+            ) : (
+                <MoonIcon className={cls.icon} />
+            )}
         </Button>
     );
 };
