@@ -18,15 +18,22 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: yarn install
+        if: always()
       - name: build production project
         run: yarn build:prod
+        if: always()
       - name: linting typescript
         run: yarn lint:ts
+        if: always()
       - name: linting scss
         run: yarn lint:scss
+        if: always()
       - name: unit testing
         run: yarn test:unit
+        if: always()
       - name: build storybook
         run: yarn sb:build
+        if: always()
       - name: screenshot testing
         run: yarn test:ui:ci
+        if: always()

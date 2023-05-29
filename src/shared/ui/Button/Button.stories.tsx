@@ -87,4 +87,3 @@ export const SquareSizeXL: Story = {
         theme: ButtonTheme.BACKGROUND_INVERTED,
     },
 };
-
