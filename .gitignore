@@ -4,3 +4,5 @@ node_modules
 notes.txt
 /storybook-static
 coverage
+.loki/report.html
+.loki/report.json
