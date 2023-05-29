@@ -16,7 +16,11 @@
     "sb:build": "storybook build -c ./config/storybook",
     "test:ui": "yarn loki test",
     "test:ui:ci": "concurrently --kill-others --raw --success first \"npm run sb\" \"npm run test:ui\" \"deelay\"",
-    "test:ui:ok": "yarn loki approve"
+    "test:ui:ok": "yarn loki approve",
+    "test:ui:generate": "npm-run-all visual:report:*",
+    "test:ui:json": "node scripts/generate-visual-json-report.js",
+    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
+    "test:ui:report": "yarn test:ui:json && yarn test:ui:html"
   },
   "keywords": [],
   "author": "",
@@ -69,6 +73,7 @@
     "jest": "^27.5.1",
     "loki": "^0.31.2",
     "mini-css-extract-plugin": "^2.5.3",
+    "reg-cli": "^0.17.7",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
