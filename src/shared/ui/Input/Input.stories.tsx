@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { Input } from './Input';
 
 const meta: Meta<typeof Input> = {
-    title: 'widgets/Input',
+    title: 'shared/Input',
     component: Input,
 };
 

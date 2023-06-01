@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { AppLink, AppLinkTheme } from './AppLink';
 
 const meta: Meta<typeof AppLink> = {
-    title: 'widgets/AppLink',
+    title: 'shared/AppLink',
     component: AppLink,
     args: {
         to: '/',
