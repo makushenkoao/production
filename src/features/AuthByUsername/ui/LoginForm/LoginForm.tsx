@@ -9,7 +9,6 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import cls from './LoginForm.module.scss';
-import i18n from 'shared/config/i18n/i18n';
 
 interface LoginFormProps {
   className?: string;
