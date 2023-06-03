@@ -5,5 +5,15 @@
       "username": "admin",
       "password": "123"
     }
-  ]
+  ],
+  "profile": {
+    "firstname": "Anton",
+    "lastname": "Makushenko",
+    "age": "17",
+    "currency": "UAH",
+    "country": "Ukraine",
+    "city": "Cherkasy",
+    "username": "admin",
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0pfZj9b0K0Cp_T4kplHGQpgccAnS4i2g07w&usqp=CAU"
+  }
 }

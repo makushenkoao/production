@@ -7,16 +7,6 @@
     padding: 0 30px;
 }
 
-.item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.icon {
-    fill: var(--secondary-color);
-}
-
 .link {
     opacity: 1;
 }
@@ -43,11 +33,6 @@
     .switchers {
         flex-direction: column;
         align-items: center;
-    }
-
-    .link {
-        opacity: 0;
-        width: 0;
     }
 
     .items {

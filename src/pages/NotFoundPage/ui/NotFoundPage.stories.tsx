@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { NotFoundPage } from './NotFoundPage';
 
 const meta: Meta<typeof NotFoundPage> = {
-    title: 'widgets/NotFoundPage',
+    title: 'pages/NotFoundPage',
     component: NotFoundPage,
 };
 

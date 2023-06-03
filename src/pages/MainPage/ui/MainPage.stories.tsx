@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import MainPage from './MainPage';
 
 const meta: Meta<typeof MainPage> = {
-    title: 'widgets/MainPage',
+    title: 'pages/MainPage',
     component: MainPage,
 };
 

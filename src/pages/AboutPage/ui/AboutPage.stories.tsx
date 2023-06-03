@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import AboutPage from './AboutPage';
 
 const meta: Meta<typeof AboutPage> = {
-    title: 'widgets/AboutPage',
+    title: 'pages/AboutPage',
     component: AboutPage,
 };
 

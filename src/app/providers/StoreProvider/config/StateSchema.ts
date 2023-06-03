@@ -1,5 +1,6 @@
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
+import { ProfileSchema } from 'entities/Profile';
 import {
     AnyAction,
     CombinedState,
@@ -11,6 +12,7 @@ import {
 export interface StateSchema {
     user: UserSchema;
     loginForm?: LoginSchema;
+    profile?: ProfileSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;
