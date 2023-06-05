@@ -7,7 +7,7 @@ import App from './app/App';
 import 'shared/config/i18n/i18n';
 import 'app/styles/index.scss';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 root.render(
     <BrowserRouter>

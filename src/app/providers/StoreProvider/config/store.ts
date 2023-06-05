@@ -1,4 +1,6 @@
-import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
+import {
+    CombinedState, configureStore, Reducer, ReducersMapObject,
+} from '@reduxjs/toolkit';
 import { NavigateOptions, To } from 'react-router-dom';
 import { userReducer } from 'entities/User';
 import { $api } from 'shared/api/api';
@@ -19,7 +21,7 @@ export function createReduxStore(
 
     // <StateSchema>
     const store = configureStore({
-        reducer: reducerManager.reduce,
+        reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
         devTools: __IS_DEV__,
         preloadedState: initialState,
         middleware: (getDefaultMiddleware) => getDefaultMiddleware({
@@ -31,7 +33,7 @@ export function createReduxStore(
             },
         }),
     });
-
+    // TODO fix types
     // @ts-ignore
     store.reducerManager = reducerManager;
     return store;

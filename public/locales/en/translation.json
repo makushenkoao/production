@@ -15,5 +15,8 @@
   "Введіть пароль": "Write password",
   "Форма авторизації": "Authorization form",
   "Невірний логін або пароль :(": "Incorrect login or password :(",
-  "Вийти": "Sign out"
+  "Вийти": "Sign out",
+  "Редагувати": "Edit",
+  "Ваше прізвище": "Your last name",
+  "Ваше ім'я": "Your name"
 }
