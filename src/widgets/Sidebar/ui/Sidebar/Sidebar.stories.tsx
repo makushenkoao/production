@@ -12,14 +12,38 @@ const meta: Meta<typeof Sidebar> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LightSidebar: Story = {
+export const LightSidebarAuth: Story = {
     args: {
     },
-    decorators: [StoreDecorator({})],
+    decorators: [StoreDecorator({
+        user: {
+            authData: {},
+        },
+    })],
 };
 
-export const DarkSidebar: Story = {
+export const LightSidebarNoAuth: Story = {
     args: {
     },
-    decorators: [StoreDecorator({}), ThemeDecorator(Theme.DARK)],
+    decorators: [StoreDecorator({
+        user: {},
+    })],
+};
+
+export const DarkSidebarAuth: Story = {
+    args: {
+    },
+    decorators: [StoreDecorator({
+        user: {
+            authData: {},
+        },
+    }), ThemeDecorator(Theme.DARK)],
+};
+
+export const DarkSidebarNoAuth: Story = {
+    args: {
+    },
+    decorators: [StoreDecorator({
+        user: {},
+    }), ThemeDecorator(Theme.DARK)],
 };

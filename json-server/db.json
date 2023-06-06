@@ -9,7 +9,7 @@
   "profile": {
     "firstname": "Anton",
     "lastname": "Makushenko",
-    "age": "17",
+    "age": 17,
     "currency": "CAD",
     "country": "Canada",
     "city": "Cherkasy",

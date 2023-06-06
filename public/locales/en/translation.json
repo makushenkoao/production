@@ -28,5 +28,9 @@
   "Ваше ім'я користувача": "Your username",
   "Ваше посилання на аватар": "Your avatar link",
   "Ваша фотографія": "Your avatar",
-  "Вкажіть країну": "Your country"
+  "Вкажіть країну": "Your country",
+  "Серверна помилка": "Server error",
+  "Некоректний вік": "Incorrect age",
+  "Ім'я та прізвище обов'язкові": "Firstname and lastname required",
+  "Дані не вказані": "Data not specified"
 }
