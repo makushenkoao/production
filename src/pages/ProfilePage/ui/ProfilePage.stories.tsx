@@ -3,7 +3,9 @@ import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorato
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator';
 import ProfilePage from './ProfilePage';
+
 // TODO fix profile page test
+
 const meta: Meta<typeof ProfilePage> = {
     title: 'pages/ProfilePage',
     component: ProfilePage,

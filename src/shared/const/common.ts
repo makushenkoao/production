@@ -1,7 +1,1 @@
-export enum Currency {
-    UAH = 'UAH'
-}
-
-export enum Country {
-    Ukraine = 'Ukraine',
-}
+export const common = {};
