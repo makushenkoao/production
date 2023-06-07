@@ -32,5 +32,8 @@
   "Серверна помилка": "Server error",
   "Некоректний вік": "Incorrect age",
   "Ім'я та прізвище обов'язкові": "Firstname and lastname required",
-  "Дані не вказані": "Data not specified"
+  "Дані не вказані": "Data not specified",
+  "Статті": "Articles",
+  "Сторінка статей": "Page of articles",
+  "Сторінка деталей статті": "Article details page"
 }
