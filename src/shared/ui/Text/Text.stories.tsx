@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 const meta: Meta<typeof Text> = {
     title: 'shared/Text',
@@ -65,6 +65,40 @@ export const DarkErrorText: Story = {
         title: 'Error',
         text: 'An error has occurred because...',
         theme: TextTheme.ERROR,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const LightSizeM: Story = {
+    args: {
+        title: 'Size M',
+        size: TextSize.M,
+        text: 'Random text',
+    },
+};
+
+export const LightSizeL: Story = {
+    args: {
+        title: 'Size M',
+        size: TextSize.L,
+        text: 'Random text',
+    },
+};
+
+export const DarkSizeM: Story = {
+    args: {
+        title: 'Size M',
+        size: TextSize.M,
+        text: 'Random text',
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const DarkSizeL: Story = {
+    args: {
+        title: 'Size M',
+        size: TextSize.L,
+        text: 'Random text',
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };

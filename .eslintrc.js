@@ -42,7 +42,7 @@ module.exports = {
         'react/button-has-type': 'warn',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'name'],
+            ignoreAttribute: ['data-testid', 'to', 'name', 'alt'],
         }],
         'max-len': ['error', {
             ignoreComments: true,
@@ -54,7 +54,7 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
-        'no-undef': 'off'
+        'no-undef': 'off',
     },
     globals: {
         __IS_DEV__: true,
