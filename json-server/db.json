@@ -105,13 +105,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0pfZj9b0K0Cp_T4kplHGQpgccAnS4i2g07w&usqp=CAU"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0pfZj9b0K0Cp_T4kplHGQpgccAnS4i2g07w&usqp=CAU"
     }
   ]
 }
