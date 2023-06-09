@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { CommentCard } from './CommentCard';
 
 const meta: Meta<typeof CommentCard> = {
-    title: 'folder/CommentCard',
+    title: 'entities/Comment/CommentCard',
     component: CommentCard,
 };
 
@@ -12,10 +12,41 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightCommentCard: Story = {
-    args: {},
+    args: {
+        comment: {
+            id: '1',
+            text: 'hello',
+            user: {
+                id: '1',
+                username: 'Username1',
+            },
+        },
+    },
 };
 
 export const DarkCommentCard: Story = {
-    args: {},
+    args: {
+        comment: {
+            id: '1',
+            text: 'hello',
+            user: {
+                id: '1',
+                username: 'Username1',
+            },
+        },
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const LightCommentCardLoading: Story = {
+    args: {
+        isLoading: true,
+    },
+};
+
+export const DarkCommentCardLoading: Story = {
+    args: {
+        isLoading: true,
+    },
     decorators: [ThemeDecorator(Theme.DARK)],
 };

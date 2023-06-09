@@ -3,26 +3,24 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Text } from 'shared/ui/Text/Text';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Comment } from '../../model/types/comment';
 import cls from './CommentCard.module.scss';
 
 interface CommentCardProps {
     className?: string;
-    comment: Comment;
+    comment?: Comment;
     isLoading?: boolean;
 }
 
 export const CommentCard = memo((props: CommentCardProps) => {
     const { className, comment, isLoading } = props;
 
-    // TODO - loader(skeleton)
-    // Skeleton not working
-    // The component CommentsList returns either comments or the text "No comments"
-
     if (isLoading) {
         return (
             <div
-                className={classNames(cls.CommentCard, {}, [className])}
+                className={classNames(cls.CommentCard, {}, [className, cls.loading])}
             >
                 <div className={cls.header}>
                     <Skeleton width={30} height={30} borderRadius="50%" />
@@ -33,11 +31,13 @@ export const CommentCard = memo((props: CommentCardProps) => {
         );
     }
 
+    if (!comment) return null;
+
     return (
         <div
             className={classNames(cls.CommentCard, {}, [className])}
         >
-            <div className={cls.header}>
+            <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={cls.header}>
                 <Avatar
                     width={30}
                     height={30}
@@ -46,7 +46,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
                         : 'https://cdn-icons-png.flaticon.com/512/149/149071.png'}
                 />
                 <Text title={comment.user.username} />
-            </div>
+            </AppLink>
             <Text text={comment.text} />
         </div>
     );

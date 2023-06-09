@@ -1,14 +1,28 @@
 {
-  "profile": {
-    "firstname": "Anton",
-    "lastname": "Makushenko",
-    "age": 17,
-    "currency": "CAD",
-    "country": "Canada",
-    "city": "Cherkasy",
-    "username": "admin",
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0pfZj9b0K0Cp_T4kplHGQpgccAnS4i2g07w&usqp=CAU"
-  },
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Anton",
+      "lastname": "Makushenko",
+      "age": 17,
+      "currency": "UAH",
+      "country": "Ukraine",
+      "city": "Cherkasy",
+      "username": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0pfZj9b0K0Cp_T4kplHGQpgccAnS4i2g07w&usqp=CAU"
+    },
+    {
+      "id": "2",
+      "firstname": "Kate",
+      "lastname": "Gnatyuk",
+      "age": 16,
+      "currency": "CAD",
+      "country": "Canada",
+      "city": "Quebec",
+      "username": "kate_gnatyuk",
+      "avatar": "https://hips.hearstapps.com/hmg-prod/images/sigourney-weaver-avatar-ii-the-way-of-water-1670323174.jpg?crop=0.500xw:0.949xh;0.299xw,0.0514xh&resize=1200:*"
+    }
+  ],
   "articles": [
     {
       "id": "1",
@@ -17,7 +31,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "06.06.2023",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -98,6 +114,18 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Hello",
+      "id": "5UslMsE"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "hello world",
+      "id": "hbARbIq"
     }
   ],
   "users": [
@@ -110,10 +138,10 @@
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "kate_gnatyuk",
       "password": "123",
-      "role": "USER",
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0pfZj9b0K0Cp_T4kplHGQpgccAnS4i2g07w&usqp=CAU"
+      "role": "ADMIN",
+      "avatar": "https://instagram.fiev22-1.fna.fbcdn.net/v/t51.2885-15/288682984_1756642198019997_8165905734652319659_n.jpg?stp=dst-jpg_e35_p1080x1080&_nc_ht=instagram.fiev22-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=yUmamtaClM8AX_S3zBp&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=Mjg2NDE2MzA4MzIyMDI3MTIwNw%3D%3D.2-ccb7-5&oh=00_AfB9q0MktBnUsLHaxkW82c1qIoB04kZ1bSins0Uv-8sycw&oe=6488861C&_nc_sid=640168"
     }
   ]
 }
