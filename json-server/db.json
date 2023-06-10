@@ -31,6 +31,7 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "06.06.2023",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -134,7 +135,7 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0pfZj9b0K0Cp_T4kplHGQpgccAnS4i2g07w&usqp=CAU"
+      "avatar": "c"
     },
     {
       "id": "2",

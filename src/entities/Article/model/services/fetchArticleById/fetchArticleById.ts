@@ -15,7 +15,7 @@ export const fetchArticleById = createAsyncThunk<Article, string, ThunkConfig<st
 
             return data;
         } catch (e) {
-            return rejectWithValue('error');
+            return rejectWithValue('Сталася непередбачена помилка');
         }
     },
 );
