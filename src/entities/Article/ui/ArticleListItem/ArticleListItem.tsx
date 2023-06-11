@@ -42,6 +42,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             <Icon svg={EyeIcon} />
         </>
     );
+
     const image = <img className={cls.img} alt={article.title} src={article.img} />;
 
     if (view === ArticleView.BIG) {

@@ -37,7 +37,7 @@ export const CommentList = memo((props: CommentListProps) => {
                 ? (
                     <div className={cls.comments}>
                         {comments.map((comment) => (
-                            <CommentCard comment={comment} isLoading={isLoading} />
+                            <CommentCard key={comment.id} comment={comment} isLoading={isLoading} />
                         ))}
                     </div>
                 )
