@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { Page } from './Page';
 
 const meta: Meta<typeof Page> = {
-    title: 'folder/Page',
+    title: 'widgets/Page',
     component: Page,
 };
 
