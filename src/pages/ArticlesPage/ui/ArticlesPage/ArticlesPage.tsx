@@ -9,6 +9,10 @@ import {
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
+import { Page } from 'shared/ui/Page/Page';
+import {
+    fetchNextArticlesPage,
+} from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import {
     fetchArticleList,
 } from '../../model/services/fetchArticleList/fetchArticleList';
@@ -19,8 +23,8 @@ import {
 } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import {
-    getArticlesPageError,
-    getArticlesPageIsLoading, getArticlesPageView,
+    getArticlesPageError, getArticlesPageHasMore,
+    getArticlesPageIsLoading, getArticlesPageNum, getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 
 interface ArticlesPageProps {
@@ -44,14 +48,21 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         dispatch(articlesPageActions.setView(view));
     }, [dispatch]);
 
+    const onLoadNextPart = useCallback(() => {
+        dispatch(fetchNextArticlesPage());
+    }, [dispatch]);
+
     useInitialEffect(() => {
-        dispatch(fetchArticleList());
         dispatch(articlesPageActions.initSlice());
+        dispatch(fetchArticleList({
+            page: 1,
+        }));
     });
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div
+            <Page
+                onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
             >
                 <ArticleViewSelector view={view} onViewClick={onChangeView} />
@@ -60,7 +71,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
                     view={view}
                     articles={articles}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

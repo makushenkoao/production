@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Text } from 'shared/ui/Text/Text';
 import {
     ArticleListItemSkeleton,
 } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
@@ -28,16 +27,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
     } = props;
     const { t } = useTranslation();
 
-    if (isLoading) {
-        return (
-            <div
-                className={classNames(cls.ArticleList, {}, [className, cls[view]])}
-            >
-                {getSkeletons(view)}
-            </div>
-        );
-    }
-
     const renderArticle = (article: Article) => (
         <ArticleListItem key={article.id} className={cls.card} article={article} view={view} />
     );
@@ -46,9 +35,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
         <div
             className={classNames(cls.ArticleList, {}, [className, cls[view]])}
         >
-            {articles.length > 0
-                ? articles.map(renderArticle)
-                : <Text text={t('Статті відсутні')} />}
+            {articles.length > 0 && articles.map(renderArticle)}
+            {isLoading && getSkeletons(view)}
+            {articles.length < 0 && null}
         </div>
     );
 });
