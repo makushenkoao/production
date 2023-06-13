@@ -1,6 +1,6 @@
 import {
     DynamicModuleLoader,
-    ReducerList,
+    ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     fetchProfileData,
@@ -25,7 +25,7 @@ import { useParams } from 'react-router-dom';
 import { Page } from 'widgets/Page/Page';
 import { ProfilePageHeader } from '../ui/ProfilePageHeader/ProfilePageHeader';
 
-const reducers: ReducerList = {
+const reducers: ReducersList = {
     profile: profileReducer,
 };
 

@@ -5,7 +5,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { Button } from 'shared/ui/Button/Button';
 import {
     DynamicModuleLoader,
-    ReducerList,
+    ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -20,7 +20,7 @@ import {
     getAddCommentFormIsLoading,
 } from '../../model/selectors/addCommentsFormSelectors';
 
-const reducers: ReducerList = {
+const reducers: ReducersList = {
     addCommentForm: addCommentFormReducer,
 };
 

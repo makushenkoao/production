@@ -4,7 +4,7 @@ import { memo, useCallback } from 'react';
 import { ArticleList, ArticleView } from 'entities/Article';
 import {
     DynamicModuleLoader,
-    ReducerList,
+    ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -33,7 +33,7 @@ interface ArticlesPageProps {
     className?: string;
 }
 
-const reducers: ReducerList = {
+const reducers: ReducersList = {
     articlesPage: articlesPageReducer,
 };
 
