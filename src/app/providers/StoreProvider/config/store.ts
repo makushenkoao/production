@@ -4,9 +4,9 @@ import {
 import { NavigateOptions, To } from 'react-router-dom';
 import { userReducer } from 'entities/User';
 import { $api } from 'shared/api/api';
+import { uiReducer } from 'features/UI';
 import { StateSchema } from './StateSchema';
 import { createReducerManager } from './reducerManager';
-import { uiReducer } from 'features/UI';
 
 export function createReduxStore(
     initialState?: StateSchema,

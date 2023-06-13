@@ -7,6 +7,7 @@ import {
 import { Article, ArticleView } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 
 interface ArticleListProps {
     className?: string;
@@ -30,6 +31,16 @@ export const ArticleList = memo((props: ArticleListProps) => {
     const renderArticle = (article: Article) => (
         <ArticleListItem key={article.id} className={cls.card} article={article} view={view} />
     );
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div
+                className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+            >
+                <Text size={TextSize.L} title={t('Статті не знайдені')} />
+            </div>
+        )
+    }
 
     return (
         <div

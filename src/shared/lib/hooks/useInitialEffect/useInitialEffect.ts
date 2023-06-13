@@ -7,4 +7,4 @@ export function useInitialEffect(callback: () => void) {
         }
         // eslint-disable-next-line
     }, []);
-};
+}

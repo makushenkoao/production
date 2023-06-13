@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ArticleViewSelector } from './ArticleViewSelector';
+import { ArticlesPageFilters } from './ArticlesPageFilters';
 
-const meta: Meta<typeof ArticleViewSelector> = {
-    title: 'entities/Article/ArticleViewSelector',
-    component: ArticleViewSelector,
+const meta: Meta<typeof ArticlesPageFilters> = {
+    title: 'pages/Article/ArticlesPageFilters',
+    component: ArticlesPageFilters,
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LightArticleViewSelector: Story = {
+export const LightArticlesPageFilters: Story = {
     args: {},
 };
 
-export const DarkArticleViewSelector: Story = {
+export const DarkArticlesPageFilters: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
