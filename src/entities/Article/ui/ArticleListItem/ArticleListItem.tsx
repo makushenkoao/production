@@ -29,7 +29,9 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-    const { className, article, view, target } = props;
+    const {
+        className, article, view, target,
+    } = props;
     const { t } = useTranslation();
 
     const types = <Text text={article.type.join(' ')} className={cls.types} />;
@@ -64,8 +66,8 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     <div className={cls.footer}>
                         <AppLink to={RoutePath.article_details + article.id} target={target}>
                             <Button theme={ButtonTheme.OUTLINE}>{t('Читати далі')}</Button>
-                            {views}
                         </AppLink>
+                        {views}
                     </div>
                 </Card>
             </div>
