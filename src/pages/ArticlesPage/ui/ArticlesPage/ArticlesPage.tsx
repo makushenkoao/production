@@ -14,6 +14,7 @@ import {
     fetchNextArticlesPage,
 } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
+import { useSearchParams } from 'react-router-dom';
 import {
     initArticlesPage,
 } from '../../model/services/initArticlesPage/initArticlesPage';
@@ -26,7 +27,6 @@ import {
     getArticlesPageError,
     getArticlesPageIsLoading, getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
-import { useSearchParams } from 'react-router-dom'
 import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {

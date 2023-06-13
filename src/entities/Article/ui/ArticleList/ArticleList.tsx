@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import {
     ArticleListItemSkeleton,
 } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import { Article, ArticleView } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { Text, TextSize } from 'shared/ui/Text/Text';
 
 interface ArticleListProps {
     className?: string;
@@ -39,7 +39,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
             >
                 <Text size={TextSize.L} title={t('Статті не знайдені')} />
             </div>
-        )
+        );
     }
 
     return (
