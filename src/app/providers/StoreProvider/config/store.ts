@@ -33,7 +33,7 @@ export function createReduxStore(
             },
         }),
     });
-    // TODO fix types
+    // TODO - fix types
     // @ts-ignore
     store.reducerManager = reducerManager;
     return store;

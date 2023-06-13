@@ -86,7 +86,6 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
                 <ArticleViewSelector view={view} onViewClick={onChangeView} />
             </div>
             <Card className={cls.search}>
-                {/* TODO - search is not working properly */}
                 <Input
                     placeholder={t('Пошук')}
                     onChange={onChangeSearch}
