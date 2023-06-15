@@ -1,7 +1,7 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import {
     fetchNextArticlesPage,
-} from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+} from './fetchNextArticlesPage';
 import {
     fetchArticleList,
 } from '../fetchArticleList/fetchArticleList';

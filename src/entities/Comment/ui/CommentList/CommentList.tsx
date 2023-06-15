@@ -2,8 +2,7 @@ import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
-import { CommentCard } from 'entities/Comment/ui/CommentCard/CommentCard';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { CommentCard } from '../CommentCard/CommentCard';
 import cls from './CommentList.module.scss';
 import { Comment } from '../../model/types/comment';
 

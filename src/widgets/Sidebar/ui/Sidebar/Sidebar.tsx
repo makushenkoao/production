@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
-import cls from './Sidebar.module.scss';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string

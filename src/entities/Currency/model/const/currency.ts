@@ -1,4 +1,4 @@
-import { Currency } from 'entities/Currency';
+import { Currency } from '../types/currency';
 
 export const CURRENCY_OPTIONS = [
     {

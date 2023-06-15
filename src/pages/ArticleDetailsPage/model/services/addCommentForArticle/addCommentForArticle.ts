@@ -6,7 +6,7 @@ import { addCommentFormActions } from 'features/AddCommentForm/model/slice/addCo
 import { getArticleDetailsData } from 'entities/Article/model/selectors/articleDetails';
 import {
     fetchCommentsByArticleId,
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+} from '../fetchCommentsByArticleId/fetchCommentsByArticleId';
 
 export const addCommentForArticle = createAsyncThunk<Comment, string, ThunkConfig<string>>(
     'article/addCommentForArticle',

@@ -17,13 +17,13 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Icon } from 'shared/ui/Icon/Icon';
 import {
     ArticleCodeBlockComponent,
-} from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+} from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import {
     ArticleImageBlockComponent,
-} from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
+} from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import {
     ArticleTextBlockComponent,
-} from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
+} from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import {

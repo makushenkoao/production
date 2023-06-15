@@ -2,8 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator';
-import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
 import { ARTICLE_MOCK } from 'shared/config/storybook/mock/article';
 import { ArticleDetails } from './ArticleDetails';
 

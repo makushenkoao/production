@@ -1,4 +1,4 @@
-import { Country } from 'entities/Country';
+import { Country } from '../types/country';
 
 export const COUNTRY_OPTIONS = [
     {
