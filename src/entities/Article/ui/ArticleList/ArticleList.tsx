@@ -47,7 +47,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     article={articles[i]}
                     view={view}
                     target={target}
-                    key={index}
+                    key={i}
                 />,
             );
         }

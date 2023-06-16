@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 
 interface AvatarProps {
@@ -6,12 +6,13 @@ interface AvatarProps {
   src?: string;
   alt?: string;
   width?: number;
-  height?: number
+  height?: number;
+  rounded?: boolean;
 }
 
 export const Avatar = (props: AvatarProps) => {
     const {
-        src, alt, className, height = 100, width = 100,
+        src, alt, className, height = 100, width = 100, rounded,
     } = props;
 
     return (
@@ -20,7 +21,9 @@ export const Avatar = (props: AvatarProps) => {
             alt={alt}
             width={width}
             height={height}
-            className={classNames(cls.Avatar, {}, [className])}
+            className={classNames(cls.Avatar, {
+                [cls.rounded]: rounded,
+            }, [className])}
         />
     );
 };

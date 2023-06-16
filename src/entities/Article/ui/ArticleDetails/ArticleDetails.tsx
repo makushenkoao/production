@@ -33,6 +33,7 @@ import {
 } from '../../model/selectors/articleDetails';
 import cls from './ArticleDetails.module.scss';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { HStack, VStack } from 'shared/ui/Stack';
 
 const reducers: ReducersList = {
     articleDetails: articleDetailsReducer,
@@ -74,13 +75,14 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     if (isLoading) {
         content = (
-            <div className={cls.skeletonsWrapper}>
-                <Skeleton
-                    width={200}
-                    height={200}
-                    borderRadius="50%"
-                    className={cls.avatar}
-                />
+            <VStack gap="16" align="start">
+                <HStack justify="center" max>
+                    <Skeleton
+                        width={200}
+                        height={200}
+                        borderRadius="50%"
+                    />
+                </HStack>
                 <Skeleton
                     width={300}
                     height={32}
@@ -97,7 +99,11 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     width="100%"
                     height={200}
                 />
-            </div>
+                <Skeleton
+                    width="100%"
+                    height={200}
+                />
+            </VStack>
         );
     } else if (error) {
         content = (
@@ -110,35 +116,34 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     } else {
         content = (
             <>
-                <div className={cls.avatarWrapper}>
+                <HStack justify="center" max>
                     <Avatar
                         width={200}
                         height={200}
-                        className={cls.avatar}
                         src={article?.img}
                         alt="Article image"
                     />
-                </div>
+                </HStack>
                 <Text
                     title={article?.title}
                     text={article?.subtitle}
                     size={TextSize.L}
                 />
-                <div className={cls.articleInfo}>
+                <HStack gap="8">
                     <Icon svg={EyeIcon} />
                     <Text
                         text={String(article?.views)}
                     />
-                </div>
-                <div className={cls.articleInfo}>
+                </HStack>
+                <HStack gap="8">
                     <Icon svg={CalendarIcon} />
                     <Text
                         text={article?.createdAt}
                     />
-                </div>
-                <div className={cls.blockWrapper}>
+                </HStack>
+                <VStack gap="8">
                     {article?.blocks.map(renderBlock)}
-                </div>
+                </VStack>
             </>
         );
     }
