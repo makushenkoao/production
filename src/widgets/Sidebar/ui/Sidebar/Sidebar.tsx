@@ -2,7 +2,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useMemo, useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import { useTranslation } from 'react-i18next';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
 import { VStack } from 'shared/ui/Stack/VStack/VStack';
@@ -16,7 +15,6 @@ interface SidebarProps {
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
-    const { t } = useTranslation();
     const sidebarItemsList = useSelector(getSidebarItems);
     const onToggle = (): void => setCollapsed((prevState) => !prevState);
 
@@ -29,7 +27,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     )), [collapsed, sidebarItemsList]);
 
     return (
-        <menu
+        <aside
             data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
                 className,
@@ -45,13 +43,18 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             >
                 {collapsed ? '>' : '<'}
             </Button>
-            <VStack gap="4" align={collapsed ? 'center' : 'start'} className={cls.items}>
+            <VStack
+                role="navigation"
+                gap="4"
+                align={collapsed ? 'center' : 'start'}
+                className={cls.items}
+            >
                 {itemsList}
             </VStack>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher short={collapsed} />
             </div>
-        </menu>
+        </aside>
     );
 });
