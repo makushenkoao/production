@@ -91,6 +91,7 @@ export const ProfileCard = (props : ProfileCardProps) => {
                 <Avatar
                     src={data?.avatar}
                     alt={t('Ваша фотографія')}
+                    rounded
                 />
             )}
             <Input

@@ -8,7 +8,10 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { getUserAuthData, userActions } from 'entities/User';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import cls from './Navbar.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface NavbarProps {
     className?: string
@@ -43,14 +46,33 @@ export const Navbar = memo((props: NavbarProps) => {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
                 {logo}
-                <div className={cls.headerBtns}>
+                <HStack gap="16" align="center">
                     <AppLink to={RoutePath.article_create}>
                         {t('Створити статтю')}
                     </AppLink>
-                    <Button theme={ButtonTheme.CLEAR_INVERTED} onClick={onLogout}>
-                        {t('Вийти')}
-                    </Button>
-                </div>
+                    <Dropdown
+                        items={[
+                            {
+                                content: t('Вийти'),
+                                onClick: onLogout,
+                            },
+                            {
+                                content: t('Профіль'),
+                                href: RoutePath.profile + userAuthData.id,
+                            },
+                        ]}
+                        trigger={(
+                            <Avatar
+                                src={userAuthData.avatar}
+                                height={30}
+                                width={30}
+                                rounded
+                                alt="User"
+                            />
+                        )}
+                        direction="bottom left"
+                    />
+                </HStack>
             </header>
         );
     }
