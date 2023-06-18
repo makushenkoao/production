@@ -4,6 +4,8 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator';
 import { Navbar } from './Navbar';
 
+// TODO - write stories
+
 const meta: Meta<typeof Navbar> = {
     title: 'widgets/Navbar',
     component: Navbar,

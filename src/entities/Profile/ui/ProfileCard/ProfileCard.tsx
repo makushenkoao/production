@@ -83,7 +83,7 @@ export const ProfileCard = (props : ProfileCardProps) => {
     return (
         <VStack
             gap="16"
-            align="start"
+            align="normal"
             max
             className={classNames(cls.ProfileCard, mods, [className])}
         >

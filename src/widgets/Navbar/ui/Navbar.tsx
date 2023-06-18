@@ -53,12 +53,12 @@ export const Navbar = memo((props: NavbarProps) => {
                     <Dropdown
                         items={[
                             {
-                                content: t('Вийти'),
-                                onClick: onLogout,
-                            },
-                            {
                                 content: t('Профіль'),
                                 href: RoutePath.profile + userAuthData.id,
+                            },
+                            {
+                                content: <Text text={t('Вийти')} theme={TextTheme.ERROR} />,
+                                onClick: onLogout,
                             },
                         ]}
                         trigger={(

@@ -33,6 +33,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
     const { className, onSendComment } = props;
     const { t } = useTranslation();
     const text = useSelector(getAddCommentFormText);
+    // TODO - loading and error
     const error = useSelector(getAddCommentFormError);
     const isLoading = useSelector(getAddCommentFormIsLoading);
     const dispatch = useAppDispatch();

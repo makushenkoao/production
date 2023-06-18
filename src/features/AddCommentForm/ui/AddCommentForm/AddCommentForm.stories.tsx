@@ -5,6 +5,8 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator';
 import AddCommentForm from './AddCommentForm';
 
+// TODO - write stories
+
 const meta: Meta<typeof AddCommentForm> = {
     title: 'feature/AddCommentForm',
     component: AddCommentForm,
