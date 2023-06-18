@@ -10,8 +10,8 @@ import { getUserAuthData, userActions } from 'entities/User';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import cls from './Navbar.module.scss';
 import { HStack } from 'shared/ui/Stack';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string
