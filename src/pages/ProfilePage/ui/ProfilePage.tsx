@@ -1,6 +1,5 @@
-import { EditableProfileCard, EditableProfileCardHeader } from 'features/editableProfileCard';
+import { EditableProfileCard } from 'features/editableProfileCard';
 import { Page } from 'widgets/Page/Page';
-import { VStack } from 'shared/ui/Stack/VStack/VStack';
 import { useParams } from 'react-router-dom';
 
 const ProfilePage = () => {
@@ -15,10 +14,7 @@ const ProfilePage = () => {
 
     return (
         <Page>
-            <VStack gap="16" max>
-                <EditableProfileCardHeader />
-                <EditableProfileCard id={id} />
-            </VStack>
+            <EditableProfileCard id={id} />
         </Page>
     );
 };

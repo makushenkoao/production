@@ -54,7 +54,7 @@ export function ListBox(props: ListBoxProps) {
                 value={value}
                 onChange={onChange}
             >
-                <HListBox.Button className={cls.trigger}>
+                <HListBox.Button as={Fragment}>
                     <Button theme={ButtonTheme.OUTLINE} disabled={readonly}>
                         {value ?? defaultValue}
                     </Button>
