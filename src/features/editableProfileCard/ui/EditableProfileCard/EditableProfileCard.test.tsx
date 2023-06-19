@@ -36,13 +36,13 @@ const options = {
 };
 
 describe('features/EditableProfileCard', () => {
-    test('Режим рид онли должен переключиться', async () => {
+    test('Readonly mode should switch\n', async () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
         expect(screen.getByTestId('EditableProfileCardHeader.CancelButton')).toBeInTheDocument();
     });
 
-    test('При отмене значения должны обнуляться', async () => {
+    test('Values must be set to zero on cancellation.\n', async () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
@@ -61,7 +61,7 @@ describe('features/EditableProfileCard', () => {
         expect(screen.getByTestId('ProfileCard.lastname')).toHaveValue('admin');
     });
 
-    test('Должна появиться ошибка', async () => {
+    test('There should be an error', async () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
@@ -72,7 +72,7 @@ describe('features/EditableProfileCard', () => {
         expect(screen.getByTestId('EditableProfileCard.Error.Paragraph')).toBeInTheDocument();
     });
 
-    test('Если нет ошибок валидации, то на сервер должен уйти PUT запрос', async () => {
+    test('If there are no validation errors, then a PUT request should go to the server', async () => {
         const mockPutReq = jest.spyOn($api, 'put');
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
