@@ -6,7 +6,7 @@ import { ArticleInfiniteList } from './ArticleInfiniteList';
 // TODO - write stories
 
 const meta: Meta<typeof ArticleInfiniteList> = {
-    title: 'folder/ArticleInfiniteList',
+    title: 'pages/Article/ArticleInfiniteList',
     component: ArticleInfiniteList,
 };
 

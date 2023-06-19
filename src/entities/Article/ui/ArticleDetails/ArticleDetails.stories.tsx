@@ -6,7 +6,7 @@ import { ARTICLE_MOCK } from 'shared/config/storybook/mock/article';
 import { ArticleDetails } from './ArticleDetails';
 
 const meta: Meta<typeof ArticleDetails> = {
-    title: 'entities/ArticleDetails',
+    title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
 };
 

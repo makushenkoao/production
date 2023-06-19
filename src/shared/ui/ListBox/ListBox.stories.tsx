@@ -6,7 +6,7 @@ import { ListBox } from './ListBox';
 // TODO - write stories
 
 const meta: Meta<typeof ListBox> = {
-    title: 'folder/ListBox',
+    title: 'shared/ListBox',
     component: ListBox,
 };
 

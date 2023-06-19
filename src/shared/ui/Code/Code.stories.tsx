@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { Code } from './Code';
 
 const meta: Meta<typeof Code> = {
-    title: 'folder/Code',
+    title: 'shared/Code',
     component: Code,
 };
 

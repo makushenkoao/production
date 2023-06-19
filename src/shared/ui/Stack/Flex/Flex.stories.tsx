@@ -6,7 +6,7 @@ import { Flex } from './Flex';
 // TODO - write stories
 
 const meta: Meta<typeof Flex> = {
-    title: 'ui/Flex',
+    title: 'shared/Flex',
     component: Flex,
 };
 

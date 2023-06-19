@@ -8,7 +8,7 @@ import AddCommentForm from './AddCommentForm';
 // TODO - write stories
 
 const meta: Meta<typeof AddCommentForm> = {
-    title: 'feature/AddCommentForm',
+    title: 'features/AddCommentForm',
     component: AddCommentForm,
     args: {
         onSendComment: action('onSendComment'),

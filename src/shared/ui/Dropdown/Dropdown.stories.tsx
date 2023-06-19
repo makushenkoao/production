@@ -6,7 +6,7 @@ import { Dropdown } from './Dropdown';
 // TODO - write stories
 
 const meta: Meta<typeof Dropdown> = {
-    title: 'folder/Dropdown',
+    title: 'shared/Dropdown',
     component: Dropdown,
 };
 

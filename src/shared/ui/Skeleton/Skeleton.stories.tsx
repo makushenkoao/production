@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { Skeleton } from './Skeleton';
 
 const meta: Meta<typeof Skeleton> = {
-    title: 'folder/Skeleton',
+    title: 'shared/Skeleton',
     component: Skeleton,
 };
 

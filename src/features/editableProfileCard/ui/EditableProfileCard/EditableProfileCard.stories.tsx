@@ -1,19 +1,21 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
+import { ThemeDecorator } from 'shared/config/storybook';
+import { Theme } from 'app/providers/ThemeProvider';
 import { EditableProfileCard } from './EditableProfileCard';
 
-export default {
-    title: 'features/EditableProfileCard',
+const meta: Meta<typeof EditableProfileCard> = {
+    title: 'features/EditableProfileCard/EditableProfileCard',
     component: EditableProfileCard,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof EditableProfileCard>;
+};
 
-const Template: ComponentStory<typeof EditableProfileCard> = (args) => <EditableProfileCard {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Normal = Template.bind({});
-Normal.args = {
+export const LightEditableProfileCard: Story = {
+    args: {},
+};
 
+export const DarkEditableProfileCard: Story = {
+    args: {},
+    decorators: [ThemeDecorator(Theme.DARK)],
 };

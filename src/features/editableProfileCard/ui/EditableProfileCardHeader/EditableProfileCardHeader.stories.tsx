@@ -6,7 +6,7 @@ import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 // TODO - write stories
 
 const meta: Meta<typeof EditableProfileCardHeader> = {
-    title: 'folder/EditableProfileCardHeader',
+    title: 'features/EditableProfileCard/EditableProfileCardHeader',
     component: EditableProfileCardHeader,
 };
 
