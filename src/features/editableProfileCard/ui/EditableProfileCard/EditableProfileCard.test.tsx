@@ -1,4 +1,4 @@
-import { fireEvent, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
 import { Profile } from 'entities/Profile';
 import { Currency } from 'entities/Currency';
@@ -15,7 +15,7 @@ const profile: Profile = {
     age: 465,
     currency: Currency.USD,
     country: Country.Ukraine,
-    city: 'Moscow',
+    city: 'Kiyv',
     username: 'admin213',
 };
 

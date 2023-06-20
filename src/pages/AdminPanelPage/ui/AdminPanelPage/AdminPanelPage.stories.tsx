@@ -1,26 +1,26 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook';
 import { Theme } from 'app/providers/ThemeProvider';
-import ArticleEditPage from './ArticleEditPage';
+import { AdminPanelPage } from './AdminPanelPage';
 
-const meta: Meta<typeof ArticleEditPage> = {
+const meta: Meta<typeof AdminPanelPage> = {
     title: 'pages/Article/ArticleEditPage',
-    component: ArticleEditPage,
+    component: AdminPanelPage,
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LightArticleEditPage: Story = {
+export const LightAdminPanelPage: Story = {
     args: {},
 };
 
-export const DarkArticleEditPage: Story = {
+export const DarkAdminPanelPage: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const OrangeArticleEditPage: Story = {
+export const OrangeAdminPanelPage: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.ORANGE)],
 };

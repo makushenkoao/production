@@ -6,7 +6,9 @@ import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
-import { getUserAuthData, userActions } from 'entities/User';
+import {
+    getUserAuthData, isUserAdmin, isUserManager, userActions,
+} from 'entities/User';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
@@ -23,6 +25,8 @@ export const Navbar = memo((props: NavbarProps) => {
     const [isAuthModal, setIsAuthModal] = useState<boolean>(false);
     const dispatch = useDispatch();
     const userAuthData = useSelector(getUserAuthData);
+    const isAdmin = useSelector(isUserAdmin);
+    const isManager = useSelector(isUserManager);
 
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
@@ -42,6 +46,8 @@ export const Navbar = memo((props: NavbarProps) => {
         </AppLink>
     );
 
+    const isAdminPanelAvailable = isAdmin || isManager;
+
     if (userAuthData) {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
@@ -52,6 +58,15 @@ export const Navbar = memo((props: NavbarProps) => {
                     </AppLink>
                     <Dropdown
                         items={[
+                            ...(isAdminPanelAvailable
+                                ? [
+                                    {
+                                        content: t('Адмінка'),
+                                        href: RoutePath.admin_panel,
+                                    },
+                                ]
+                                : []
+                            ),
                             {
                                 content: t('Профіль'),
                                 href: RoutePath.profile + userAuthData.id,
