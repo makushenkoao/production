@@ -36,7 +36,7 @@ const options = {
 };
 
 describe('features/EditableProfileCard', () => {
-    test('Readonly mode should switch\n', async () => {
+    test('Readonly mode should switch', async () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
         expect(screen.getByTestId('EditableProfileCardHeader.CancelButton')).toBeInTheDocument();
