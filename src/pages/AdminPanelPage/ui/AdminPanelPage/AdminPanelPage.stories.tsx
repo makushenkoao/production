@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook';
 import { Theme } from 'app/providers/ThemeProvider';
-import { AdminPanelPage } from './AdminPanelPage';
+import AdminPanelPage from './AdminPanelPage';
 
 const meta: Meta<typeof AdminPanelPage> = {
     title: 'pages/Article/ArticleEditPage',

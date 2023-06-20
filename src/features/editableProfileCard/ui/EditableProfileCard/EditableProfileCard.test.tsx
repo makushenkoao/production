@@ -5,7 +5,7 @@ import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import userEvent from '@testing-library/user-event';
 import { $api } from 'shared/api/api';
-import { profileReducer } from '../../model/slice/profileSlice';
+import { profileReducer } from '../../model/slice/ProfileSlice';
 import { EditableProfileCard } from './EditableProfileCard';
 
 const profile: Profile = {
@@ -15,7 +15,7 @@ const profile: Profile = {
     age: 465,
     currency: Currency.USD,
     country: Country.Ukraine,
-    city: 'Kiyv',
+    city: 'Cherkasy',
     username: 'admin213',
 };
 
