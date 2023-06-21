@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text, TextSize, TextTheme } from './Text';
+import {
+    Text, TextAlign, TextSize, TextTheme,
+} from './Text';
 
 const meta: Meta<typeof Text> = {
     title: 'shared/Text',
@@ -26,33 +28,27 @@ export const DarkText: Story = {
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const LightOnlyText: Story = {
+export const OrangeText: Story = {
+    args: {
+        title: 'Title',
+        text: 'Text',
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
+};
+
+export const OnlyText: Story = {
     args: {
         text: 'Text',
     },
 };
 
-export const LightOnlyTitle: Story = {
+export const LOnlyTitle: Story = {
     args: {
         title: 'Title',
     },
 };
 
-export const DarkOnlyText: Story = {
-    args: {
-        text: 'Text',
-    },
-    decorators: [ThemeDecorator(Theme.DARK)],
-};
-
-export const DarkOnlyTitle: Story = {
-    args: {
-        title: 'Title',
-    },
-    decorators: [ThemeDecorator(Theme.DARK)],
-};
-
-export const LightErrorText: Story = {
+export const ErrorText: Story = {
     args: {
         title: 'Error',
         text: 'An error has occurred because...',
@@ -60,16 +56,15 @@ export const LightErrorText: Story = {
     },
 };
 
-export const DarkErrorText: Story = {
+export const SizeS: Story = {
     args: {
-        title: 'Error',
-        text: 'An error has occurred because...',
-        theme: TextTheme.ERROR,
+        title: 'Size S',
+        size: TextSize.S,
+        text: 'Random text',
     },
-    decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const LightSizeM: Story = {
+export const SizeM: Story = {
     args: {
         title: 'Size M',
         size: TextSize.M,
@@ -77,7 +72,7 @@ export const LightSizeM: Story = {
     },
 };
 
-export const LightSizeL: Story = {
+export const SizeL: Story = {
     args: {
         title: 'Size M',
         size: TextSize.L,
@@ -85,20 +80,29 @@ export const LightSizeL: Story = {
     },
 };
 
-export const DarkSizeM: Story = {
+export const AlignLeft: Story = {
     args: {
         title: 'Size M',
         size: TextSize.M,
+        align: TextAlign.LEFT,
         text: 'Random text',
     },
-    decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const DarkSizeL: Story = {
+export const AlignCenter: Story = {
     args: {
         title: 'Size M',
-        size: TextSize.L,
+        size: TextSize.M,
+        align: TextAlign.CENTER,
         text: 'Random text',
     },
-    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const AlignEnd: Story = {
+    args: {
+        title: 'Size M',
+        size: TextSize.M,
+        align: TextAlign.RIGHT,
+        text: 'Random text',
+    },
 };

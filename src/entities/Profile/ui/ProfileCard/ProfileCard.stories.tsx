@@ -6,6 +6,17 @@ import { Currency } from 'entities/Currency';
 import AvatarPng from 'shared/assets/tests/storybook.png';
 import { ProfileCard } from './ProfileCard';
 
+const data = {
+    firstname: 'Anton',
+    lastname: 'Makushenko',
+    age: 17,
+    currency: Currency.UAH,
+    country: Country.Ukraine,
+    city: 'Cherkasy',
+    username: 'admin',
+    avatar: AvatarPng,
+};
+
 const meta: Meta<typeof ProfileCard> = {
     title: 'entities/ProfileCard',
     component: ProfileCard,
@@ -14,59 +25,62 @@ const meta: Meta<typeof ProfileCard> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ProfileCardDefaultLightTheme: Story = {
+export const LightProfileCard: Story = {
     args: {
-        data: {
-            firstname: 'Anton',
-            lastname: 'Makushenko',
-            age: 17,
-            currency: Currency.UAH,
-            country: Country.Ukraine,
-            city: 'Cherkasy',
-            username: 'admin',
-            avatar: AvatarPng,
-        },
+        data,
     },
 };
 
-export const ProfileCardWithErrorLightTheme: Story = {
+export const DarkProfileCard: Story = {
     args: {
-        error: 'error',
-    },
-};
-
-export const ProfileCardWithLoadingLightTheme: Story = {
-    args: {
-        error: 'error',
-    },
-};
-
-export const ProfileCardDefaultDarkTheme: Story = {
-    args: {
-        data: {
-            firstname: 'Anton',
-            lastname: 'Makushenko',
-            age: 17,
-            currency: Currency.UAH,
-            country: Country.Ukraine,
-            city: 'Cherkasy',
-            username: 'admin',
-            avatar: AvatarPng,
-        },
+        data,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const ProfileCardWithErrorDarkTheme: Story = {
+export const OrangeProfileCard: Story = {
+    args: {
+        data,
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
+};
+
+export const LightProfileCardIsLoading: Story = {
+    args: {
+        isLoading: true,
+    },
+};
+
+export const DarkProfileCardIsLoading: Story = {
+    args: {
+        isLoading: true,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeProfileCardIsLoading: Story = {
+    args: {
+        isLoading: true,
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
+};
+
+export const LightProfileCardError: Story = {
+    args: {
+        error: 'error',
+    },
+};
+
+export const DarkProfileCardError: Story = {
     args: {
         error: 'error',
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const ProfileCardWithLoadingDarkTheme: Story = {
+export const OrangeProfileCardError: Story = {
     args: {
         error: 'error',
     },
-    decorators: [ThemeDecorator(Theme.DARK)],
+    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

@@ -38,3 +38,9 @@ export const DarkSelect: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const OrangeSelect: Story = {
+    args: {
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
+};

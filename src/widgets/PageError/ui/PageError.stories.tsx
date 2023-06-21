@@ -21,3 +21,9 @@ export const DarkPageError: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const OrangePageError: Story = {
+    args: {
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
+};

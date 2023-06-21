@@ -31,6 +31,15 @@ export const DarkArticleDetailsData: Story = {
     }), ThemeDecorator(Theme.DARK)],
 };
 
+export const OrangeArticleDetailsData: Story = {
+    args: {},
+    decorators: [StoreDecorator({
+        articleDetails: {
+            data: ARTICLE_MOCK,
+        },
+    }), ThemeDecorator(Theme.ORANGE)],
+};
+
 export const LightArticleDetailsLoading: Story = {
     args: {},
     decorators: [StoreDecorator({
@@ -49,6 +58,15 @@ export const DarkArticleDetailsLoading: Story = {
     }), ThemeDecorator(Theme.DARK)],
 };
 
+export const OrangeArticleDetailsLoading: Story = {
+    args: {},
+    decorators: [StoreDecorator({
+        articleDetails: {
+            isLoading: true,
+        },
+    }), ThemeDecorator(Theme.ORANGE)],
+};
+
 export const LightArticleDetailsError: Story = {
     args: {},
     decorators: [StoreDecorator({
@@ -65,4 +83,13 @@ export const DarkArticleDetailsError: Story = {
             error: 'error',
         },
     }), ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeArticleDetailsError: Story = {
+    args: {},
+    decorators: [StoreDecorator({
+        articleDetails: {
+            error: 'error',
+        },
+    }), ThemeDecorator(Theme.ORANGE)],
 };

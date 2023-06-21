@@ -12,10 +12,18 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightArticleSortSelector: Story = {
-    args: {},
+    args: {
+    },
 };
 
 export const DarkArticleSortSelector: Story = {
-    args: {},
+    args: {
+    },
     decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeArticleSortSelector: Story = {
+    args: {
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

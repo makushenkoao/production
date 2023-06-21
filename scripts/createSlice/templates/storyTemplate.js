@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { ${componentName} } from './${componentName}';
 
 const meta: Meta<typeof ${componentName}> = {
-    title: 'pages/Article/ArticleEditPage',
+    title: 'pages/${componentName}',
     component: ${componentName},
 };
 

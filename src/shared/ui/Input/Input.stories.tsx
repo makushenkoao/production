@@ -6,22 +6,25 @@ import { Input } from './Input';
 const meta: Meta<typeof Input> = {
     title: 'shared/Input',
     component: Input,
+    args: {
+        placeholder: 'Placeholder',
+        value: 'Value',
+    },
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightInput: Story = {
-    args: {
-        placeholder: 'Placeholder',
-        value: 'Value',
-    },
+    args: {},
 };
 
 export const DarkInput: Story = {
-    args: {
-        placeholder: 'Placeholder',
-        value: 'Value',
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeInput: Story = {
+    args: {},
+    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

@@ -5,8 +5,6 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator';
 import AddCommentForm from './AddCommentForm';
 
-// TODO - write stories
-
 const meta: Meta<typeof AddCommentForm> = {
     title: 'features/AddCommentForm',
     component: AddCommentForm,
@@ -19,12 +17,16 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightAddCommentForm: Story = {
-    args: {
-    },
+    args: {},
     decorators: [StoreDecorator({})],
 };
 
 export const DarkAddCommentForm: Story = {
     args: {},
     decorators: [StoreDecorator({}), ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeAddCommentForm: Story = {
+    args: {},
+    decorators: [StoreDecorator({}), ThemeDecorator(Theme.ORANGE)],
 };

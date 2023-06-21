@@ -7,11 +7,6 @@ const ProfilePage = () => {
         id: string;
     }>();
 
-    if (!id) {
-        // TODO - error
-        return null;
-    }
-
     return (
         <Page>
             <EditableProfileCard id={id} />

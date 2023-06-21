@@ -6,12 +6,6 @@ import { Code } from './Code';
 const meta: Meta<typeof Code> = {
     title: 'shared/Code',
     component: Code,
-};
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const LightCode: Story = {
     args: {
         text: 'import type { Meta, StoryObj } from \'@storybook/react\';\n'
             + 'import { ThemeDecorator } from \'shared/config/storybook\';\n'
@@ -28,7 +22,20 @@ export const LightCode: Story = {
     },
 };
 
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const LightCode: Story = {
+    args: {},
+};
+
 export const DarkCode: Story = {
     args: {},
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeCode: Story = {
+    args: {
+    },
     decorators: [ThemeDecorator(Theme.DARK)],
 };

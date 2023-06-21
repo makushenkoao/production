@@ -16,11 +16,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightCard: Story = {
-    args: {
-    },
+    args: {},
 };
 
 export const DarkCard: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeCard: Story = {
+    args: {},
+    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

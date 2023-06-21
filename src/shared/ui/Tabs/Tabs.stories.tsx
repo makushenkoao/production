@@ -38,3 +38,8 @@ export const DarkTabs: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const OrangeTabs: Story = {
+    args: {},
+    decorators: [ThemeDecorator(Theme.DARK)],
+};

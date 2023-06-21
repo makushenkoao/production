@@ -21,3 +21,9 @@ export const DarkLoader: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const OrangeLoader: Story = {
+    args: {
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
+};

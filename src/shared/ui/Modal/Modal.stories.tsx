@@ -6,6 +6,10 @@ import { Modal } from './Modal';
 const meta: Meta<typeof Modal> = {
     title: 'shared/Modal',
     component: Modal,
+    args: {
+        children: 'Modal',
+        isOpen: true,
+    },
 };
 
 export default meta;
@@ -13,15 +17,17 @@ type Story = StoryObj<typeof meta>;
 
 export const LightModal: Story = {
     args: {
-        children: 'Modal',
-        isOpen: true,
     },
 };
 
 export const DarkModal: Story = {
     args: {
-        children: 'Modal',
-        isOpen: true,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeModal: Story = {
+    args: {
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

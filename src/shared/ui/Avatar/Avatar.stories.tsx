@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook';
-import { Theme } from 'app/providers/ThemeProvider';
 import AvatarPng from 'shared/assets/tests/storybook.png';
 import { Avatar } from './Avatar';
 
@@ -16,28 +14,20 @@ const meta: Meta<typeof Avatar> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const AvatarDefaultLightTheme: Story = {
+export const AvatarDefault: Story = {
     args: {
     },
 };
 
-export const AvatarWithHeightWidthLightTheme: Story = {
+export const AvatarWithHeightWidth: Story = {
     args: {
         width: 50,
         height: 50,
     },
 };
 
-export const AvatarDefaultDarkTheme: Story = {
+export const AvatarRounded: Story = {
     args: {
+        rounded: true,
     },
-    decorators: [ThemeDecorator(Theme.DARK)],
-};
-
-export const AvatarWithHeightWidthDarkTheme: Story = {
-    args: {
-        width: 50,
-        height: 50,
-    },
-    decorators: [ThemeDecorator(Theme.DARK)],
 };

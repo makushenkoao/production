@@ -29,7 +29,7 @@ export default ({ config }: {
     config!.module!.rules.push(buildStyleLoader(true));
     config!.plugins!.push(new DefinePlugin({
         __IS_DEV__: true,
-        __API__: JSON.stringify(''),
+        __API__: JSON.stringify('https://testapi.ua'),
         __PROJECT__: JSON.stringify('storybook'),
     }));
 

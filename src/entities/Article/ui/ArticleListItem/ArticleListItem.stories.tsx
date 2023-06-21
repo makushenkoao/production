@@ -16,19 +16,42 @@ const meta: Meta<typeof ArticleListItem> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ArticleListItemViewSmall: Story = {
+export const LightArticleListItemViewSmall: Story = {
     args: {
         view: ArticleView.SMALL,
     },
 };
 
-export const ArticleListItemViewBig: Story = {
+export const LightArticleListItemViewBig: Story = {
     args: {
         view: ArticleView.BIG,
     },
 };
 
-export const DarkArticleListItem: Story = {
-    args: {},
+export const DarkArticleListItemViewSmall: Story = {
+    args: {
+        view: ArticleView.SMALL,
+    },
     decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const DarkArticleListItemViewBig: Story = {
+    args: {
+        view: ArticleView.BIG,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeArticleListItemViewSmall: Story = {
+    args: {
+        view: ArticleView.SMALL,
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
+};
+
+export const OrangeArticleListItemViewBig: Story = {
+    args: {
+        view: ArticleView.BIG,
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

@@ -44,6 +44,13 @@ export const BackgroundInvertedTheme: Story = {
     },
 };
 
+export const BackgroundOutlineRedTheme: Story = {
+    args: {
+        children: 'Background Inverted',
+        theme: ButtonTheme.OUTLINE_RED,
+    },
+};
+
 export const SizeM: Story = {
     args: {
         children: 'M',

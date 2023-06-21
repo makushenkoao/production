@@ -6,13 +6,15 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from 'widgets/Page/Page';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useSearchParams } from 'react-router-dom';
+import { VStack } from 'shared/ui/Stack';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import {
     fetchNextArticlesPage,
 } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
-import {
-    articlesPageReducer,
-} from '../../model/slice/articlesPageSlice';
+import { articlesPageReducer } from '../../model/slice/articlesPageSlice';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 
 interface ArticlesPageProps {
@@ -26,10 +28,15 @@ const reducers: ReducersList = {
 const ArticlesPage = (props: ArticlesPageProps) => {
     const { className } = props;
     const dispatch = useAppDispatch();
+    const [searchParams] = useSearchParams();
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
     }, [dispatch]);
+
+    useInitialEffect(() => {
+        dispatch(initArticlesPage(searchParams));
+    });
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
@@ -37,8 +44,10 @@ const ArticlesPage = (props: ArticlesPageProps) => {
                 onScrollEnd={onLoadNextPart}
                 className={classNames('', {}, [className])}
             >
-                <ArticlesPageFilters />
-                <ArticleInfiniteList />
+                <VStack gap="32" align="normal">
+                    <ArticlesPageFilters />
+                    <ArticleInfiniteList />
+                </VStack>
             </Page>
         </DynamicModuleLoader>
     );

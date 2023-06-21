@@ -21,3 +21,9 @@ export const DarkThemeSwitcher: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const OrangeThemeSwitcher: Story = {
+    args: {
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
+};
