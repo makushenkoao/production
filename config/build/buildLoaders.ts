@@ -9,20 +9,21 @@ export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
 
     const svgLoader = buildSvgLoader();
 
-    const babelLoader = buildBabelLoader(options);
+    const codeBabelLoader = buildBabelLoader({ ...options, isTsx: false });
+    const tsxCodeBabelLoader = buildBabelLoader({ ...options, isTsx: true });
 
     const styleLoader = buildStyleLoader(isDev);
 
-    const typescriptLoader = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-    };
+    // const typescriptLoader = {
+    //     test: /\.tsx?$/,
+    //     use: 'ts-loader',
+    //     exclude: /node_modules/,
+    // };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif|woff2|woff)$/i,
         use: [{ loader: 'file-loader' }],
     };
 
-    return [fileLoader, svgLoader, babelLoader, typescriptLoader, styleLoader];
+    return [fileLoader, svgLoader, codeBabelLoader, tsxCodeBabelLoader, styleLoader];
 };
