@@ -61,6 +61,7 @@ module.exports = {
                 'role',
                 'as',
                 'direction',
+                'borderRadius',
             ],
         }],
         'max-len': ['error', {

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import userPng from '../../assets/tests/storybook.png';
-import { Avatar } from '../Avatar/Avatar';
+import userPng from '../../../../assets/tests/storybook.png';
+import { Avatar } from '../../../Avatar/Avatar';
 import { Dropdown } from './Dropdown';
 
 const meta: Meta<typeof Dropdown> = {
-    title: 'shared/Dropdown',
+    title: 'shared/Popups/Dropdown',
     component: Dropdown,
     args: {
         items: [

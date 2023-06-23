@@ -3,6 +3,8 @@ import { ThemeDecorator } from 'shared/config/storybook';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ${componentName} } from './${componentName}';
 
+// TODO - write stories
+
 const meta: Meta<typeof ${componentName}> = {
     title: 'pages/${componentName}',
     component: ${componentName},

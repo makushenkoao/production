@@ -1,4 +1,38 @@
 {
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Повідомлення 1",
+      "description": "Сталася якась подія",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Повідомлення 2",
+      "description": "Сталася якась подія",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Повідомлення 3",
+      "description": "Сталася якась подія",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Повідомлення 4",
+      "description": "Сталася якась подія",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Повідомлення 5",
+      "description": "Сталася якась подія",
+      "userId": "2"
+    }
+  ],
   "profile": [
     {
       "id": "1",
