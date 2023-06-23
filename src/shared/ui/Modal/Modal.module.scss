@@ -4,20 +4,13 @@
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: -1;
     opacity: 0;
     pointer-events: none;
-    color: var(--primary-color);
-}
-
-.overlay {
-    width: 100%;
-    height: 100%;
-    background: var(--overlay-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: -1;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -39,7 +32,7 @@
     }
 }
 
-.closing {
+.isClosing {
     .content {
         transform: scale(0.2);
     }
