@@ -56,5 +56,5 @@ export function useModal(props: UseModalProps) {
         isClosing,
         close,
         isMounted,
-    }
+    };
 }
