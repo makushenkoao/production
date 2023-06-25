@@ -59,7 +59,7 @@ export const Dropdown = memo((props: DropdownProps) => {
                             <Menu.Item
                                 as={AppLink}
                                 to={item.href}
-                                key={index}
+                                key={`dropdown-key-${index}`}
                                 disabled={item.disabled}
                             >
                                 {content}
@@ -70,7 +70,7 @@ export const Dropdown = memo((props: DropdownProps) => {
                     return (
                         <Menu.Item
                             as={Fragment}
-                            key={index}
+                            key={`dropdown-key-${index}`}
                             disabled={item.disabled}
                         >
                             {content}
