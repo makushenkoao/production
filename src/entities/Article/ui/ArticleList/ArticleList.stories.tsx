@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook';
-import { Theme } from 'app/providers/ThemeProvider';
-import { ARRAY_ARTICLE_MOCK } from 'shared/config/storybook/mock/article';
+import { ThemeDecorator } from '@/shared/config/storybook';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { ARRAY_ARTICLE_MOCK } from '@/shared/config/storybook/mock/article';
 import { ArticleView } from '../../model/consts/consts';
 import { ArticleList } from './ArticleList';
 

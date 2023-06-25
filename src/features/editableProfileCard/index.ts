@@ -2,5 +2,5 @@ export { EditableProfileCard } from './ui/EditableProfileCard/EditableProfileCar
 export {
     type ProfileSchema,
 
-} from 'features/editableProfileCard/model/types/editableProfileCardSchema';
-export { ValidateProfileError } from 'features/editableProfileCard/model/consts/consts';
+} from '@/features/editableProfileCard/model/types/editableProfileCardSchema';
+export { ValidateProfileError } from '@/features/editableProfileCard/model/consts/consts';
