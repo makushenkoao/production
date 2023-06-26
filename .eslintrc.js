@@ -79,7 +79,7 @@ module.exports = {
         'consistent-return': 'warn',
         'react/prop-types': 'warn',
         'no-plusplus': 'off',
-        'makushenkoao-plugin/path-checker': 'error',
+        'makushenkoao-plugin/path-checker': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
