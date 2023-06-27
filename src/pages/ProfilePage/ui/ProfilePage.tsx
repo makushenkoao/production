@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { EditableProfileCard } from '@/features/editableProfileCard';
-import { Page } from '@/widgets/Page/Page';
+import { Page } from '@/widgets/Page';
 
 const ProfilePage = () => {
     const { id } = useParams<{
