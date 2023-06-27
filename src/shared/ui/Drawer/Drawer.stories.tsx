@@ -3,11 +3,13 @@ import { ThemeDecorator } from '@/shared/config/storybook';
 import { Drawer } from './Drawer';
 import { Theme } from '@/shared/const/theme';
 
-// TODO - write stories
-
 const meta: Meta<typeof Drawer> = {
-    title: 'folder/Drawer',
+    title: 'shared/Drawer',
     component: Drawer,
+    args: {
+        isOpen: true,
+        children: <h1>content</h1>,
+    },
 };
 
 export default meta;
@@ -22,4 +24,10 @@ export const DarkDrawer: Story = {
     args: {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeDrawer: Story = {
+    args: {
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

@@ -3,10 +3,8 @@ import { ThemeDecorator } from '@/shared/config/storybook';
 import { RatingCard } from './RatingCard';
 import { Theme } from '@/shared/const/theme';
 
-// TODO - write stories
-
 const meta: Meta<typeof RatingCard> = {
-    title: 'folder/RatingCard',
+    title: 'shared/RatingCard',
     component: RatingCard,
 };
 

@@ -3,10 +3,10 @@ import {
     StyleDecorator,
     ThemeDecorator,
     RouterDecorator,
+    SuspenseDecorator,
 } from '../../src/shared/config/storybook';
 import 'app/styles/index.scss';
-import { SuspenseDecorator } from '../../src/shared/config/storybook/decorators/SuspenseDecorator';
-import { Theme } from '../../src';
+import { Theme } from '../../src/shared/const/theme';
 
 const preview: Preview = {
     parameters: {

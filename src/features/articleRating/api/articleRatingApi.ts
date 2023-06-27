@@ -3,7 +3,7 @@ import { Rating } from '@/entities/Rating';
 
 interface GetArticleRatingArg {
     userId: string;
-    articleId: string;
+    articleId?: string;
 }
 
 interface RateArticleArg extends GetArticleRatingArg {

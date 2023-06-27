@@ -1900,6 +1900,13 @@
       "rate": 3,
       "feedback": "Not bad",
       "id": "fbJzSza"
+    },
+    {
+      "userId": "1",
+      "articleId": "13",
+      "rate": 4,
+      "feedback": "goood",
+      "id": "mBdhHNf"
     }
   ],
   "profile-ratings": [

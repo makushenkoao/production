@@ -3,11 +3,16 @@ import { ThemeDecorator } from '@/shared/config/storybook';
 import { NotificationItem } from './NotificationItem';
 import { Theme } from '@/shared/const/theme';
 
-// TODO - write stories
-
 const meta: Meta<typeof NotificationItem> = {
-    title: 'folder/NotificationItem',
+    title: 'entities/Notification/NotificationItem',
     component: NotificationItem,
+    args: {
+        item: {
+            id: '1',
+            title: 'Повідомення',
+            description: 'Бла бла бла...',
+        },
+    },
 };
 
 export default meta;
@@ -18,6 +23,13 @@ export const LightNotificationItem: Story = {
 };
 
 export const DarkNotificationItem: Story = {
-    args: {},
+    args: {
+    },
     decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OrangeNotificationItem: Story = {
+    args: {
+    },
+    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

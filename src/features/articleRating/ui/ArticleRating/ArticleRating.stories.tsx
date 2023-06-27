@@ -2,12 +2,30 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook';
 import ArticleRating from './ArticleRating';
 import { Theme } from '@/shared/const/theme';
-
-// TODO - write stories
+import { StoreDecorator } from '@/shared/config/storybook/decorators/StoreDecorator';
 
 const meta: Meta<typeof ArticleRating> = {
     title: 'pages/ArticleRating',
     component: ArticleRating,
+    decorators: [StoreDecorator({})],
+    parameters: {
+        mockData: [
+            {
+                url: `${__API__}/article-ratings?&userId=1`,
+                method: 'GET',
+                status: 200,
+                response: [
+                    {
+                        id: '1',
+                        rate: 4,
+                        feedback: 'Хорошая статья',
+                        userId: '1',
+                        articleId: '1',
+                    },
+                ],
+            },
+        ],
+    },
 };
 
 export default meta;

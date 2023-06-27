@@ -21,6 +21,20 @@ const meta: Meta<typeof ArticleDetailsPage> = {
                     { ...ARTICLE_MOCK, id: '4' },
                 ],
             },
+            {
+                url: `${__API__}/article-ratings?&userId=1`,
+                method: 'GET',
+                status: 200,
+                response: [
+                    {
+                        id: '1',
+                        rate: 4,
+                        feedback: 'Хорошая статья',
+                        userId: '1',
+                        articleId: '1',
+                    },
+                ],
+            },
         ],
     },
 };
