@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/config/storybook/decorators/StoreDecorator';
 import { Profile } from '@/entities/Profile';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import { EditableProfileCard } from './EditableProfileCard';
+import { Theme } from '@/shared/const/theme';
 
 const form: Profile = {
     id: '1',

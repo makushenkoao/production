@@ -4,9 +4,9 @@ import {
     ThemeDecorator,
     RouterDecorator,
 } from '../../src/shared/config/storybook';
-import { Theme } from '../../src/app/providers/ThemeProvider';
 import 'app/styles/index.scss';
 import { SuspenseDecorator } from '../../src/shared/config/storybook/decorators/SuspenseDecorator';
+import { Theme } from '../../src';
 
 const preview: Preview = {
     parameters: {

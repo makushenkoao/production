@@ -11,3 +11,7 @@ export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelecto
 export {
     ArticleType, ArticleSortField, ArticleView, ArticleBlockType,
 } from './model/consts/consts';
+export {
+    ARRAY_ARTICLE_MOCK,
+    ARTICLE_MOCK,
+} from './model/consts/mock';

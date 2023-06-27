@@ -1,7 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
 import MainIcon from '@/shared/assets/icons/main.svg';
 import AboutIcon from '@/shared/assets/icons/about.svg';
-import ProfileIcon from '@/shared/assets/icons/profile.svg';
 import ArticleIcon from '@/shared/assets/icons/article.svg';
 import { getUserAuthData } from '@/entities/User';
 import { SidebarItemTypes } from '../types/sidebar';

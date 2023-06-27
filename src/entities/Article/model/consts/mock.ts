@@ -1,4 +1,5 @@
-import { Article, ArticleType, ArticleBlockType } from '@/entities/Article';
+import { ArticleBlockType, ArticleType } from '../consts/consts';
+import { Article } from '../types/article';
 
 export const ARTICLE_MOCK: Article = {
     id: '1',
@@ -24,7 +25,7 @@ export const ARTICLE_MOCK: Article = {
                 'JavaScript - це мова, програми на якій можна виконувати'
                 + ' в різних середовищах. У нашому випадку йдеться про браузери'
                 + ' та про серверну платформу Node.js. Якщо досі ви не написали жодного'
-                + " рядка коду на JS і читаєте цей текст у браузері, на настільному комп'ютері,"
+                + ' рядка коду на JS і читаєте цей текст у браузері, на настільному комп\'ютері,'
                 + ' це означає, що ви буквально за лічені секунди від своєї першої JavaScript-програми.',
                 'Існують інші способи запуску JS-коду в браузері.'
                 + ' Так, якщо говорити про звичайне використання програм JavaScript,'
@@ -78,8 +79,8 @@ export const ARTICLE_MOCK: Article = {
         {
             id: '3',
             type: ArticleBlockType.CODE,
-            code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst"
-                + " router = jsonServer.router(path.resolve(__dirname, 'db.json'));"
+            code: 'const path = require(\'path\');\n\nconst server = jsonServer.create();\n\nconst'
+                + ' router = jsonServer.router(path.resolve(__dirname, \'db.json\'));'
                 + '\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);',
         },
         {
@@ -90,7 +91,7 @@ export const ARTICLE_MOCK: Article = {
                 'JavaScript - це мова, програми на якій можна виконувати в різних середовищах.'
                 + ' У нашому випадку йдеться про браузери та про серверну платформу Node.js.'
                 + ' Якщо досі ви не написали жодного рядка коду на JS і читаєте цей текст у браузері,'
-                + " на настільному комп'ютері, це означає, що ви буквально за лічені секунди від своєї"
+                + ' на настільному комп\'ютері, це означає, що ви буквально за лічені секунди від своєї'
                 + ' першої JavaScript-програми.',
                 'Існують інші способи запуску JS-коду в браузері.'
                 + ' Так, якщо говорити про звичайне використання програм JavaScript, '
@@ -120,15 +121,15 @@ export const ARTICLE_MOCK: Article = {
                 'JavaScript - це мова, програми на якій можна виконувати в різних середовищах.'
                 + ' У нашому випадку йдеться про браузери та про серверну платформу Node.js.'
                 + ' Якщо досі ви не написали жодного рядка коду на JS і читаєте цей текст у браузері,'
-                + " на настільному комп'ютері, це означає, що ви буквально за лічені секунди"
+                + ' на настільному комп\'ютері, це означає, що ви буквально за лічені секунди'
                 + ' від своєї першої JavaScript-програми.',
             ],
         },
     ],
 };
-
-export const ARRAY_ARTICLE_MOCK = new Array(9).fill(ARTICLE_MOCK).map((obj, index) => {
-    const clonedObject = { ...obj };
-    clonedObject.id = index + 1;
-    return clonedObject;
-});
+export const ARRAY_ARTICLE_MOCK = new Array(9).fill(ARTICLE_MOCK)
+    .map((obj, index) => {
+        const clonedObject = { ...obj };
+        clonedObject.id = index + 1;
+        return clonedObject;
+    });

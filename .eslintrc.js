@@ -80,6 +80,12 @@ module.exports = {
         'react/prop-types': 'warn',
         'no-plusplus': 'off',
         'makushenkoao-plugin/path-checker': ['error', { alias: '@' }],
+        'makushenkoao-plugin/layer-imports': ['error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         'makushenkoao-plugin/public-api-imports': ['error',
             {
                 alias: '@',

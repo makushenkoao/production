@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { NotificationItem } from './NotificationItem';
+import { Theme } from '@/shared/const/theme';
 
 // TODO - write stories
 
