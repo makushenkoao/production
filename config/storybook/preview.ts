@@ -19,6 +19,7 @@ const preview: Preview = {
         },
     },
     decorators: [
+        // @ts-ignore
         StyleDecorator,
         ThemeDecorator(Theme.LIGHT),
         RouterDecorator,
