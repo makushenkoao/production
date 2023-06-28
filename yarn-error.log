@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\anton\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D slint-plugin-makushenkoao-plugin
+  C:\Program Files\nodejs\node.exe C:\Users\anton\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D eslint-plugin-unuser-imports
 
 PATH: 
   C:\Program Files\Microsoft\jdk-11.0.18.10-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Users\anton\AppData\Local\Microsoft\WindowsApps;C:\Users\anton\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\anton\AppData\Local\GitHubDesktop\bin;C:\Users\anton\AppData\Roaming\npm;C:\Users\anton\AppData\Local\Android\Sdk\platform-tools;;C:\Users\anton\OneDrive\Рабочий стол\makush\course\react-production\node_modules\.bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/slint-plugin-makushenkoao-plugin: Not found
+  Error: https://registry.yarnpkg.com/eslint-plugin-unuser-imports: Not found
       at params.callback [as _callback] (C:\Users\anton\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
       at self.callback (C:\Users\anton\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
       at Request.emit (node:events:513:28)
@@ -104,7 +104,7 @@ npm manifest:
       "eslint-plugin-i18next": "^5.1.2",
       "eslint-plugin-import": "^2.27.5",
       "eslint-plugin-jsx-a11y": "^6.7.1",
-      "eslint-plugin-makushenkoao-plugin": "^0.0.4",
+      "eslint-plugin-makushenkoao-plugin": "^0.0.6",
       "eslint-plugin-n": "^15.7.0",
       "eslint-plugin-promise": "^6.1.1",
       "eslint-plugin-react": "^7.32.2",
@@ -7306,10 +7306,10 @@ Lockfile:
       object.fromentries "^2.0.6"
       semver "^6.3.0"
   
-  eslint-plugin-makushenkoao-plugin@^0.0.4:
-    version "0.0.4"
-    resolved "https://registry.yarnpkg.com/eslint-plugin-makushenkoao-plugin/-/eslint-plugin-makushenkoao-plugin-0.0.4.tgz#b1a67a4068716c85e2de590eb5b14df2275b6712"
-    integrity sha512-qjA3T8XgKk8Qi4wVaF1pYrLULnPN8ysnrb1FEyeq3AuA2Oc7ZEiEHLxqAn/4WNfgLjDwqGh101bA/XhLF+G9NQ==
+  eslint-plugin-makushenkoao-plugin@^0.0.6:
+    version "0.0.6"
+    resolved "https://registry.yarnpkg.com/eslint-plugin-makushenkoao-plugin/-/eslint-plugin-makushenkoao-plugin-0.0.6.tgz#719428d62678b413ec122e46fef30529259408e2"
+    integrity sha512-90q/xFl0DPCFIvG/LMEoBVyZrTGf9ueZb3nDHlWAX1oesTyWzNYvUr10KooPkgoaA/s4rTeAymUvam2r3Q4hYg==
     dependencies:
       micromatch "^4.0.5"
       requireindex "^1.2.0"
