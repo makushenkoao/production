@@ -7117,10 +7117,10 @@ eslint-plugin-jsx-a11y@^6.7.1:
     object.fromentries "^2.0.6"
     semver "^6.3.0"
 
-eslint-plugin-makushenkoao-plugin@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-makushenkoao-plugin/-/eslint-plugin-makushenkoao-plugin-0.0.6.tgz#719428d62678b413ec122e46fef30529259408e2"
-  integrity sha512-90q/xFl0DPCFIvG/LMEoBVyZrTGf9ueZb3nDHlWAX1oesTyWzNYvUr10KooPkgoaA/s4rTeAymUvam2r3Q4hYg==
+eslint-plugin-makushenkoao-plugin@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-makushenkoao-plugin/-/eslint-plugin-makushenkoao-plugin-0.0.7.tgz#d8af1033ad56d5100e55e22a0bc34f6baafd37f0"
+  integrity sha512-Vg2tQ7GhmT6uH3pvqnTdeZZ8Ed9rAvfeM8j+Rsyu5NLppRpaMiVqjkUIxWuxdd7+ih5XiJWl11D2qNL0VeTaGg==
   dependencies:
     micromatch "^4.0.5"
     requireindex "^1.2.0"
