@@ -71,7 +71,7 @@ export const buildPlugins = (
                     },
                 ],
             }),
-        )
+        );
     }
 
     return plugins as WebpackPluginInstance[];
