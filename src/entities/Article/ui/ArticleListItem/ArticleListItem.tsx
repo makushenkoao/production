@@ -10,14 +10,9 @@ import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { AppLink } from '@/shared/ui/AppLink';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
-import {
-    Article,
-    ArticleTextBlock,
-} from '../../model/types/article';
-import {
-    ArticleTextBlockComponent,
-} from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { RoutePath } from '@/shared/const/router';
+import { Article, ArticleTextBlock, } from '../../model/types/article';
+import { ArticleTextBlockComponent, } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { getRouteArticleDetails } from '@/shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;
@@ -62,7 +57,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
                     )}
                     <div className={cls.footer}>
-                        <AppLink to={RoutePath.article_details + article.id} target={target}>
+                        <AppLink to={getRouteArticleDetails(article.id)} target={target}>
                             <Button theme={ButtonTheme.OUTLINE}>{t('Читати далі')}</Button>
                         </AppLink>
                         {views}
@@ -74,7 +69,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <AppLink
-            to={RoutePath.article_details + article.id}
+            to={getRouteArticleDetails(article.id)}
             target={target}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >

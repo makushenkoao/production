@@ -5,11 +5,9 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
-import {
-    getUserAuthData, isUserAdmin, isUserManager, userActions,
-} from '@/entities/User';
+import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
 
 interface AvatarDropdownProps {
     className?: string;
@@ -42,14 +40,14 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                     ? [
                         {
                             content: t('Адмінка'),
-                            href: RoutePath.admin_panel,
+                            href: getRouteAdmin(),
                         },
                     ]
                     : []
                 ),
                 {
                     content: t('Профіль'),
-                    href: RoutePath.profile + userAuthData.id,
+                    href: getRouteProfile(userAuthData.id),
                 },
                 {
                     content: <Text text={t('Вийти')} theme={TextTheme.ERROR} />,

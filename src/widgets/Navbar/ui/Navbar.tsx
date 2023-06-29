@@ -11,7 +11,7 @@ import { getUserAuthData } from '@/entities/User';
 import { HStack } from '@/shared/ui/Stack';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import cls from './Navbar.module.scss';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleCreate, getRouteMain } from '@/shared/const/router';
 
 interface NavbarProps {
     className?: string
@@ -32,7 +32,7 @@ export const Navbar = memo((props: NavbarProps) => {
     }, []);
 
     const logo = (
-        <AppLink to={RoutePath.main}>
+        <AppLink to={getRouteMain()}>
             <Text theme={TextTheme.INVERTED} title={t('MAO')} className={cls.appName} />
         </AppLink>
     );
@@ -42,7 +42,7 @@ export const Navbar = memo((props: NavbarProps) => {
             <header className={classNames(cls.Navbar, {}, [className])}>
                 {logo}
                 <HStack gap="16" align="center">
-                    <AppLink to={RoutePath.article_create}>
+                    <AppLink to={getRouteArticleCreate()}>
                         {t('Створити статтю')}
                     </AppLink>
                     <HStack gap="16">
