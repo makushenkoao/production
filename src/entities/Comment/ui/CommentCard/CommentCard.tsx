@@ -42,10 +42,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
                     width={30}
                     height={30}
                     rounded
-                    src={comment.user.avatar
-                        ? comment.user.avatar
-                        // TODO - add default user icon
-                        : 'https://cdn-icons-png.flaticon.com/512/149/149071.png'}
+                    src={comment.user.avatar}
                 />
                 <Text title={comment.user.username} />
             </AppLink>

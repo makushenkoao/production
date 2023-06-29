@@ -1,4 +1,8 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppImage } from '../AppImage';
+import { Skeleton } from '../Skeleton';
+import { Icon } from '../Icon';
+import UserIcon from '../../assets/icons/user.svg';
 import cls from './Avatar.module.scss';
 
 interface AvatarProps {
@@ -8,15 +12,33 @@ interface AvatarProps {
   width?: number;
   height?: number;
   rounded?: boolean;
+  fallbackInverted?: boolean;
 }
 
 export const Avatar = (props: AvatarProps) => {
     const {
-        src, alt, className, height = 100, width = 100, rounded,
+        src, alt, className, height = 100, width = 100, rounded, fallbackInverted
     } = props;
 
+    const fallback = (
+        <Skeleton
+            width={width}
+            height={height}
+            borderRadius={rounded ? '50%' : undefined}
+        />
+    );
+
+    const errorFallback = (
+        <Icon
+            svg={UserIcon}
+            width={width}
+            height={height}
+            inverted={fallbackInverted}
+        />
+    );
+
     return (
-        <img
+        <AppImage
             src={src}
             alt={alt}
             width={width}
@@ -24,6 +46,8 @@ export const Avatar = (props: AvatarProps) => {
             className={classNames(cls.Avatar, {
                 [cls.rounded]: rounded,
             }, [className])}
+            fallback={fallback}
+            errorFallback={errorFallback}
         />
     );
 };
