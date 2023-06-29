@@ -18,6 +18,7 @@
     "sb": "storybook dev -p 6006 -c ./config/storybook",
     "sb:build": "storybook build -c ./config/storybook",
     "test:ui": "yarn loki test",
+    "test:ui:update": "yarn loki update",
     "test:ui:ci": "concurrently --kill-others --raw --success first \"yarn sb\" \"yarn test:ui\" \"deelay\"",
     "test:ui:ok": "yarn loki approve",
     "test:ui:generate": "npm-run-all visual:report:*",
