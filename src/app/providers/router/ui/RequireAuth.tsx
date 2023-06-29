@@ -23,7 +23,7 @@ export const RequireAuth = (props: RequireAuthProps) => {
     if (!auth || !hasRequiredRoles) {
         return (
             <Navigate
-                to={getRouteMain()}
+                to={getRouteForbidden()}
                 state={{
                     from: location,
                 }}
@@ -35,7 +35,7 @@ export const RequireAuth = (props: RequireAuthProps) => {
     if (!hasRequiredRoles) {
         return (
             <Navigate
-                to={getRouteForbidden()}
+                to={getRouteMain()}
                 state={{
                     from: location,
                 }}

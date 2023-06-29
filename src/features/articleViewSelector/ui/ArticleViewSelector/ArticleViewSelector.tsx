@@ -1,11 +1,10 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import ListIcon from '@/shared/assets/icons/list.svg';
-import TiledIcon from '@/shared/assets/icons/tiled.svg';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { Icon } from '@/shared/ui/Icon';
-import { ArticleView } from '../../model/consts/consts';
+import { ArticleView } from '@/entities/Article';
+import { VIEW_TYPES } from '../../model/consts';
 import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {
@@ -13,17 +12,6 @@ interface ArticleViewSelectorProps {
     view: ArticleView,
     onViewClick?: (view: ArticleView) => void
 }
-
-const viewTypes = [
-    {
-        view: ArticleView.SMALL,
-        icon: TiledIcon,
-    },
-    {
-        view: ArticleView.BIG,
-        icon: ListIcon,
-    },
-];
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     const { className, onViewClick, view } = props;
@@ -37,7 +25,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
         <div
             className={classNames(cls.ArticleViewSelector, {}, [className])}
         >
-            {viewTypes.map((viewType) => (
+            {VIEW_TYPES.map((viewType) => (
                 <Button
                     key={viewType.view}
                     onClick={onClick(viewType.view)}

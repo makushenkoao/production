@@ -6,9 +6,6 @@ import {
     ArticleSortField,
     ArticleType,
     ArticleView,
-    ArticleViewSelector,
-    ArticleSortSelector,
-    ArticleTypeTabs,
 } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Card } from '@/shared/ui/Card';
@@ -23,6 +20,9 @@ import {
     getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort, getArticlesPageType,
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
+import { ArticleSortSelector } from '@/features/articleSortSelector';
+import { ArticleViewSelector } from '@/features/articleViewSelector';
+import { ArticleTypeTabs } from '@/features/articleTypeTabs';
 import cls from './ArticlesPageFilters.module.scss';
 
 interface ArticlesPageFiltersProps {

@@ -25,7 +25,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         element: <AboutPage />,
     },
     [AppRoutes.PROFILE]: {
-        path: getRouteProfile('id'),
+        path: getRouteProfile(':id'),
         element: <ProfilePage />,
         authOnly: true,
     },
@@ -35,7 +35,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         authOnly: true,
     },
     [AppRoutes.ARTICLE_DETAILS]: {
-        path: getRouteArticleDetails('id'),
+        path: getRouteArticleDetails(':id'),
         element: <ArticleDetailsPage />,
         authOnly: true,
     },
@@ -45,11 +45,11 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         authOnly: true,
     },
     [AppRoutes.ARTICLE_EDIT]: {
-        path: getRouteArticleEdit('id'),
+        path: getRouteArticleEdit(':id'),
         element: <ArticleEditPage />,
         authOnly: true,
     },
-    [AppRoutes.ADMIN_PANEL]: {
+    [AppRoutes.ADMIN]: {
         path: getRouteAdmin(),
         element: <AdminPanelPage />,
         authOnly: true,
