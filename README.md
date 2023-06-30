@@ -146,27 +146,26 @@ The `scripts` folder contains various scripts for refactoring\simplification of 
 
 ----
 
-## CI pipeline и pre commit хуки
+## CI pipeline and pre-commit hooks
 
-Конфигурация github actions находится в /.github/workflows.
-В ci прогоняются все виды тестов, сборка проекта и сторибука, линтинг.
+The github action config is in /.github/workflows.
+All types of tests, assembly of the project and storybook, linting are carried out in it.
 
-В прекоммит хуках проверяем проект линтерами, конфиг в /.husky
+In precommit hooks, we check the project with linters, the config is in /.husky
 
 ----
 
-### Работа с данными
+### Working with data
 
-Взаимодействие с данными осуществляется с помощью redux toolkit.
-По возможности переиспользуемые сущности необходимо нормализовать с помощью EntityAdapter
+Interaction with data was carried out using the Redux toolkit.
+Whenever possible, reusable entities should be normalized using the EntityAdapter
 
-Запросы на сервер отправляются с помощью [RTK query](/src/shared/api/rtkApi.ts)
+Server requests are sent using [RTK query](/src/shared/api/rtkApi.ts)
 
-Для асинхронного подключения редюсеров (чтобы не тянуть их в общий бандл) используется
+For asynchronous connection of reducers (so as not to pull them into a common bundle), use
 [DynamicModuleLoader](/src/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader.tsx)
 
 ----
-
 
 ## Entities
 
