@@ -8,7 +8,7 @@ const ProfilePage = () => {
     }>();
 
     return (
-        <Page>
+        <Page data-testid="ProfilePage">
             <EditableProfileCard id={id} />
         </Page>
     );
