@@ -33,8 +33,8 @@ import {
     getArticleDetailsError,
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
-import cls from './ArticleDetails.module.scss';
 import { ArticleBlock } from '../../model/types/article';
+import cls from './ArticleDetails.module.scss';
 
 const reducers: ReducersList = {
     articleDetails: articleDetailsReducer,
