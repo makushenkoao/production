@@ -1863,6 +1863,15 @@
         "MANAGER"
       ],
       "avatar": "https://www.shareicon.net/data/512x512/2016/09/01/822726_user_512x512.png"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://www.shareicon.net/data/512x512/2016/09/01/822726_user_512x512.png"
     }
   ],
   "article-ratings": [
