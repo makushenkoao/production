@@ -125,25 +125,31 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                         alt="Article image"
                     />
                 </HStack>
-                <Text
-                    title={article?.title}
-                    text={article?.subtitle}
-                    size={TextSize.L}
-                />
-                <HStack gap="8">
-                    <Icon svg={EyeIcon} />
+                <VStack
+                    align="normal"
+                    max
+                    data-testid="ArticleDetails.Info"
+                >
                     <Text
-                        text={String(article?.views)}
+                        title={article?.title}
+                        text={article?.subtitle}
+                        size={TextSize.L}
                     />
-                </HStack>
-                <HStack gap="8">
-                    <Icon svg={CalendarIcon} />
-                    <Text
-                        text={article?.createdAt}
-                    />
-                </HStack>
-                <VStack gap="8">
-                    {article?.blocks.map(renderBlock)}
+                    <HStack gap="8">
+                        <Icon svg={EyeIcon} />
+                        <Text
+                            text={String(article?.views)}
+                        />
+                    </HStack>
+                    <HStack gap="8">
+                        <Icon svg={CalendarIcon} />
+                        <Text
+                            text={article?.createdAt}
+                        />
+                    </HStack>
+                    <VStack gap="8">
+                        {article?.blocks.map(renderBlock)}
+                    </VStack>
                 </VStack>
             </>
         );

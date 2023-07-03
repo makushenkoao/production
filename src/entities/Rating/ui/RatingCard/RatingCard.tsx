@@ -67,12 +67,13 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 value={feedback}
                 onChange={setFeedback}
                 autofocus
+                data-testid="RatingCard.Input"
             />
             <HStack max gap="16" justify="end">
-                <Button onClick={cancelHandle} theme={ButtonTheme.OUTLINE_RED}>
+                <Button onClick={cancelHandle} theme={ButtonTheme.OUTLINE_RED} data-testid="RatingCard.Close">
                     {t('Закрити')}
                 </Button>
-                <Button onClick={acceptHandle}>
+                <Button onClick={acceptHandle} data-testid="RatingCard.Send">
                     {t('Відпрати')}
                 </Button>
             </HStack>
@@ -83,6 +84,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
         <Card
             max
             className={classNames('', {}, [className])}
+            data-testid="RatingCard"
         >
             <VStack align="center" gap="8" max>
                 <Text title={starsCount ? t('Дякую за оцінку!') : title} />
