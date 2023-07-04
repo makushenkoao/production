@@ -35,8 +35,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightArticlesPage: Story = {
-    args: {
-    },
+    args: {},
 };
 
 export const DarkArticlesPage: Story = {

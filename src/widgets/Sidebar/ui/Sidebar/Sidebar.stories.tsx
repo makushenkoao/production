@@ -13,55 +13,65 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightSidebarAuth: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        user: {
-            authData: {},
-        },
-    })],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: {},
+            },
+        }),
+    ],
 };
 
 export const LightSidebarNoAuth: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        user: {},
-    })],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            user: {},
+        }),
+    ],
 };
 
 export const DarkSidebarAuth: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        user: {
-            authData: {},
-        },
-    }), ThemeDecorator(Theme.DARK)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: {},
+            },
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const DarkSidebarNoAuth: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        user: {},
-    }), ThemeDecorator(Theme.DARK)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            user: {},
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const OrangeSidebarAuth: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        user: {
-            authData: {},
-        },
-    }), ThemeDecorator(Theme.ORANGE)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: {},
+            },
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };
 
 export const OrangeSidebarNoAuth: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        user: {},
-    }), ThemeDecorator(Theme.ORANGE)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            user: {},
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };

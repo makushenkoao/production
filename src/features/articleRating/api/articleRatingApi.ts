@@ -7,8 +7,8 @@ interface GetArticleRatingArg {
 }
 
 interface RateArticleArg extends GetArticleRatingArg {
-    rate: number
-    feedback?: string
+    rate: number;
+    feedback?: string;
 }
 
 export const articleRatingApi = rtkApi.injectEndpoints({
@@ -32,7 +32,5 @@ export const articleRatingApi = rtkApi.injectEndpoints({
     }),
 });
 
-export const {
-    useGetArticleRatingQuery,
-    useRateArticleMutation,
-} = articleRatingApi;
+export const { useGetArticleRatingQuery, useRateArticleMutation } =
+    articleRatingApi;

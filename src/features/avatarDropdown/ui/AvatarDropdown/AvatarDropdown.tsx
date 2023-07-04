@@ -6,7 +6,10 @@ import { Text, TextTheme } from '@/shared/ui/Text';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
 import {
-    getUserAuthData, isUserAdmin, isUserManager, userActions,
+    getUserAuthData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
 } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
@@ -40,13 +43,12 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             items={[
                 ...(isAdminPanelAvailable
                     ? [
-                        {
-                            content: t('Адмінка'),
-                            href: getRouteAdmin(),
-                        },
-                    ]
-                    : []
-                ),
+                          {
+                              content: t('Адмінка'),
+                              href: getRouteAdmin(),
+                          },
+                      ]
+                    : []),
                 {
                     content: t('Профіль'),
                     href: getRouteProfile(userAuthData.id),
@@ -56,7 +58,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                     onClick: onLogout,
                 },
             ]}
-            trigger={(
+            trigger={
                 <Avatar
                     src={userAuthData.avatar}
                     height={30}
@@ -64,7 +66,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                     rounded
                     alt="User"
                 />
-            )}
+            }
             direction="bottom left"
         />
     );

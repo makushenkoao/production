@@ -13,8 +13,8 @@ export const removeComment = (commentId: string) => {
 declare global {
     namespace Cypress {
         interface Chainable {
-            addComment(test: string): Chainable<void>
-            removeComment(commentId: string): Chainable<void>
+            addComment(test: string): Chainable<void>;
+            removeComment(commentId: string): Chainable<void>;
         }
     }
 }

@@ -23,13 +23,11 @@ export const LightNotificationItem: Story = {
 };
 
 export const DarkNotificationItem: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const OrangeNotificationItem: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.ORANGE)],
 };

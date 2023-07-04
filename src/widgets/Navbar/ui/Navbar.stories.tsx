@@ -13,57 +13,60 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightNavbarNoAuth: Story = {
-    args: {
-    },
+    args: {},
     decorators: [StoreDecorator({})],
 };
 
 export const DarkNavbarNoAuth: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({})],
 };
 
 export const OrangeNavbarNoAuth: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.ORANGE), StoreDecorator({})],
 };
 
 export const LightNavbarAuth: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        user: {
-            authData: {
-                username: '123',
-                id: '1',
+    args: {},
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: {
+                    username: '123',
+                    id: '1',
+                },
             },
-        },
-    })],
+        }),
+    ],
 };
 
 export const DarkNavbarAuth: Story = {
-    args: {
-    },
-    decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({
-        user: {
-            authData: {
-                username: '123',
-                id: '1',
+    args: {},
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({
+            user: {
+                authData: {
+                    username: '123',
+                    id: '1',
+                },
             },
-        },
-    })],
+        }),
+    ],
 };
 
 export const OrangeNavbarAuth: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE), StoreDecorator({
-        user: {
-            authData: {
-                username: '123',
-                id: '1',
+    decorators: [
+        ThemeDecorator(Theme.ORANGE),
+        StoreDecorator({
+            user: {
+                authData: {
+                    username: '123',
+                    id: '1',
+                },
             },
-        },
-    })],
+        }),
+    ],
 };

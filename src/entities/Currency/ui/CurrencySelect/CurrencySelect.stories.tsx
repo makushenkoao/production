@@ -12,18 +12,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightCurrencySelect: Story = {
-    args: {
-    },
+    args: {},
 };
 
 export const DarkCurrencySelect: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const OrangeCurrencySelect: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.ORANGE)],
 };

@@ -16,18 +16,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightModal: Story = {
-    args: {
-    },
+    args: {},
 };
 
 export const DarkModal: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const OrangeModal: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.ORANGE)],
 };

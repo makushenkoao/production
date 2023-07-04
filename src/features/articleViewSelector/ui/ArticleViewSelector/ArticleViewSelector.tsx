@@ -9,8 +9,8 @@ import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {
     className?: string;
-    view: ArticleView,
-    onViewClick?: (view: ArticleView) => void
+    view: ArticleView;
+    onViewClick?: (view: ArticleView) => void;
 }
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
@@ -22,9 +22,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     };
 
     return (
-        <div
-            className={classNames(cls.ArticleViewSelector, {}, [className])}
-        >
+        <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
             {VIEW_TYPES.map((viewType) => (
                 <Button
                     key={viewType.view}

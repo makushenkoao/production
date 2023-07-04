@@ -16,18 +16,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightDrawer: Story = {
-    args: {
-    },
+    args: {},
 };
 
 export const DarkDrawer: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const OrangeDrawer: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.ORANGE)],
 };

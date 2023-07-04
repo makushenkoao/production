@@ -44,81 +44,105 @@ type Story = StoryObj<typeof meta>;
 
 export const LightArticleDetailsPage: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        articleDetails: {
-            data: ARTICLE_MOCK,
-        },
-    })],
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                data: ARTICLE_MOCK,
+            },
+        }),
+    ],
 };
 
 export const DarkArticleDetailsPage: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        articleDetails: {
-            data: ARTICLE_MOCK,
-        },
-    }), ThemeDecorator(Theme.DARK)],
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                data: ARTICLE_MOCK,
+            },
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const OrangeArticleDetailsPage: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        articleDetails: {
-            data: ARTICLE_MOCK,
-        },
-    }), ThemeDecorator(Theme.ORANGE)],
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                data: ARTICLE_MOCK,
+            },
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };
 
 export const LightArticleDetailsPageLoading: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        articleDetails: {
-            isLoading: true,
-        },
-    })],
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                isLoading: true,
+            },
+        }),
+    ],
 };
 
 export const DarkArticleDetailsPageLoading: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        articleDetails: {
-            isLoading: true,
-        },
-    }), ThemeDecorator(Theme.DARK)],
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                isLoading: true,
+            },
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const OrangeArticleDetailsPageLoading: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        articleDetails: {
-            isLoading: true,
-        },
-    }), ThemeDecorator(Theme.ORANGE)],
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                isLoading: true,
+            },
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };
 
 export const LightArticleDetailsPageError: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        articleDetails: {
-            error: 'error',
-        },
-    })],
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                error: 'error',
+            },
+        }),
+    ],
 };
 
 export const DarkArticleDetailsPageError: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        articleDetails: {
-            error: 'error',
-        },
-    }), ThemeDecorator(Theme.DARK)],
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                error: 'error',
+            },
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const OrangeArticleDetailsPageError: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        articleDetails: {
-            error: 'error',
-        },
-    }), ThemeDecorator(Theme.ORANGE)],
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                error: 'error',
+            },
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };

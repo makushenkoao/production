@@ -29,81 +29,105 @@ type Story = StoryObj<typeof meta>;
 
 export const LightEditableProfileCard: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        profile: {
-            form,
-        },
-    })],
+    decorators: [
+        StoreDecorator({
+            profile: {
+                form,
+            },
+        }),
+    ],
 };
 
 export const DarkEditableProfileCard: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({
-        profile: {
-            form,
-        },
-    })],
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({
+            profile: {
+                form,
+            },
+        }),
+    ],
 };
 
 export const OrangeEditableProfileCard: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE), StoreDecorator({
-        profile: {
-            form,
-        },
-    })],
+    decorators: [
+        ThemeDecorator(Theme.ORANGE),
+        StoreDecorator({
+            profile: {
+                form,
+            },
+        }),
+    ],
 };
 
 export const LightEditableProfileCardLoading: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        profile: {
-            isLoading: true,
-        },
-    })],
+    decorators: [
+        StoreDecorator({
+            profile: {
+                isLoading: true,
+            },
+        }),
+    ],
 };
 
 export const DarkEditableProfileCardLoading: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({
-        profile: {
-            isLoading: true,
-        },
-    })],
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({
+            profile: {
+                isLoading: true,
+            },
+        }),
+    ],
 };
 
 export const OrangeEditableProfileCardLoading: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE), StoreDecorator({
-        profile: {
-            isLoading: true,
-        },
-    })],
+    decorators: [
+        ThemeDecorator(Theme.ORANGE),
+        StoreDecorator({
+            profile: {
+                isLoading: true,
+            },
+        }),
+    ],
 };
 
 export const LightEditableProfileCardError: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        profile: {
-            error: 'error',
-        },
-    })],
+    decorators: [
+        StoreDecorator({
+            profile: {
+                error: 'error',
+            },
+        }),
+    ],
 };
 
 export const DarkEditableProfileCardError: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({
-        profile: {
-            error: 'error',
-        },
-    })],
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({
+            profile: {
+                error: 'error',
+            },
+        }),
+    ],
 };
 
 export const OrangeEditableProfileCardError: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE), StoreDecorator({
-        profile: {
-            error: 'error',
-        },
-    })],
+    decorators: [
+        ThemeDecorator(Theme.ORANGE),
+        StoreDecorator({
+            profile: {
+                error: 'error',
+            },
+        }),
+    ],
 };

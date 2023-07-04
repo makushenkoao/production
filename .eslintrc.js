@@ -9,6 +9,7 @@ module.exports = {
         'airbnb',
         'plugin:i18next/recommended',
         'plugin:storybook/recommended',
+        'prettier',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -27,13 +28,13 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
         'unused-imports/no-unused-imports': 'error',
-        indent: [2, 4],
-        'react/jsx-filename-extension': [2, {
-            extensions: ['.js', '.jsx', '.tsx'],
-        }],
+        'react/jsx-filename-extension': [
+            2,
+            {
+                extensions: ['.js', '.jsx', '.tsx'],
+            },
+        ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
@@ -48,28 +49,34 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'no-return-await': 'off',
         'react/button-has-type': 'warn',
-        'i18next/no-literal-string': ['error', {
-            markupOnly: true,
-            ignoreAttribute: [
-                'data-testid',
-                'to',
-                'name',
-                'alt',
-                'target',
-                'align',
-                'direction',
-                'gap',
-                'justify',
-                'role',
-                'as',
-                'direction',
-                'borderRadius',
-            ],
-        }],
-        'max-len': ['error', {
-            ignoreComments: true,
-            code: 120,
-        }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: [
+                    'data-testid',
+                    'to',
+                    'name',
+                    'alt',
+                    'target',
+                    'align',
+                    'direction',
+                    'gap',
+                    'justify',
+                    'role',
+                    'as',
+                    'direction',
+                    'borderRadius',
+                ],
+            },
+        ],
+        'max-len': [
+            'error',
+            {
+                ignoreComments: true,
+                code: 120,
+            },
+        ],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'arrow-body-style': 'off',
@@ -82,18 +89,30 @@ module.exports = {
         'react/prop-types': 'warn',
         'no-plusplus': 'off',
         'makushenkoao-plugin/path-checker': ['error', { alias: '@' }],
-        'makushenkoao-plugin/layer-imports': ['error',
+        'makushenkoao-plugin/layer-imports': [
+            'error',
             {
                 alias: '@',
                 ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
             },
         ],
-        'makushenkoao-plugin/public-api-imports': ['error',
+        'makushenkoao-plugin/public-api-imports': [
+            'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
+        // 'react/jsx-max-props-per-line': [
+        //     'error',
+        //     {
+        //         maximum: 3,
+        //     },
+        // ],
     },
     globals: {
         __IS_DEV__: true,

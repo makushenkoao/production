@@ -14,8 +14,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightAvatarDropdown: Story = {
-    args: {
-    },
+    args: {},
 };
 
 export const DarkAvatarDropdown: Story = {

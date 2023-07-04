@@ -6,18 +6,24 @@ import UserIcon from '../../assets/icons/user.svg';
 import cls from './Avatar.module.scss';
 
 interface AvatarProps {
-  className?: string;
-  src?: string;
-  alt?: string;
-  width?: number;
-  height?: number;
-  rounded?: boolean;
-  fallbackInverted?: boolean;
+    className?: string;
+    src?: string;
+    alt?: string;
+    width?: number;
+    height?: number;
+    rounded?: boolean;
+    fallbackInverted?: boolean;
 }
 
 export const Avatar = (props: AvatarProps) => {
     const {
-        src, alt, className, height = 100, width = 100, rounded, fallbackInverted,
+        src,
+        alt,
+        className,
+        height = 100,
+        width = 100,
+        rounded,
+        fallbackInverted,
     } = props;
 
     const fallback = (
@@ -43,9 +49,13 @@ export const Avatar = (props: AvatarProps) => {
             alt={alt}
             width={width}
             height={height}
-            className={classNames(cls.Avatar, {
-                [cls.rounded]: rounded,
-            }, [className])}
+            className={classNames(
+                cls.Avatar,
+                {
+                    [cls.rounded]: rounded,
+                },
+                [className],
+            )}
             fallback={fallback}
             errorFallback={errorFallback}
         />

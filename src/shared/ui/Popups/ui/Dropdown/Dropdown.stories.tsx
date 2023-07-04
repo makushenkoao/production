@@ -18,13 +18,15 @@ const meta: Meta<typeof Dropdown> = {
                 content: 'third',
             },
         ],
-        trigger: <Avatar
-            src={userPng}
-            height={30}
-            width={30}
-            rounded
-            alt="User"
-        />,
+        trigger: (
+            <Avatar
+                src={userPng}
+                height={30}
+                width={30}
+                rounded
+                alt="User"
+            />
+        ),
     },
 };
 

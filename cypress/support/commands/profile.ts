@@ -29,8 +29,8 @@ export const resetProfile = (profileId: string) => {
 declare global {
     namespace Cypress {
         interface Chainable {
-            updateProfile(firstname: string, lastname: string): Chainable<void>
-            resetProfile(profileId: string): Chainable<void>
+            updateProfile(firstname: string, lastname: string): Chainable<void>;
+            resetProfile(profileId: string): Chainable<void>;
         }
     }
 }

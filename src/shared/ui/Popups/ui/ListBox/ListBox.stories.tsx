@@ -11,7 +11,6 @@ const meta: Meta<typeof ListBox> = {
             { content: '1asfasfasf21233', value: '1232' },
         ],
     },
-
 };
 
 export default meta;

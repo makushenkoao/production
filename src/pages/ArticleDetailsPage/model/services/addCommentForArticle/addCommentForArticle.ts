@@ -4,35 +4,32 @@ import { Comment } from '@/entities/Comment';
 import { getUserAuthData } from '@/entities/User';
 import { addCommentFormActions } from '@/features/AddCommentForm';
 import { getArticleDetailsData } from '@/entities/Article';
-import {
-    fetchCommentsByArticleId,
-} from '../fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { fetchCommentsByArticleId } from '../fetchCommentsByArticleId/fetchCommentsByArticleId';
 
-export const addCommentForArticle = createAsyncThunk<Comment, string, ThunkConfig<string>>(
-    'article/addCommentForArticle',
-    async (text, ThunkApi) => {
-        const {
-            rejectWithValue, extra, getState, dispatch,
-        } = ThunkApi;
-        const userData = getUserAuthData(getState());
-        const article = getArticleDetailsData(getState());
+export const addCommentForArticle = createAsyncThunk<
+    Comment,
+    string,
+    ThunkConfig<string>
+>('article/addCommentForArticle', async (text, ThunkApi) => {
+    const { rejectWithValue, extra, getState, dispatch } = ThunkApi;
+    const userData = getUserAuthData(getState());
+    const article = getArticleDetailsData(getState());
 
-        if (!userData || !text || !article) {
-            return rejectWithValue('no data');
-        }
+    if (!userData || !text || !article) {
+        return rejectWithValue('no data');
+    }
 
-        try {
-            const { data } = await extra.api.post<Comment>('/comments', {
-                articleId: article?.id,
-                userId: userData.id,
-                text,
-            });
-            if (!data) throw new Error();
-            dispatch(addCommentFormActions.setText(''));
-            dispatch(fetchCommentsByArticleId(article.id));
-            return data;
-        } catch (e) {
-            return rejectWithValue('error');
-        }
-    },
-);
+    try {
+        const { data } = await extra.api.post<Comment>('/comments', {
+            articleId: article?.id,
+            userId: userData.id,
+            text,
+        });
+        if (!data) throw new Error();
+        dispatch(addCommentFormActions.setText(''));
+        dispatch(fetchCommentsByArticleId(article.id));
+        return data;
+    } catch (e) {
+        return rejectWithValue('error');
+    }
+});

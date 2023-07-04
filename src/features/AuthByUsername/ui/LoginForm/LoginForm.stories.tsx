@@ -17,73 +17,88 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightLoginForm: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        loginForm,
-    })],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            loginForm,
+        }),
+    ],
 };
 
 export const DarkLoginForm: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        loginForm,
-    }), ThemeDecorator(Theme.DARK)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            loginForm,
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const OrangeLoginForm: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        loginForm,
-    }), ThemeDecorator(Theme.ORANGE)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            loginForm,
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };
 
 export const LightLoginFormError: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        loginForm: loginFormError,
-    })],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            loginForm: loginFormError,
+        }),
+    ],
 };
 
 export const DarkLoginFormError: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        loginForm: loginFormError,
-    }), ThemeDecorator(Theme.DARK)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            loginForm: loginFormError,
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const OrangeLoginFormError: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        loginForm: loginFormError,
-    }), ThemeDecorator(Theme.ORANGE)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            loginForm: loginFormError,
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };
 
 export const LightLoginFormLoading: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        loginForm: loginFormLoading,
-    })],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            loginForm: loginFormLoading,
+        }),
+    ],
 };
 
 export const DarkLoginFormLoading: Story = {
-    args: {
-    },
-    decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({
-        loginForm: loginFormLoading,
-    })],
+    args: {},
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({
+            loginForm: loginFormLoading,
+        }),
+    ],
 };
 
 export const OrangeLoginFormLoading: Story = {
-    args: {
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE), StoreDecorator({
-        loginForm: loginFormLoading,
-    })],
+    args: {},
+    decorators: [
+        ThemeDecorator(Theme.ORANGE),
+        StoreDecorator({
+            loginForm: loginFormLoading,
+        }),
+    ],
 };

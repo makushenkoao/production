@@ -12,18 +12,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightPageError: Story = {
-    args: {
-    },
+    args: {},
 };
 
 export const DarkPageError: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const OrangePageError: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.ORANGE)],
 };

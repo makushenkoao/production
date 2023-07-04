@@ -17,15 +17,13 @@ export interface DropdownItem {
 
 interface DropdownProps {
     className?: string;
-    items: DropdownItem[]
+    items: DropdownItem[];
     trigger: ReactNode;
     direction?: DropdownDirection;
 }
 
 export const Dropdown = memo((props: DropdownProps) => {
-    const {
-        className, items, trigger, direction = 'bottom right',
-    } = props;
+    const { className, items, trigger, direction = 'bottom right' } = props;
 
     const menuClasses = [mapDirectionClass[direction]];
 
@@ -34,21 +32,17 @@ export const Dropdown = memo((props: DropdownProps) => {
             as="div"
             className={classNames('', {}, [className, popupCls.popup])}
         >
-            <Menu.Button className={popupCls.trigger}>
-                {trigger}
-            </Menu.Button>
-            <Menu.Items
-                className={classNames(cls.menu, {}, menuClasses)}
-            >
+            <Menu.Button className={popupCls.trigger}>{trigger}</Menu.Button>
+            <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
                 {items.map((item, index) => {
-                    const content = ({ active }: {
-                        active: boolean;
-                    }) => (
+                    const content = ({ active }: { active: boolean }) => (
                         <button
                             type="button"
                             onClick={item.onClick}
                             disabled={item.disabled}
-                            className={classNames(cls.item, { [cls.popupCls]: active })}
+                            className={classNames(cls.item, {
+                                [cls.popupCls]: active,
+                            })}
                         >
                             {item.content}
                         </button>

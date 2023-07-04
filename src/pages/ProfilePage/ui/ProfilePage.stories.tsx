@@ -28,85 +28,100 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightProfilePage: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        profile,
-    })],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            profile,
+        }),
+    ],
 };
 
 export const DarkProfilePage: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        profile,
-    }), ThemeDecorator(Theme.DARK)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            profile,
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const OrangeProfilePage: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        profile,
-    }), ThemeDecorator(Theme.ORANGE)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            profile,
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };
 
 export const LightProfilePageLoading: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        profile: {
-            isLoading: true,
-        },
-    })],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            profile: {
+                isLoading: true,
+            },
+        }),
+    ],
 };
 
 export const DarkProfilePageLoading: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        profile: {
-            isLoading: true,
-        },
-    }), ThemeDecorator(Theme.DARK)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            profile: {
+                isLoading: true,
+            },
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const OrangeProfilePageLoading: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        profile: {
-            isLoading: true,
-        },
-    }), ThemeDecorator(Theme.ORANGE)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            profile: {
+                isLoading: true,
+            },
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };
 
 export const LightProfilePageError: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        profile: {
-            error: 'error',
-        },
-    })],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            profile: {
+                error: 'error',
+            },
+        }),
+    ],
 };
 
 export const DarkProfilePageError: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        profile: {
-            error: 'error',
-        },
-    }), ThemeDecorator(Theme.DARK)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            profile: {
+                error: 'error',
+            },
+        }),
+        ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const OrangeProfilePageError: Story = {
-    args: {
-    },
-    decorators: [StoreDecorator({
-        profile: {
-            error: 'error',
-        },
-    }), ThemeDecorator(Theme.ORANGE)],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            profile: {
+                error: 'error',
+            },
+        }),
+        ThemeDecorator(Theme.ORANGE),
+    ],
 };

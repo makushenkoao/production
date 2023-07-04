@@ -1,9 +1,7 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import {
-    ArticleListItemSkeleton,
-} from '../ArticleListItem/ArticleListItemSkeleton';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { Text, TextSize } from '@/shared/ui/Text';
 import { Article } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
@@ -15,18 +13,27 @@ interface ArticleListProps {
     articles: Article[];
     isLoading?: boolean;
     view?: ArticleView;
-    target?: HTMLAttributeAnchorTarget
+    target?: HTMLAttributeAnchorTarget;
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 12 : 3)
-    .fill(0)
-    .map((item, index) => (
-        <ArticleListItemSkeleton key={index} view={view} className={cls.card} />
-    ));
+const getSkeletons = (view: ArticleView) =>
+    new Array(view === ArticleView.SMALL ? 12 : 3)
+        .fill(0)
+        .map((item, index) => (
+            <ArticleListItemSkeleton
+                key={index}
+                view={view}
+                className={cls.card}
+            />
+        ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
-        className, articles, view = ArticleView.SMALL, isLoading, target,
+        className,
+        articles,
+        view = ArticleView.SMALL,
+        isLoading,
+        target,
     } = props;
     const { t } = useTranslation();
 
@@ -43,7 +50,10 @@ export const ArticleList = memo((props: ArticleListProps) => {
     if (!isLoading && !articles.length) {
         return (
             <div
-                className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+                className={classNames(cls.ArticleList, {}, [
+                    className,
+                    cls[view],
+                ])}
             >
                 <Text size={TextSize.L} title={t('Статті не знайдені')} />
             </div>

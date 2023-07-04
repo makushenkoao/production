@@ -15,8 +15,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const AvatarDefault: Story = {
-    args: {
-    },
+    args: {},
 };
 
 export const AvatarWithHeightWidth: Story = {

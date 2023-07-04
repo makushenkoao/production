@@ -20,13 +20,11 @@ interface ArticleListItemProps {
     className?: string;
     article: Article;
     view: ArticleView;
-    target?: HTMLAttributeAnchorTarget
+    target?: HTMLAttributeAnchorTarget;
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-    const {
-        className, article, view, target,
-    } = props;
+    const { className, article, view, target } = props;
     const { t } = useTranslation();
 
     const types = <Text text={article.type.join(' ')} className={cls.types} />;
@@ -38,17 +36,29 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     );
 
     if (view === ArticleView.BIG) {
-        const textBlock = article.blocks
-            .find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
+        const textBlock = article.blocks.find(
+            (block) => block.type === ArticleBlockType.TEXT,
+        ) as ArticleTextBlock;
         return (
             <div
-                className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+                className={classNames(cls.ArticleListItem, {}, [
+                    className,
+                    cls[view],
+                ])}
                 data-testid="ArticleListItem"
             >
                 <Card>
                     <div className={cls.header}>
-                        <Avatar width={30} height={30} src={article.user.avatar} rounded />
-                        <Text text={article.user.username} className={cls.username} />
+                        <Avatar
+                            width={30}
+                            height={30}
+                            src={article.user.avatar}
+                            rounded
+                        />
+                        <Text
+                            text={article.user.username}
+                            className={cls.username}
+                        />
                         <Text text={article.createdAt} className={cls.date} />
                     </div>
                     <Text title={article.title} className={cls.title} />
@@ -60,11 +70,19 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         fallback={<Skeleton width="100%" height={250} />}
                     />
                     {textBlock && (
-                        <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
+                        <ArticleTextBlockComponent
+                            block={textBlock}
+                            className={cls.textBlock}
+                        />
                     )}
                     <div className={cls.footer}>
-                        <AppLink to={getRouteArticleDetails(article.id)} target={target}>
-                            <Button theme={ButtonTheme.OUTLINE}>{t('Читати далі')}</Button>
+                        <AppLink
+                            to={getRouteArticleDetails(article.id)}
+                            target={target}
+                        >
+                            <Button theme={ButtonTheme.OUTLINE}>
+                                {t('Читати далі')}
+                            </Button>
                         </AppLink>
                         {views}
                     </div>
@@ -78,7 +96,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             data-testid="ArticleListItem"
             to={getRouteArticleDetails(article.id)}
             target={target}
-            className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+            className={classNames(cls.ArticleListItem, {}, [
+                className,
+                cls[view],
+            ])}
         >
             <Card>
                 <div className={cls.imageWrapper}>

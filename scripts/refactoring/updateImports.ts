@@ -16,7 +16,7 @@ function isAbsolute(value: string) {
         'pages',
     ];
 
-    return (layers.some((layer) => value.startsWith(layer)));
+    return layers.some((layer) => value.startsWith(layer));
 }
 
 files.forEach((sourceFile) => {

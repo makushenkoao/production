@@ -6,6 +6,5 @@ export enum Country {
     Estonia = 'Estonia',
     Latvia = 'Latvia',
     Great_Britain = 'Great Britain',
-    Canada = 'Canada'
-
+    Canada = 'Canada',
 }

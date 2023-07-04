@@ -16,9 +16,7 @@ const ArticleEditPage = (props: ArticleEditPageProps) => {
     const isEdit = Boolean(id);
 
     return (
-        <Page
-            className={classNames(cls.ArticleEditPage, {}, [className])}
-        >
+        <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
             {t('Сторінка створення/редагування статі')}
         </Page>
     );

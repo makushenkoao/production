@@ -7,18 +7,19 @@ const meta: Meta<typeof Code> = {
     title: 'shared/Code',
     component: Code,
     args: {
-        text: 'import type { Meta, StoryObj } from \'@storybook/react\';\n'
-            + 'import { ThemeDecorator } from \'shared/config/storybook\';\n'
-            + 'import { Theme } from \'app/providers/ThemeProvider\';\n'
-            + 'import { Code } from \'./Code\';\n'
-            + '\n'
-            + 'const meta: Meta<typeof Code> = {\n'
-            + '    title: \'folder/Code\',\n'
-            + '    component: Code,\n'
-            + '};\n'
-            + '\n'
-            + 'export default meta;\n'
-            + 'type Story = StoryObj<typeof meta>;',
+        text:
+            "import type { Meta, StoryObj } from '@storybook/react';\n" +
+            "import { ThemeDecorator } from 'shared/config/storybook';\n" +
+            "import { Theme } from 'app/providers/ThemeProvider';\n" +
+            "import { Code } from './Code';\n" +
+            '\n' +
+            'const meta: Meta<typeof Code> = {\n' +
+            "    title: 'folder/Code',\n" +
+            '    component: Code,\n' +
+            '};\n' +
+            '\n' +
+            'export default meta;\n' +
+            'type Story = StoryObj<typeof meta>;',
     },
 };
 
@@ -35,7 +36,6 @@ export const DarkCode: Story = {
 };
 
 export const OrangeCode: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };

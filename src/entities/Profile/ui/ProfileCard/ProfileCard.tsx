@@ -10,25 +10,25 @@ import { HStack, VStack } from '@/shared/ui/Stack';
 import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 
-type onChangeInput = (v?: string) => void
+type onChangeInput = (v?: string) => void;
 
 interface ProfileCardProps {
-  className?: string;
-  data?: Profile;
-  isLoading?: boolean;
-  error?: string;
-  onChangeFirstname?: onChangeInput;
-  onChangeLastname?: onChangeInput;
-  onChangeCity?: onChangeInput;
-  onChangeAge?: onChangeInput;
-  onChangeUsername?: onChangeInput;
-  onChangeAvatar?: onChangeInput;
-  onChangeCurrency?: (v: Currency) => void;
-  onChangeCountry?: (v: Country) => void;
-  readonly?: boolean
+    className?: string;
+    data?: Profile;
+    isLoading?: boolean;
+    error?: string;
+    onChangeFirstname?: onChangeInput;
+    onChangeLastname?: onChangeInput;
+    onChangeCity?: onChangeInput;
+    onChangeAge?: onChangeInput;
+    onChangeUsername?: onChangeInput;
+    onChangeAvatar?: onChangeInput;
+    onChangeCurrency?: (v: Currency) => void;
+    onChangeCountry?: (v: Country) => void;
+    readonly?: boolean;
 }
 
-export const ProfileCard = (props : ProfileCardProps) => {
+export const ProfileCard = (props: ProfileCardProps) => {
     const {
         className,
         data,
@@ -51,7 +51,10 @@ export const ProfileCard = (props : ProfileCardProps) => {
             <HStack
                 max
                 justify="center"
-                className={classNames(cls.ProfileCard, {}, [className, cls.error])}
+                className={classNames(cls.ProfileCard, {}, [
+                    className,
+                    cls.error,
+                ])}
             >
                 <Loader />
             </HStack>
@@ -63,10 +66,15 @@ export const ProfileCard = (props : ProfileCardProps) => {
             <HStack
                 max
                 justify="center"
-                className={classNames(cls.ProfileCard, {}, [className, cls.error])}
+                className={classNames(cls.ProfileCard, {}, [
+                    className,
+                    cls.error,
+                ])}
             >
                 <Text
-                    title={t('Сталася якась помилка під час завантаження сторінки')}
+                    title={t(
+                        'Сталася якась помилка під час завантаження сторінки',
+                    )}
                     theme={TextTheme.ERROR}
                     text={t('Спробуйте оновити сторінку')}
                     align={TextAlign.CENTER}
@@ -87,15 +95,11 @@ export const ProfileCard = (props : ProfileCardProps) => {
             className={classNames(cls.ProfileCard, mods, [className])}
         >
             {data?.avatar && (
-                <Avatar
-                    src={data?.avatar}
-                    alt={t('Ваша фотографія')}
-                    rounded
-                />
+                <Avatar src={data?.avatar} alt={t('Ваша фотографія')} rounded />
             )}
             <Input
                 value={data?.firstname}
-                placeholder={t('Ваше ім\'я')}
+                placeholder={t("Ваше ім'я")}
                 onChange={onChangeFirstname}
                 readonly={readonly}
                 data-testid="ProfileCard.firstname"
@@ -121,7 +125,7 @@ export const ProfileCard = (props : ProfileCardProps) => {
             />
             <Input
                 value={data?.username}
-                placeholder={t('Ваше ім\'я користувача')}
+                placeholder={t("Ваше ім'я користувача")}
                 onChange={onChangeUsername}
                 readonly={readonly}
             />

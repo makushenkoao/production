@@ -4,7 +4,7 @@ import { Button, ButtonTheme } from '@/shared/ui/Button';
 import cls from './PageError.module.scss';
 
 interface PageErrorProps {
-  className?: string;
+    className?: string;
 }
 
 export const PageError = ({ className }: PageErrorProps) => {
@@ -18,13 +18,8 @@ export const PageError = ({ className }: PageErrorProps) => {
     return (
         <div className={classNames(cls.PageError, {}, [className])}>
             <p>{t('Сталася непередбачена помилка')}</p>
-            <Button
-                theme={ButtonTheme.CLEAR}
-                onClick={reloadPage}
-            >
-                {
-                    t('Оновити сторіку')
-                }
+            <Button theme={ButtonTheme.CLEAR} onClick={reloadPage}>
+                {t('Оновити сторіку')}
             </Button>
         </div>
     );

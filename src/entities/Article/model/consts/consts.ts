@@ -20,5 +20,5 @@ export enum ArticleType {
     IT = 'IT',
     SCIENCE = 'SCIENCE',
     ECONOMICS = 'ECONOMICS',
-    COOKIE = 'COOKIE'
+    COOKIE = 'COOKIE',
 }

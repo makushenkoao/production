@@ -36,14 +36,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const [starsCount, setStarsCount] = useState<number>(rate);
     const [feedback, setFeedback] = useState<string>('');
 
-    const onSelectStars = useCallback((selectedStarsCount: number) => {
-        setStarsCount(selectedStarsCount);
-        if (hasFeedback) {
-            setIsModalOpen(true);
-        } else {
-            onAccept?.(selectedStarsCount);
-        }
-    }, [hasFeedback, onAccept]);
+    const onSelectStars = useCallback(
+        (selectedStarsCount: number) => {
+            setStarsCount(selectedStarsCount);
+            if (hasFeedback) {
+                setIsModalOpen(true);
+            } else {
+                onAccept?.(selectedStarsCount);
+            }
+        },
+        [hasFeedback, onAccept],
+    );
 
     const acceptHandle = useCallback(() => {
         setIsModalOpen(false);
@@ -56,11 +59,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
     }, [onCancel, starsCount]);
 
     const modalContent = (
-        <VStack
-            max
-            gap="32"
-            align="normal"
-        >
+        <VStack max gap="32" align="normal">
             <Text title={feedbackTitle} />
             <Input
                 placeholder={t('Ваш відгук')}
@@ -70,7 +69,11 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 data-testid="RatingCard.Input"
             />
             <HStack max gap="16" justify="end">
-                <Button onClick={cancelHandle} theme={ButtonTheme.OUTLINE_RED} data-testid="RatingCard.Close">
+                <Button
+                    onClick={cancelHandle}
+                    theme={ButtonTheme.OUTLINE_RED}
+                    data-testid="RatingCard.Close"
+                >
                     {t('Закрити')}
                 </Button>
                 <Button onClick={acceptHandle} data-testid="RatingCard.Send">
@@ -88,7 +91,11 @@ export const RatingCard = memo((props: RatingCardProps) => {
         >
             <VStack align="center" gap="8" max>
                 <Text title={starsCount ? t('Дякую за оцінку!') : title} />
-                <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
+                <StarRating
+                    selectedStars={starsCount}
+                    size={40}
+                    onSelect={onSelectStars}
+                />
             </VStack>
             <BrowserView>
                 <Modal isOpen={isModalOpen} lazy onClose={cancelHandle}>

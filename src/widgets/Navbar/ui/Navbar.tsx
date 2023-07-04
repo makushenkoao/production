@@ -14,7 +14,7 @@ import cls from './Navbar.module.scss';
 import { getRouteArticleCreate, getRouteMain } from '@/shared/const/router';
 
 interface NavbarProps {
-    className?: string
+    className?: string;
 }
 
 export const Navbar = memo((props: NavbarProps) => {
@@ -33,7 +33,11 @@ export const Navbar = memo((props: NavbarProps) => {
 
     const logo = (
         <AppLink to={getRouteMain()}>
-            <Text theme={TextTheme.INVERTED} title={t('MAO')} className={cls.appName} />
+            <Text
+                theme={TextTheme.INVERTED}
+                title={t('MAO')}
+                className={cls.appName}
+            />
         </AppLink>
     );
 
@@ -61,10 +65,7 @@ export const Navbar = memo((props: NavbarProps) => {
                 {t('Увійти')}
             </Button>
             {isAuthModal && (
-                <LoginModal
-                    onClose={onCloseModal}
-                    isOpen={isAuthModal}
-                />
+                <LoginModal onClose={onCloseModal} isOpen={isAuthModal} />
             )}
         </header>
     );

@@ -29,18 +29,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LightSelect: Story = {
-    args: {
-    },
+    args: {},
 };
 
 export const DarkSelect: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const OrangeSelect: Story = {
-    args: {
-    },
+    args: {},
     decorators: [ThemeDecorator(Theme.ORANGE)],
 };

@@ -22,8 +22,7 @@ const App = () => {
                 <Navbar />
                 <div className="content-page">
                     <Sidebar />
-                    {mounted
-                    && <AppRouter />}
+                    {mounted && <AppRouter />}
                 </div>
             </Suspense>
         </div>

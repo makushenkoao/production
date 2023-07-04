@@ -8,18 +8,13 @@ import { SidebarItemTypes } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
-  item: SidebarItemTypes;
-  collapsed: boolean
+    item: SidebarItemTypes;
+    collapsed: boolean;
 }
 
-export const SidebarItem = memo((props : SidebarItemProps) => {
+export const SidebarItem = memo((props: SidebarItemProps) => {
     const {
-        item: {
-            path,
-            icon: Icon,
-            text,
-            authOnly,
-        },
+        item: { path, icon: Icon, text, authOnly },
         collapsed,
     } = props;
     const { t } = useTranslation();

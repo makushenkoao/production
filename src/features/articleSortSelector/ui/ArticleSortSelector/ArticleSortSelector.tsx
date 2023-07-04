@@ -15,45 +15,43 @@ interface ArticleSortSelectorProps {
 }
 
 export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
-    const {
-        className,
-        onChangeSort,
-        sort,
-        onChangeOrder,
-        order,
-    } = props;
+    const { className, onChangeSort, sort, onChangeOrder, order } = props;
     const { t } = useTranslation();
 
-    const orderOptions = useMemo<SelectOption<SortOrder>[]>(() => [
-        {
-            value: 'asc',
-            content: t('зростання'),
-        },
-        {
-            value: 'desc',
-            content: t('спадання'),
-        },
-    ], [t]);
+    const orderOptions = useMemo<SelectOption<SortOrder>[]>(
+        () => [
+            {
+                value: 'asc',
+                content: t('зростання'),
+            },
+            {
+                value: 'desc',
+                content: t('спадання'),
+            },
+        ],
+        [t],
+    );
 
-    const orderFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(() => [
-        {
-            value: ArticleSortField.CREATED,
-            content: t('даті створення'),
-        },
-        {
-            value: ArticleSortField.TITLE,
-            content: t('назвою'),
-        },
-        {
-            value: ArticleSortField.VIEWS,
-            content: t('переглядами'),
-        },
-    ], [t]);
+    const orderFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(
+        () => [
+            {
+                value: ArticleSortField.CREATED,
+                content: t('даті створення'),
+            },
+            {
+                value: ArticleSortField.TITLE,
+                content: t('назвою'),
+            },
+            {
+                value: ArticleSortField.VIEWS,
+                content: t('переглядами'),
+            },
+        ],
+        [t],
+    );
 
     return (
-        <div
-            className={classNames(cls.ArticleSortSelector, {}, [className])}
-        >
+        <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
             <Select<ArticleSortField>
                 label={t('Сортувати ЗА')}
                 options={orderFieldOptions}

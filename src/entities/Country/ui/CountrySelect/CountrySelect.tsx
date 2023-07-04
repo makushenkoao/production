@@ -9,18 +9,19 @@ interface CountrySelectProps {
     className?: string;
     value?: Country;
     onChange?: (v: Country) => void;
-    readonly?: boolean
+    readonly?: boolean;
 }
 
-export const CountrySelect = memo((props : CountrySelectProps) => {
-    const {
-        className, value, onChange, readonly,
-    } = props;
+export const CountrySelect = memo((props: CountrySelectProps) => {
+    const { className, value, onChange, readonly } = props;
     const { t } = useTranslation();
 
-    const onChangeHandler = useCallback((v: string) => {
-        onChange?.(v as Country);
-    }, [onChange]);
+    const onChangeHandler = useCallback(
+        (v: string) => {
+            onChange?.(v as Country);
+        },
+        [onChange],
+    );
 
     return (
         <ListBox
