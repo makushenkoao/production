@@ -146,6 +146,25 @@ The `scripts` folder contains various scripts for refactoring\simplification of 
 
 ----
 
+### Working with feature-flags
+
+Allow feature flags only with toggleFeatures helper
+
+an object with options is passed to it
+
+{
+name: feature flag name,
+on: a function that will work after enabling the feature
+of: function that will work after the feature is turned off
+}
+
+To automatically remove a feature, use the remove-feature.ts script,
+which takes 2 arguments
+1. The name of the feature flag to be removed
+2. Status (on\off)
+
+----
+
 ## CI pipeline and pre-commit hooks
 
 The github action config is in /.github/workflows.
