@@ -14,6 +14,7 @@ import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPag
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { articlesPageReducer } from '../../model/slice/articlesPageSlice';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
+import { ArticlePageGreeting } from '@/features/articlePageGreeting';
 
 interface ArticlesPageProps {
     className?: string;
@@ -37,16 +38,23 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     });
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
+        <DynamicModuleLoader
+            reducers={reducers}
+            removeAfterUnmount={false}
+        >
             <Page
                 data-testid="ArticlesPage"
                 onScrollEnd={onLoadNextPart}
                 className={classNames('', {}, [className])}
             >
-                <VStack gap="32" align="normal">
+                <VStack
+                    gap="32"
+                    align="normal"
+                >
                     <ArticlesPageFilters />
                     <ArticleInfiniteList />
                 </VStack>
+                <ArticlePageGreeting />
             </Page>
         </DynamicModuleLoader>
     );

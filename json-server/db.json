@@ -1853,7 +1853,8 @@
       "username": "admin",
       "password": "111",
       "jsonSettings": {
-        "theme": "app_orange_theme"
+        "theme": "app_orange_theme",
+        "isArticlesPageWasOpened": true
       },
       "roles": [
         "ADMIN"
@@ -1867,7 +1868,7 @@
       "jsonSettings": {
         "theme": "app_light_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "isArticlesPageWasOpened": true
       },
       "roles": [
         "USER"
@@ -1880,8 +1881,7 @@
       "password": "123",
       "jsonSettings": {
         "theme": "app_light_theme",
-        "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "isFirstVisit": true
       },
       "roles": [
         "MANAGER"
@@ -1894,8 +1894,7 @@
       "password": "123",
       "jsonSettings": {
         "theme": "app_light_theme",
-        "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "isFirstVisit": true
       },
       "roles": [
         "ADMIN"
