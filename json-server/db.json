@@ -1852,6 +1852,9 @@
       "id": "1",
       "username": "admin",
       "password": "111",
+      "jsonSettings": {
+        "theme": "app_dark_theme"
+      },
       "roles": [
         "ADMIN"
       ],
@@ -1861,6 +1864,11 @@
       "id": "2",
       "username": "user",
       "password": "123",
+      "jsonSettings": {
+        "theme": "app_light_theme",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
       "roles": [
         "USER"
       ],
@@ -1870,6 +1878,11 @@
       "id": "3",
       "username": "manager",
       "password": "123",
+      "jsonSettings": {
+        "theme": "app_light_theme",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
       "roles": [
         "MANAGER"
       ],
@@ -1879,6 +1892,11 @@
       "id": "4",
       "username": "testuser",
       "password": "123",
+      "jsonSettings": {
+        "theme": "app_light_theme",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
       "roles": [
         "ADMIN"
       ],

@@ -8,3 +8,8 @@ export {
     getUserRoles,
 } from './model/selectors/roleSelectors';
 export { UserRole } from '@/entities/User/model/consts/consts';
+export {
+    useJsonSettings,
+    getJsonSettings,
+} from './model/selectors/jsonSettings';
+export { saveJsonSettings } from './model/services/saveJsonSettings';
