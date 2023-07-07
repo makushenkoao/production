@@ -80,20 +80,41 @@ export const Navbar = memo((props: NavbarProps) => {
     }
 
     return (
-        <header className={classNames(cls.Navbar, {}, [className])}>
-            {logo}
-            <Button
-                theme={ButtonTheme.CLEAR_INVERTED}
-                onClick={onShowModal}
-            >
-                {t('Увійти')}
-            </Button>
-            {isAuthModal && (
-                <LoginModal
-                    onClose={onCloseModal}
-                    isOpen={isAuthModal}
-                />
-            )}
-        </header>
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <header className={classNames(cls.Navbar, {}, [className])}>
+                    <Button
+                        theme={ButtonTheme.CLEAR_INVERTED}
+                        onClick={onShowModal}
+                    >
+                        {t('Увійти')}
+                    </Button>
+                    {isAuthModal && (
+                        <LoginModal
+                            onClose={onCloseModal}
+                            isOpen={isAuthModal}
+                        />
+                    )}
+                </header>
+            }
+            off={
+                <header className={classNames(cls.Navbar, {}, [className])}>
+                    {logo}
+                    <Button
+                        theme={ButtonTheme.CLEAR_INVERTED}
+                        onClick={onShowModal}
+                    >
+                        {t('Увійти')}
+                    </Button>
+                    {isAuthModal && (
+                        <LoginModal
+                            onClose={onCloseModal}
+                            isOpen={isAuthModal}
+                        />
+                    )}
+                </header>
+            }
+        />
     );
 });
