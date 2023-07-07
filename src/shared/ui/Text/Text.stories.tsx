@@ -26,20 +26,6 @@ export const DarkText: Story = {
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const OrangeText: Story = {
-    args: {
-        title: 'Title',
-        text: 'Text',
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};
-
-export const OnlyText: Story = {
-    args: {
-        text: 'Text',
-    },
-};
-
 export const LOnlyTitle: Story = {
     args: {
         title: 'Title',

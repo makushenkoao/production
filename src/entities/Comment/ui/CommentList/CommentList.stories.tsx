@@ -43,13 +43,6 @@ export const DarkCommentList: Story = {
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const OrangeCommentList: Story = {
-    args: {
-        comments,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};
-
 export const LightCommentListIsLoading: Story = {
     args: {
         isLoading: true,
@@ -61,11 +54,4 @@ export const DarkCommentListIsLoading: Story = {
         isLoading: true,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
-};
-
-export const OrangeCommentListIsLoading: Story = {
-    args: {
-        isLoading: true,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

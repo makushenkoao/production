@@ -46,16 +46,6 @@ export const DarkProfilePage: Story = {
     ],
 };
 
-export const OrangeProfilePage: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            profile,
-        }),
-        ThemeDecorator(Theme.ORANGE),
-    ],
-};
-
 export const LightProfilePageLoading: Story = {
     args: {},
     decorators: [
@@ -79,18 +69,6 @@ export const DarkProfilePageLoading: Story = {
     ],
 };
 
-export const OrangeProfilePageLoading: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            profile: {
-                isLoading: true,
-            },
-        }),
-        ThemeDecorator(Theme.ORANGE),
-    ],
-};
-
 export const LightProfilePageError: Story = {
     args: {},
     decorators: [
@@ -111,17 +89,5 @@ export const DarkProfilePageError: Story = {
             },
         }),
         ThemeDecorator(Theme.DARK),
-    ],
-};
-
-export const OrangeProfilePageError: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            profile: {
-                error: 'error',
-            },
-        }),
-        ThemeDecorator(Theme.ORANGE),
     ],
 };

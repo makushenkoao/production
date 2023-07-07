@@ -21,8 +21,3 @@ export const DarkAdminPanelPage: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeAdminPanelPage: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

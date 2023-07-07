@@ -41,17 +41,3 @@ export const DarkArticleListItemViewBig: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeArticleListItemViewSmall: Story = {
-    args: {
-        view: ArticleView.SMALL,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};
-
-export const OrangeArticleListItemViewBig: Story = {
-    args: {
-        view: ArticleView.BIG,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

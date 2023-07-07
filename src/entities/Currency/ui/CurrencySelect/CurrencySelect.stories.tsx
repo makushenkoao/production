@@ -19,8 +19,3 @@ export const DarkCurrencySelect: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeCurrencySelect: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

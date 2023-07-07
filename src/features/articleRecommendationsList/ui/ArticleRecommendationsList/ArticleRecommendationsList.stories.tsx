@@ -36,8 +36,3 @@ export const DarkArticleRecommendationsList: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeArticleRecommendationsList: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

@@ -19,8 +19,3 @@ export const DarkPageError: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangePageError: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

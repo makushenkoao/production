@@ -21,8 +21,3 @@ export const DarkAboutPage: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeAboutPage: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

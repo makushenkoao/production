@@ -19,8 +19,3 @@ export const DarkArticleViewSelector: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeArticleViewSelector: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

@@ -23,8 +23,3 @@ export const DarkModal: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeModal: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

@@ -16,21 +16,27 @@
     min-height: 100vh;
 }
 
+.app_redesigned {
+    background: var(--bg-redesigned);
+    min-height: 100vh;
+    font: var(--font-m-redesigned);
+    color: var(--text-redesigned);
+}
+
 .content-page {
     display: flex;
 }
 
-*::-webkit-scrollbar {
-    width: 12px;
-    height: 8px;
-}
-
-*::-webkit-scrollbar-track {
-    background: var(--card-bg);
-}
-
-*::-webkit-scrollbar-thumb {
-    background: var(--inverted-primary-color);
-    border-radius: 20px;
-    border: 1px solid var(--primary-color);
-}
+// TODO - fix scrollbar
+// *::-webkit-scrollbar {
+//    width: 12px;
+//    height: 8px;
+// }
+// *::-webkit-scrollbar-track {
+//    background: var(--card-bg);
+// }
+// *::-webkit-scrollbar-thumb {
+//    background: var(--inverted-primary-color);
+//    border-radius: 20px;
+//    border: 1px solid var(--primary-color);
+// }

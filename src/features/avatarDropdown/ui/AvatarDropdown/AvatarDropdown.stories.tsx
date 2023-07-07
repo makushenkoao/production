@@ -21,8 +21,3 @@ export const DarkAvatarDropdown: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeAvatarDropdown: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

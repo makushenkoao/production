@@ -21,8 +21,3 @@ export const DarkArticlesPageFilters: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeArticlesPageFilters: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

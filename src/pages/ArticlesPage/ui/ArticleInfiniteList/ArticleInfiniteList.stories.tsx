@@ -21,8 +21,3 @@ export const DarkArticleInfiniteList: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeArticleInfiniteList: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

@@ -53,25 +53,3 @@ export const DarkSidebarNoAuth: Story = {
         ThemeDecorator(Theme.DARK),
     ],
 };
-
-export const OrangeSidebarAuth: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            user: {
-                authData: {},
-            },
-        }),
-        ThemeDecorator(Theme.ORANGE),
-    ],
-};
-
-export const OrangeSidebarNoAuth: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            user: {},
-        }),
-        ThemeDecorator(Theme.ORANGE),
-    ],
-};

@@ -22,11 +22,6 @@ export const DarkNavbarNoAuth: Story = {
     decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({})],
 };
 
-export const OrangeNavbarNoAuth: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE), StoreDecorator({})],
-};
-
 export const LightNavbarAuth: Story = {
     args: {},
     decorators: [
@@ -45,21 +40,6 @@ export const DarkNavbarAuth: Story = {
     args: {},
     decorators: [
         ThemeDecorator(Theme.DARK),
-        StoreDecorator({
-            user: {
-                authData: {
-                    username: '123',
-                    id: '1',
-                },
-            },
-        }),
-    ],
-};
-
-export const OrangeNavbarAuth: Story = {
-    args: {},
-    decorators: [
-        ThemeDecorator(Theme.ORANGE),
         StoreDecorator({
             user: {
                 authData: {

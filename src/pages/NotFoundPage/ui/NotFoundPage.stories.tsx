@@ -21,8 +21,3 @@ export const DarkNotFoundPage: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeNotFoundPage: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

@@ -25,8 +25,3 @@ export const DarkStarRating: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeStarRating: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

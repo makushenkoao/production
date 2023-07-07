@@ -1856,6 +1856,9 @@
         "theme": "app_orange_theme",
         "isArticlesPageWasOpened": true
       },
+      "features": {
+        "isAppRedesigned": true
+      },
       "roles": [
         "ADMIN"
       ],
@@ -1866,9 +1869,9 @@
       "username": "user",
       "password": "123",
       "jsonSettings": {
-        "theme": "app_light_theme",
         "isFirstVisit": true,
-        "isArticlesPageWasOpened": true
+        "isArticlesPageWasOpened": true,
+        "theme": "app_light_theme"
       },
       "roles": [
         "USER"

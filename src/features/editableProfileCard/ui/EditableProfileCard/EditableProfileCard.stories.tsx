@@ -50,18 +50,6 @@ export const DarkEditableProfileCard: Story = {
     ],
 };
 
-export const OrangeEditableProfileCard: Story = {
-    args: {},
-    decorators: [
-        ThemeDecorator(Theme.ORANGE),
-        StoreDecorator({
-            profile: {
-                form,
-            },
-        }),
-    ],
-};
-
 export const LightEditableProfileCardLoading: Story = {
     args: {},
     decorators: [
@@ -85,18 +73,6 @@ export const DarkEditableProfileCardLoading: Story = {
     ],
 };
 
-export const OrangeEditableProfileCardLoading: Story = {
-    args: {},
-    decorators: [
-        ThemeDecorator(Theme.ORANGE),
-        StoreDecorator({
-            profile: {
-                isLoading: true,
-            },
-        }),
-    ],
-};
-
 export const LightEditableProfileCardError: Story = {
     args: {},
     decorators: [
@@ -112,18 +88,6 @@ export const DarkEditableProfileCardError: Story = {
     args: {},
     decorators: [
         ThemeDecorator(Theme.DARK),
-        StoreDecorator({
-            profile: {
-                error: 'error',
-            },
-        }),
-    ],
-};
-
-export const OrangeEditableProfileCardError: Story = {
-    args: {},
-    decorators: [
-        ThemeDecorator(Theme.ORANGE),
         StoreDecorator({
             profile: {
                 error: 'error',

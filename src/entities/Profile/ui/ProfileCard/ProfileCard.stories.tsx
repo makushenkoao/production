@@ -38,13 +38,6 @@ export const DarkProfileCard: Story = {
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const OrangeProfileCard: Story = {
-    args: {
-        data,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};
-
 export const LightProfileCardIsLoading: Story = {
     args: {
         isLoading: true,
@@ -58,13 +51,6 @@ export const DarkProfileCardIsLoading: Story = {
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const OrangeProfileCardIsLoading: Story = {
-    args: {
-        isLoading: true,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};
-
 export const LightProfileCardError: Story = {
     args: {
         error: 'error',
@@ -76,11 +62,4 @@ export const DarkProfileCardError: Story = {
         error: 'error',
     },
     decorators: [ThemeDecorator(Theme.DARK)],
-};
-
-export const OrangeProfileCardError: Story = {
-    args: {
-        error: 'error',
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

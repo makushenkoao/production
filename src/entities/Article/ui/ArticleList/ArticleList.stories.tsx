@@ -47,24 +47,6 @@ export const ArticleListLoadingSmallDarkTheme: Story = {
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const ArticleListLoadingBigOrangeTheme: Story = {
-    args: {
-        isLoading: true,
-        articles: [],
-        view: ArticleView.BIG,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};
-
-export const ArticleListLoadingSmallOrangeTheme: Story = {
-    args: {
-        isLoading: true,
-        articles: [],
-        view: ArticleView.SMALL,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};
-
 export const ArticleListBigLightTheme: Story = {
     args: {
         articles: ARRAY_ARTICLE_MOCK,
@@ -93,20 +75,4 @@ export const ArticleListSmallDarkTheme: Story = {
         view: ArticleView.SMALL,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
-};
-
-export const ArticleListBigOrangeTheme: Story = {
-    args: {
-        articles: ARRAY_ARTICLE_MOCK,
-        view: ArticleView.BIG,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};
-
-export const ArticleListSmallOrangeTheme: Story = {
-    args: {
-        articles: ARRAY_ARTICLE_MOCK,
-        view: ArticleView.SMALL,
-    },
-    decorators: [ThemeDecorator(Theme.ORANGE)],
 };

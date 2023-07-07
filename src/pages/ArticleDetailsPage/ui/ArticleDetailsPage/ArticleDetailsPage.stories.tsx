@@ -65,18 +65,6 @@ export const DarkArticleDetailsPage: Story = {
     ],
 };
 
-export const OrangeArticleDetailsPage: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            articleDetails: {
-                data: ARTICLE_MOCK,
-            },
-        }),
-        ThemeDecorator(Theme.ORANGE),
-    ],
-};
-
 export const LightArticleDetailsPageLoading: Story = {
     args: {},
     decorators: [
@@ -100,18 +88,6 @@ export const DarkArticleDetailsPageLoading: Story = {
     ],
 };
 
-export const OrangeArticleDetailsPageLoading: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            articleDetails: {
-                isLoading: true,
-            },
-        }),
-        ThemeDecorator(Theme.ORANGE),
-    ],
-};
-
 export const LightArticleDetailsPageError: Story = {
     args: {},
     decorators: [
@@ -132,17 +108,5 @@ export const DarkArticleDetailsPageError: Story = {
             },
         }),
         ThemeDecorator(Theme.DARK),
-    ],
-};
-
-export const OrangeArticleDetailsPageError: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            articleDetails: {
-                error: 'error',
-            },
-        }),
-        ThemeDecorator(Theme.ORANGE),
     ],
 };

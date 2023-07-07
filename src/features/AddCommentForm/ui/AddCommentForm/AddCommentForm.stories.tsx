@@ -25,8 +25,3 @@ export const DarkAddCommentForm: Story = {
     args: {},
     decorators: [StoreDecorator({}), ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeAddCommentForm: Story = {
-    args: {},
-    decorators: [StoreDecorator({}), ThemeDecorator(Theme.ORANGE)],
-};

@@ -21,8 +21,3 @@ export const DarkNotificationButton: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeNotificationButton: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

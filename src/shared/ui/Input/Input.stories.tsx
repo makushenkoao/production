@@ -23,8 +23,3 @@ export const DarkInput: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeInput: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

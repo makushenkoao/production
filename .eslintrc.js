@@ -67,6 +67,7 @@ module.exports = {
                     'as',
                     'direction',
                     'borderRadius',
+                    'feature',
                 ],
             },
         ],

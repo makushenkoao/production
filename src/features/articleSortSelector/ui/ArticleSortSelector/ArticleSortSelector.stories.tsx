@@ -19,8 +19,3 @@ export const DarkArticleSortSelector: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeArticleSortSelector: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

@@ -19,8 +19,3 @@ export const DarkArticleTypeTabs: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeArticleTypeTabs: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

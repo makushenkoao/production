@@ -47,8 +47,3 @@ export const DarkNotificationList: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-export const OrangeNotificationList: Story = {
-    args: {},
-    decorators: [ThemeDecorator(Theme.ORANGE)],
-};

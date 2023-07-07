@@ -35,16 +35,6 @@ export const DarkLoginForm: Story = {
     ],
 };
 
-export const OrangeLoginForm: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            loginForm,
-        }),
-        ThemeDecorator(Theme.ORANGE),
-    ],
-};
-
 export const LightLoginFormError: Story = {
     args: {},
     decorators: [
@@ -64,16 +54,6 @@ export const DarkLoginFormError: Story = {
     ],
 };
 
-export const OrangeLoginFormError: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({
-            loginForm: loginFormError,
-        }),
-        ThemeDecorator(Theme.ORANGE),
-    ],
-};
-
 export const LightLoginFormLoading: Story = {
     args: {},
     decorators: [
@@ -87,16 +67,6 @@ export const DarkLoginFormLoading: Story = {
     args: {},
     decorators: [
         ThemeDecorator(Theme.DARK),
-        StoreDecorator({
-            loginForm: loginFormLoading,
-        }),
-    ],
-};
-
-export const OrangeLoginFormLoading: Story = {
-    args: {},
-    decorators: [
-        ThemeDecorator(Theme.ORANGE),
         StoreDecorator({
             loginForm: loginFormLoading,
         }),
