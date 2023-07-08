@@ -2,7 +2,7 @@ import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
-import { Text, TextSize } from '@/shared/ui/Text';
+import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 import { Article } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -55,7 +55,10 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     cls[view],
                 ])}
             >
-                <Text size={TextSize.L} title={t('Статті не знайдені')} />
+                <Text
+                    size={TextSize.L}
+                    title={t('Статті не знайдені')}
+                />
             </div>
         );
     }

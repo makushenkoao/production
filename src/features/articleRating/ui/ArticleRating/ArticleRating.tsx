@@ -8,7 +8,7 @@ import {
     useRateArticleMutation,
 } from '../../api/articleRatingApi';
 import { getUserAuthData } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/Skeleton';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 
 export interface ArticleRatingProps {
     className?: string;
@@ -58,7 +58,12 @@ const ArticleRating = (props: ArticleRatingProps) => {
     );
 
     if (isLoading) {
-        return <Skeleton width="100%" height={120} />;
+        return (
+            <Skeleton
+                width="100%"
+                height={120}
+            />
+        );
     }
 
     if (error) {

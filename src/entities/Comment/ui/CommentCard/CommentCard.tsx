@@ -1,9 +1,9 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Text } from '@/shared/ui/Text';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { AppLink } from '@/shared/ui/AppLink';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Text } from '@/shared/ui/deprecated/Text';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { AppLink } from '@/shared/ui/deprecated/AppLink';
 import { Comment } from '../../model/types/comment';
 import cls from './CommentCard.module.scss';
 import { getRouteProfile } from '@/shared/const/router';
@@ -27,10 +27,20 @@ export const CommentCard = memo((props: CommentCardProps) => {
                 ])}
             >
                 <div className={cls.header}>
-                    <Skeleton width={30} height={30} borderRadius="50%" />
-                    <Skeleton width={50} height={15} />
+                    <Skeleton
+                        width={30}
+                        height={30}
+                        borderRadius="50%"
+                    />
+                    <Skeleton
+                        width={50}
+                        height={15}
+                    />
                 </div>
-                <Skeleton width="100%" height={50} />
+                <Skeleton
+                    width="100%"
+                    height={50}
+                />
             </div>
         );
     }

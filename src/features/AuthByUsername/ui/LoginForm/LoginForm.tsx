@@ -2,9 +2,9 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { Input } from '@/shared/ui/Input';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -58,7 +58,10 @@ const LoginForm = memo((props: LoginFormProps) => {
     }, [dispatch, onSuccess, password, username]);
 
     return (
-        <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
+        <DynamicModuleLoader
+            reducers={initialReducers}
+            removeAfterUnmount
+        >
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text title={t('Форма авторизації')} />
                 {error && (

@@ -2,9 +2,9 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextTheme } from '@/shared/ui/Text';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Dropdown } from '@/shared/ui/Popups';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Dropdown } from '@/shared/ui/deprecated/Popups';
 import {
     getUserAuthData,
     isUserAdmin,
@@ -54,7 +54,12 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                     href: getRouteProfile(userAuthData.id),
                 },
                 {
-                    content: <Text text={t('Вийти')} theme={TextTheme.ERROR} />,
+                    content: (
+                        <Text
+                            text={t('Вийти')}
+                            theme={TextTheme.ERROR}
+                        />
+                    ),
                     onClick: onLogout,
                 },
             ]}

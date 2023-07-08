@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Card } from '@/shared/ui/Card';
-import { Input } from '@/shared/ui/Input';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { Input } from '@/shared/ui/deprecated/Input';
 import { SortOrder } from '@/shared/types';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 import { fetchArticleList } from '../../model/services/fetchArticleList/fetchArticleList';
@@ -98,7 +98,10 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
                     sort={sort}
                     order={order}
                 />
-                <ArticleViewSelector view={view} onViewClick={onChangeView} />
+                <ArticleViewSelector
+                    view={view}
+                    onViewClick={onChangeView}
+                />
             </div>
             <Card className={cls.search}>
                 <Input
