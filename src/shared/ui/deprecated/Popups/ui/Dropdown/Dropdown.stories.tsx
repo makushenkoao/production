@@ -4,7 +4,7 @@ import { Avatar } from '../../../Avatar/Avatar';
 import { Dropdown } from './Dropdown';
 
 const meta: Meta<typeof Dropdown> = {
-    title: 'shared/Popups/Dropdown',
+    title: 'shared/ui/deprecated/Popups/Dropdown',
     component: Dropdown,
     args: {
         items: [

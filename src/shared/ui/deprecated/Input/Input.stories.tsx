@@ -4,7 +4,7 @@ import { Input } from './Input';
 import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof Input> = {
-    title: 'shared/Input',
+    title: 'shared/ui/deprecated/Input',
     component: Input,
     args: {
         placeholder: 'Placeholder',

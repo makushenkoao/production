@@ -4,7 +4,7 @@ import { AppImage } from './AppImage';
 // TODO - write stories
 
 const meta: Meta<typeof AppImage> = {
-    title: 'folder/AppImage',
+    title: 'shared/ui/deprecated/AppImage',
     component: AppImage,
 };
 

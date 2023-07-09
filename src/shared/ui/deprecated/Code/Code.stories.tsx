@@ -4,7 +4,7 @@ import { Code } from './Code';
 import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof Code> = {
-    title: 'shared/Code',
+    title: 'shared/ui/deprecated/Code',
     component: Code,
     args: {
         text:

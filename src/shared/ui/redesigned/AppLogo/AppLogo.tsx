@@ -1,4 +1,4 @@
-import { HStack } from '../Stack';
+import { HStack } from '../../deprecated/Stack';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AppLogo.module.scss';
 import Logo from '@/shared/assets/icons/logo.svg';
@@ -9,10 +9,6 @@ interface AppLogoProps {
     height?: string | number;
 }
 
-/**
- * Deprecated, use new components from redesigned
- * @deprecated
- */
 export const AppLogo = (props: AppLogoProps) => {
     const { className, height = 50, width = 50 } = props;
     return (

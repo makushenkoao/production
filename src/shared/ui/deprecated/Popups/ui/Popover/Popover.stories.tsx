@@ -6,7 +6,7 @@ import { Theme } from '@/shared/const/theme';
 // TODO - write stories
 
 const meta: Meta<typeof Popover> = {
-    title: 'shared/Popups/Popover',
+    title: 'shared/ui/deprecated/Popups/Popover',
     component: Popover,
 };
 

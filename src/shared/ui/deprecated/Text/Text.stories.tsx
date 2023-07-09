@@ -4,7 +4,7 @@ import { Text, TextAlign, TextSize, TextTheme } from './Text';
 import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof Text> = {
-    title: 'shared/Text',
+    title: 'shared/ui/deprecated/Text',
     component: Text,
 };
 

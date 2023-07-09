@@ -4,7 +4,7 @@ import { Drawer } from './Drawer';
 import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof Drawer> = {
-    title: 'shared/Drawer',
+    title: 'shared/ui/deprecated/Drawer',
     component: Drawer,
     args: {
         isOpen: true,

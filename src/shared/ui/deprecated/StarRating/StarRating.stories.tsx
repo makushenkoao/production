@@ -5,7 +5,7 @@ import { StarRating } from './StarRating';
 import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof StarRating> = {
-    title: 'shared/StarRating',
+    title: 'shared/ui/deprecated/StarRating',
     component: StarRating,
     args: {
         size: 30,

@@ -4,7 +4,7 @@ import { Modal } from './Modal';
 import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof Modal> = {
-    title: 'shared/Modal',
+    title: 'shared/ui/deprecated/Modal',
     component: Modal,
     args: {
         children: 'Modal',

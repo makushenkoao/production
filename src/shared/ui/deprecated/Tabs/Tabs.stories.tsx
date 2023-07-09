@@ -5,7 +5,7 @@ import { Tabs } from './Tabs';
 import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof Tabs> = {
-    title: 'shared/Tabs',
+    title: 'shared/ui/deprecated/Tabs',
     component: Tabs,
     args: {
         tabs: [
