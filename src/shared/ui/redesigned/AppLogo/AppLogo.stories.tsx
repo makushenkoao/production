@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { AppLogo } from './AppLogo';
 
-// TODO - Write stories
+// TODO - write stories
 
 const meta: Meta<typeof AppLogo> = {
-    title: 'shared/ui/redesigned/Button',
+    title: 'shared/ui/redesigned/AppLogo',
     component: AppLogo,
 };
 

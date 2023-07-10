@@ -7,12 +7,9 @@ interface OverlayProps {
     onClick?: () => void;
 }
 
-/**
- * Deprecated, use new components from redesigned
- * @deprecated
- */
 export const Overlay = memo((props: OverlayProps) => {
     const { className, onClick } = props;
+
     return (
         <div
             onClick={onClick}

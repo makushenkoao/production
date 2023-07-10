@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { LangSwitcher } from '@/features/LangSwitcher';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/deprecated/Button';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import { ToggleFeatures } from '@/shared/lib/features';
@@ -12,6 +12,7 @@ import { AppLogo } from '@/shared/ui/redesigned/AppLogo';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
 import cls from './Sidebar.module.scss';
+import { AppLink } from '@/shared/ui/redesigned/AppLink';
 
 interface SidebarProps {
     className?: string;
@@ -53,11 +54,13 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                         [className],
                     )}
                 >
-                    <AppLogo
-                        className={cls.appLogo}
-                        width={collapsed ? 30 : 50}
-                        height={collapsed ? 30 : 50}
-                    />
+                    <AppLink to="/">
+                        <AppLogo
+                            className={cls.appLogo}
+                            width={collapsed ? 30 : 50}
+                            height={collapsed ? 30 : 50}
+                        />
+                    </AppLink>
                     <VStack
                         role="navigation"
                         align={collapsed ? 'center' : 'start'}
@@ -75,6 +78,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                     />
                     {collapsed ? (
                         <VStack
+                            align="center"
                             className={cls.switchers}
                             gap="4"
                         >

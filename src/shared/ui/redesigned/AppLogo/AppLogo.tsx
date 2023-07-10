@@ -1,7 +1,8 @@
-import { HStack } from '../../deprecated/Stack';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import React, { memo } from 'react';
 import cls from './AppLogo.module.scss';
-import Logo from '@/shared/assets/icons/logo.svg';
+import { HStack } from '../Stack';
+import AppSvg from '@/shared/assets/icons/logo.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
 interface AppLogoProps {
     className?: string;
@@ -9,20 +10,22 @@ interface AppLogoProps {
     height?: string | number;
 }
 
-export const AppLogo = (props: AppLogoProps) => {
-    const { className, height = 50, width = 50 } = props;
-    return (
-        <HStack
-            max
-            justify="center"
-            className={classNames(cls.appLogoWrapper, {}, [className])}
-        >
-            <div className={cls.gradientBig} />
-            <div className={cls.gradientSmall} />
-            <Logo
-                width={width}
-                height={height}
-            />
-        </HStack>
-    );
-};
+export const AppLogo = memo(
+    ({ className, width = 50, height = 50 }: AppLogoProps) => {
+        return (
+            <HStack
+                max
+                justify="center"
+                className={classNames(cls.appLogoWrapper, {}, [className])}
+            >
+                <div className={cls.gradientBig} />
+                <div className={cls.gradientSmall} />
+                <AppSvg
+                    width={width}
+                    height={height}
+                    className={cls.appLogo}
+                />
+            </HStack>
+        );
+    },
+);

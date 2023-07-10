@@ -1853,7 +1853,7 @@
       "username": "admin",
       "password": "111",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageWasOpened": true
       },
       "features": {
@@ -1947,6 +1947,13 @@
       "rate": 4,
       "feedback": "goood",
       "id": "mBdhHNf"
+    },
+    {
+      "userId": "2",
+      "articleId": "2",
+      "rate": 3,
+      "feedback": "hrthfg",
+      "id": "o2vcDh_"
     }
   ],
   "profile-ratings": [

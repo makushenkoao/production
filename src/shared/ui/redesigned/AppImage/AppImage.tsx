@@ -12,21 +12,17 @@ interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
     errorFallback?: ReactElement;
 }
 
-/**
- * Deprecated, use new components from redesigned
- * @deprecated
- */
 export const AppImage = memo((props: AppImageProps) => {
     const {
         className,
-        alt = 'image',
         src,
-        fallback,
+        alt = 'image',
         errorFallback,
-        ...rest
+        fallback,
+        ...otherProps
     } = props;
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [hasError, setHasError] = useState<boolean>(false);
+    const [isLoading, setIsLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
 
     useLayoutEffect(() => {
         const img = new Image();
@@ -40,16 +36,13 @@ export const AppImage = memo((props: AppImageProps) => {
         };
     }, [src]);
 
-    if (isLoading && fallback) return fallback;
+    if (isLoading && fallback) {
+        return fallback;
+    }
 
-    if (hasError && errorFallback) return errorFallback;
+    if (hasError && errorFallback) {
+        return errorFallback;
+    }
 
-    return (
-        <img
-            className={className}
-            alt={alt}
-            src={src}
-            {...rest}
-        />
-    );
+    return <img className={className} src={src} alt={alt} {...otherProps} />;
 });

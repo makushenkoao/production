@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AppImage } from './AppImage';
+import { Text } from './Text';
 
 // TODO - write stories
 
-const meta: Meta<typeof AppImage> = {
-    title: 'shared/ui/deprecated/AppImage',
-    component: AppImage,
+const meta: Meta<typeof Text> = {
+    title: 'shared/ui/redesigned/Text',
+    component: Text,
 };
 
 export default meta;
