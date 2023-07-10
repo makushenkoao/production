@@ -7,6 +7,7 @@ import {
 } from '../../src/shared/config/storybook';
 import 'app/styles/index.scss';
 import { Theme } from '../../src/shared/const/theme';
+import { StoreDecorator } from '../../src/shared/config/storybook/decorators/StoreDecorator';
 
 const preview: Preview = {
     parameters: {
@@ -44,6 +45,7 @@ const preview: Preview = {
         ThemeDecorator(Theme.LIGHT),
         RouterDecorator,
         SuspenseDecorator,
+        StoreDecorator({}),
     ],
 };
 

@@ -4,7 +4,7 @@ import { RatingCard } from './RatingCard';
 import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof RatingCard> = {
-    title: 'shared/RatingCard',
+    title: 'entities/RatingCard',
     component: RatingCard,
 };
 
