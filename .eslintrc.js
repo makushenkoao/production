@@ -68,6 +68,7 @@ module.exports = {
                     'direction',
                     'borderRadius',
                     'feature',
+                    'border',
                     'variant',
                 ],
             },

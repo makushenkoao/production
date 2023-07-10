@@ -2,9 +2,13 @@ import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Select, SelectOption } from '@/shared/ui/deprecated/Select';
-import { SortOrder } from '@/shared/types';
+import { SortOrder } from '@/shared/types/sort';
 import cls from './ArticleSortSelector.module.scss';
 import { ArticleSortField } from '@/entities/Article';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { VStack } from '@/shared/ui/redesigned/Stack';
+import { ListBox } from '@/shared/ui/redesigned/Popups';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 interface ArticleSortSelectorProps {
     className?: string;
@@ -36,7 +40,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
         () => [
             {
                 value: ArticleSortField.CREATED,
-                content: t('даті створення'),
+                content: t('датою'),
             },
             {
                 value: ArticleSortField.TITLE,
@@ -51,19 +55,51 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     );
 
     return (
-        <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
-            <Select<ArticleSortField>
-                label={t('Сортувати ЗА')}
-                options={orderFieldOptions}
-                onChange={onChangeSort}
-                value={sort}
-            />
-            <Select<SortOrder>
-                label={t('ЗА')}
-                options={orderOptions}
-                onChange={onChangeOrder}
-                value={order}
-            />
-        </div>
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <div
+                    className={classNames(
+                        cls.ArticleSortSelectorRedesigned,
+                        {},
+                        [className],
+                    )}
+                >
+                    <VStack gap="8">
+                        <Text text={t('Сортувати ЗА')} />
+                        <ListBox
+                            items={orderFieldOptions}
+                            value={sort}
+                            onChange={onChangeSort}
+                        />
+                        <ListBox
+                            items={orderOptions}
+                            value={order}
+                            onChange={onChangeOrder}
+                        />
+                    </VStack>
+                </div>
+            }
+            off={
+                <div
+                    className={classNames(cls.ArticleSortSelector, {}, [
+                        className,
+                    ])}
+                >
+                    <Select<ArticleSortField>
+                        label={t('Сортувати ЗА')}
+                        options={orderFieldOptions}
+                        onChange={onChangeSort}
+                        value={sort}
+                    />
+                    <Select<SortOrder>
+                        label={t('ЗА')}
+                        options={orderOptions}
+                        onChange={onChangeOrder}
+                        value={order}
+                    />
+                </div>
+            }
+        />
     );
 });
