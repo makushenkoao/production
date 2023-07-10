@@ -1871,7 +1871,7 @@
       "jsonSettings": {
         "isFirstVisit": true,
         "isArticlesPageWasOpened": true,
-        "theme": "app_light_theme"
+        "theme": "app_dark_theme"
       },
       "roles": [
         "USER"
