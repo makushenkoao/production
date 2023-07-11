@@ -25,6 +25,8 @@ interface ListBoxProps<T extends string> {
     readonly?: boolean;
     direction?: DropdownDirection;
     label?: string;
+    height?: string | number;
+    overflow?: 'auto' | 'hidden';
 }
 
 export function ListBox<T extends string>(props: ListBoxProps<T>) {
@@ -37,9 +39,15 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
         readonly,
         direction = 'bottom right',
         label,
+        overflow = 'hidden',
+        height,
     } = props;
 
-    const optionsClasses = [mapDirectionClass[direction], popupCls.menu];
+    const optionsClasses = [
+        mapDirectionClass[direction],
+        popupCls.menu,
+        cls[overflow],
+    ];
 
     const selectedItem = useMemo(() => {
         return items?.find((item) => item.value === value);
@@ -69,6 +77,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
                 </HListBox.Button>
                 <HListBox.Options
                     className={classNames(cls.options, {}, optionsClasses)}
+                    style={{ height }}
                 >
                     {items?.map((item) => (
                         <HListBox.Option
