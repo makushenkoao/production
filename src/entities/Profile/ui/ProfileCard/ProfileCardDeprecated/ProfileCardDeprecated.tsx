@@ -6,7 +6,7 @@ import { CurrencySelect } from '@/entities/Currency';
 import { CountrySelect } from '@/entities/Country';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import cls from './ProfileCardDeprecated.module.scss';
-import { ProfileCardProps } from '../ProfileCard/ProfileCard';
+import { ProfileCardProps } from '../ProfileCard';
 import { Loader } from '@/shared/ui/deprecated/Loader';
 import { Text, TextAlign, TextTheme } from '@/shared/ui/deprecated/Text';
 

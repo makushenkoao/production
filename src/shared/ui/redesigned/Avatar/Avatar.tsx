@@ -35,7 +35,7 @@ export const Avatar = ({
         <Skeleton
             width={width}
             height={height}
-            border="50%"
+            borderRadius="50%"
         />
     );
     const errorFallback = (

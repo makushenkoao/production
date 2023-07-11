@@ -7,7 +7,7 @@ import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
-import { ProfileCardProps } from '../ProfileCard/ProfileCard';
+import { ProfileCardProps } from '../ProfileCard';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 
 export const ProfileCardRedesigned = (props: ProfileCardProps) => {
@@ -44,7 +44,7 @@ export const ProfileCardRedesigned = (props: ProfileCardProps) => {
                         <Skeleton
                             height={128}
                             width={128}
-                            border="50%"
+                            borderRadius="50%"
                         />
                     </HStack>
                     <HStack

@@ -2,8 +2,8 @@ import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
 import { Profile } from '../../model/types/profile';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { ProfileCardDeprecated } from '../ProfileCardDeprecated';
-import { ProfileCardRedesigned } from '../ProfileCardRedesigned';
+import { ProfileCardDeprecated } from './ProfileCardDeprecated';
+import { ProfileCardRedesigned } from './ProfileCardRedesigned';
 
 type onChangeInput = (v?: string) => void;
 
