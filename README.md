@@ -89,7 +89,7 @@ which contains 3 rules
 The project describes story cases for each component.
 Server requests are mocked using storybook-addon-mock.
 
-A file with stories is created next to the component with the extension StickyContentLayout.stories.tsx
+A file with stories is created next to the component with the extension .stories.tsx
 
 You can start the storybook with the command:
 - `npm run storybook`
