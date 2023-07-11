@@ -6,15 +6,12 @@ import { ArticleListItemDeprecated } from './ArticleListItemDeprecated';
 const meta: Meta<typeof ArticleListItemDeprecated> = {
     title: 'entities/Article/ArticleListItem/ArticleListItemDeprecated',
     component: ArticleListItemDeprecated,
-    args: {
-        children: 'Button',
-    }
+    args: {},
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-    args: {
-    },
+    args: {},
 };

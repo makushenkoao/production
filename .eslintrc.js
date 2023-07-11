@@ -72,6 +72,7 @@ module.exports = {
                     'variant',
                     'overflow',
                     'size',
+                    'wrap',
                 ],
             },
         ],

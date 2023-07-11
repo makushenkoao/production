@@ -6,9 +6,7 @@ import { ArticleListItemRedesigned } from './ArticleListItemRedesigned';
 const meta: Meta<typeof ArticleListItemRedesigned> = {
     title: 'entities/Article/ArticleListItem/ArticleListItemRedesigned',
     component: ArticleListItemRedesigned,
-    args: {
-        children: 'Button',
-    },
+    args: {},
 };
 
 export default meta;
