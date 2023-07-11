@@ -107,8 +107,6 @@ const replaceComponent = (node: Node) => {
     const onAttribute = getAttributeNodeByName(attributes, 'on');
     const offAttribute = getAttributeNodeByName(attributes, 'off');
 
-    console.log(onAttribute);
-
     const featureNameAttribute = getAttributeNodeByName(attributes, 'feature');
     const featureName = featureNameAttribute
         ?.getFirstDescendantByKind(SyntaxKind.StringLiteral)
