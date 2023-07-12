@@ -18,7 +18,7 @@ export const ArticleRecommendationsList = memo(
             data: articles,
             isLoading,
             error,
-        } = useGetArticleRecommendationsListQuery(4);
+        } = useGetArticleRecommendationsListQuery(3);
 
         if (error || !articles) {
             // TODO - error
