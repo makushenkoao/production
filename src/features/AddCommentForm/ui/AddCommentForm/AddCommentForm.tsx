@@ -2,8 +2,11 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Input } from '@/shared/ui/deprecated/Input';
-import { Button } from '@/shared/ui/deprecated/Button';
+import { Input as InputDeprecated } from '@/shared/ui/deprecated/Input';
+import { Button as ButtonDeprecated } from '@/shared/ui/deprecated/Button';
+import { Input } from '@/shared/ui/redesigned/Input';
+import { Button } from '@/shared/ui/redesigned/Button';
+import { Card } from '@/shared/ui/redesigned/Card';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -19,6 +22,8 @@ import {
     getAddCommentFormError,
     getAddCommentFormIsLoading,
 } from '../../model/selectors/addCommentsFormSelectors';
+import { HStack } from '@/shared/ui/redesigned/Stack';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 const reducers: ReducersList = {
     addCommentForm: addCommentFormReducer,
@@ -52,24 +57,65 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div
-                data-testid="AddCommentForm"
-                className={classNames(cls.AddCommentForm, {}, [className])}
-            >
-                <Input
-                    className={cls.input}
-                    value={text}
-                    onChange={onCommentTextChange}
-                    placeholder={t('Введіть коментар')}
-                    data-testid="AddCommentForm.Input"
-                />
-                <Button
-                    data-testid="AddCommentForm.Button"
-                    onClick={onSendHandler}
-                >
-                    {t('Відправити')}
-                </Button>
-            </div>
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                on={
+                    <Card
+                        padding="24"
+                        max
+                        border="round"
+                        className={classNames(
+                            cls.AddCommentFormRedesigned,
+                            {},
+                            [className],
+                        )}
+                    >
+                        <HStack
+                            data-testid="AddCommentForm"
+                            gap="16"
+                            max
+                        >
+                            <Input
+                                className={cls.input}
+                                value={text}
+                                onChange={onCommentTextChange}
+                                placeholder={t('Введіть коментар')}
+                                data-testid="AddCommentForm.Input"
+                            />
+                            <Button
+                                data-testid="AddCommentForm.Button"
+                                onClick={onSendHandler}
+                            >
+                                {t('Відправити')}
+                            </Button>
+                        </HStack>
+                    </Card>
+                }
+                off={
+                    <HStack
+                        data-testid="AddCommentForm"
+                        gap="16"
+                        max
+                        className={classNames(cls.AddCommentForm, {}, [
+                            className,
+                        ])}
+                    >
+                        <InputDeprecated
+                            className={cls.input}
+                            value={text}
+                            onChange={onCommentTextChange}
+                            placeholder={t('Введіть коментар')}
+                            data-testid="AddCommentForm.Input"
+                        />
+                        <ButtonDeprecated
+                            data-testid="AddCommentForm.Button"
+                            onClick={onSendHandler}
+                        >
+                            {t('Відправити')}
+                        </ButtonDeprecated>
+                    </HStack>
+                }
+            />
         </DynamicModuleLoader>
     );
 });

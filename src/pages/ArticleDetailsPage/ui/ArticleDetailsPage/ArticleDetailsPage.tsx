@@ -16,6 +16,7 @@ import { ToggleFeatures } from '@/shared/lib/features';
 import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 import { DetailsContainer } from '../DetailsContainer/DetailsContainer';
 import { AdditionalInfoContainer } from '../AdditionalInfoContainer/AdditionalInfoContainer';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 
 const reducers: ReducersList = {
     articleDetailsPage: articleDetailsPageReducer,
@@ -40,9 +41,15 @@ export const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     <StickyContentLayout
                         content={
                             <Page className={classNames('', {}, [className])}>
-                                <DetailsContainer />
-                                <ArticleRecommendationsList />
-                                <ArticleDetailsComments id={id} />
+                                <VStack
+                                    max
+                                    gap="16"
+                                >
+                                    <DetailsContainer />
+                                    <ArticleRating articleId={id} />
+                                    <ArticleRecommendationsList />
+                                    <ArticleDetailsComments id={id} />
+                                </VStack>
                             </Page>
                         }
                         right={<AdditionalInfoContainer />}
@@ -50,11 +57,16 @@ export const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                 }
                 off={
                     <Page className={classNames('', {}, [className])}>
-                        <ArticleDetailsPageHeader />
-                        <ArticleDetails id={id} />
-                        <ArticleRating articleId={id} />
-                        <ArticleRecommendationsList />
-                        <ArticleDetailsComments id={id} />
+                        <VStack
+                            max
+                            gap="16"
+                        >
+                            <ArticleDetailsPageHeader />
+                            <ArticleDetails id={id} />
+                            <ArticleRating articleId={id} />
+                            <ArticleRecommendationsList />
+                            <ArticleDetailsComments id={id} />
+                        </VStack>
                     </Page>
                 }
             />

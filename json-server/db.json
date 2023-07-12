@@ -1845,6 +1845,18 @@
       "userId": "1",
       "text": "vxcvxcv",
       "id": "q7pamZm"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "adf",
+      "id": "dQk082c"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "sdf",
+      "id": "oFBLADN"
     }
   ],
   "users": [
@@ -1876,7 +1888,10 @@
       "roles": [
         "USER"
       ],
-      "avatar": "https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
+      "avatar": "https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png",
+      "features": {
+        "isAppRedesigned": true
+      }
     },
     {
       "id": "3",
