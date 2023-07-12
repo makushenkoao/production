@@ -1,9 +1,10 @@
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/deprecated/Text';
-import cls from './ArticleTextBlockComponent.module.scss';
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { ArticleTextBlock } from '../../model/types/article';
+import { ToggleFeatures } from '@/shared/lib/features';
+import cls from './ArticleTextBlockComponent.module.scss';
 
 interface ArticleTextBlockComponentProps {
     className?: string;
@@ -13,7 +14,7 @@ interface ArticleTextBlockComponentProps {
 export const ArticleTextBlockComponent = memo(
     (props: ArticleTextBlockComponentProps) => {
         const { className, block } = props;
-        const { t } = useTranslation();
+
         return (
             <div
                 className={classNames(cls.ArticleTextBlockComponent, {}, [
@@ -21,16 +22,38 @@ export const ArticleTextBlockComponent = memo(
                 ])}
             >
                 {block.title && (
-                    <Text
-                        title={block.title}
-                        className={cls.title}
+                    <ToggleFeatures
+                        feature="isAppRedesigned"
+                        on={
+                            <Text
+                                title={block.title}
+                                className={cls.title}
+                            />
+                        }
+                        off={
+                            <TextDeprecated
+                                title={block.title}
+                                className={cls.title}
+                            />
+                        }
                     />
                 )}
-                {block.paragraphs.map((p, i) => (
-                    <Text
-                        key={p}
-                        text={p}
-                        className={cls.text}
+                {block.paragraphs.map((paragraph, index) => (
+                    <ToggleFeatures
+                        key={paragraph}
+                        feature="isAppRedesigned"
+                        on={
+                            <Text
+                                text={paragraph}
+                                className={cls.paragraph}
+                            />
+                        }
+                        off={
+                            <TextDeprecated
+                                text={paragraph}
+                                className={cls.paragraph}
+                            />
+                        }
                     />
                 ))}
             </div>

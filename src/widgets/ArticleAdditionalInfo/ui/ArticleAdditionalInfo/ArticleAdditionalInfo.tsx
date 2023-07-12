@@ -5,7 +5,6 @@ import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Button } from '@/shared/ui/redesigned/Button';
-import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 
 interface ArticleAdditionalInfoProps {
     className?: string;

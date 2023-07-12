@@ -27,6 +27,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                 width={32}
                 height={32}
                 src={article.user.avatar}
+                className={cls.avatar}
             />
             <Text
                 bold
@@ -125,13 +126,14 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
             ])}
         >
             <Card
+                padding="0"
                 className={cls.card}
                 border="round"
             >
                 <AppImage
                     fallback={
                         <Skeleton
-                            width={200}
+                            width="100%"
                             height={200}
                         />
                     }
