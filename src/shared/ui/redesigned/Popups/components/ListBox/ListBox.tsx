@@ -6,8 +6,8 @@ import { HStack } from '../../../../redesigned/Stack';
 import { Button } from '../../../Button/Button';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
-import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
 import popupCls from '../../styles/popup.module.scss';
+import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
 import { Icon } from '../../../Icon';
 
 export interface ListBoxItem<T extends string> {
@@ -26,7 +26,7 @@ interface ListBoxProps<T extends string> {
     direction?: DropdownDirection;
     label?: string;
     height?: string | number;
-    overflow?: 'auto' | 'hidden';
+    overflow?: 'auto' | 'hidden' | 'unset';
 }
 
 export function ListBox<T extends string>(props: ListBoxProps<T>) {
@@ -39,7 +39,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
         readonly,
         direction = 'bottom right',
         label,
-        overflow = 'hidden',
+        overflow = 'unset',
         height,
     } = props;
 

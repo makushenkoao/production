@@ -2,7 +2,11 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text as TextDeprecated, TextTheme } from '@/shared/ui/deprecated/Text';
+import {
+    Text as TextDeprecated,
+    TextAlign,
+    TextTheme,
+} from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
 import { Dropdown as DropdownDeprecated } from '@/shared/ui/deprecated/Popups';
@@ -13,7 +17,11 @@ import {
     userActions,
 } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
+import {
+    getRouteAdmin,
+    getRouteProfile,
+    getRouteSettings,
+} from '@/shared/const/router';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Dropdown } from '@/shared/ui/redesigned/Popups';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
@@ -55,17 +63,23 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             href: getRouteProfile(userAuthData.id),
         },
         {
+            content: t('Налаштування'),
+            href: getRouteSettings(),
+        },
+        {
             content: (
                 <ToggleFeatures
                     feature="isAppRedesigned"
                     on={
                         <Text
+                            align="center"
                             text={t('Вийти')}
                             variant="error"
                         />
                     }
                     off={
                         <TextDeprecated
+                            align={TextAlign.CENTER}
                             text={t('Вийти')}
                             theme={TextTheme.ERROR}
                         />
