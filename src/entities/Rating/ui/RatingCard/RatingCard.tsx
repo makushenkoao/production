@@ -3,9 +3,9 @@ import { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { Card as CardDeprecated } from '@/shared/ui/deprecated/Card';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
-import { Text as TextDepreacetd } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { StarRating } from '@/shared/ui/deprecated/StarRating';
+import { StarRating } from '@/shared/ui/redesigned/StarRating';
 import { Modal } from '@/shared/ui/redesigned/Modal';
 import { Input as InputDeprecated } from '@/shared/ui/deprecated/Input';
 import {
@@ -82,7 +82,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
             }
             off={
                 <>
-                    <TextDepreacetd title={feedbackTitle} />
+                    <TextDeprecated title={feedbackTitle} />
                     <InputDeprecated
                         data-testid="RatingCard.Input"
                         value={feedback}
@@ -109,7 +109,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         />
                     }
                     off={
-                        <TextDepreacetd
+                        <TextDeprecated
                             title={starsCount ? t('Дякую за оцінку!') : title}
                         />
                     }
