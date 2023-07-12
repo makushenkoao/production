@@ -12,6 +12,10 @@ import { articleDetailsPageReducer } from '../../model/slice';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleRating } from '@/features/articleRating';
 import { Page } from '@/widgets/Page';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
+import { DetailsContainer } from '../DetailsContainer/DetailsContainer';
+import { AdditionalInfoContainer } from '../AdditionalInfoContainer/AdditionalInfoContainer';
 
 const reducers: ReducersList = {
     articleDetailsPage: articleDetailsPageReducer,
@@ -26,14 +30,34 @@ export const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const { id } = useParams<{ id: string }>();
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <Page className={classNames('', {}, [className])}>
-                <ArticleDetailsPageHeader />
-                <ArticleDetails id={id} />
-                <ArticleRating articleId={id} />
-                <ArticleRecommendationsList />
-                <ArticleDetailsComments id={id} />
-            </Page>
+        <DynamicModuleLoader
+            reducers={reducers}
+            removeAfterUnmount
+        >
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                on={
+                    <StickyContentLayout
+                        content={
+                            <Page className={classNames('', {}, [className])}>
+                                <DetailsContainer />
+                                <ArticleRecommendationsList />
+                                <ArticleDetailsComments id={id} />
+                            </Page>
+                        }
+                        right={<AdditionalInfoContainer />}
+                    />
+                }
+                off={
+                    <Page className={classNames('', {}, [className])}>
+                        <ArticleDetailsPageHeader />
+                        <ArticleDetails id={id} />
+                        <ArticleRating articleId={id} />
+                        <ArticleRecommendationsList />
+                        <ArticleDetailsComments id={id} />
+                    </Page>
+                }
+            />
         </DynamicModuleLoader>
     );
 };
