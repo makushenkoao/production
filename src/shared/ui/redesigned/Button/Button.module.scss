@@ -32,10 +32,21 @@
 }
 
 .filled {
-    background: var(--light-bg-redesigned);
     border: none;
     outline: none;
     border-radius: 34px;
+
+    &.normal {
+        background: var(--light-bg-redesigned);
+    }
+
+    &.success {
+        background: var(--save-redesigned);
+    }
+
+    &.error {
+        background: var(--cancel-redesigned);
+    }
 }
 
 .outline {
@@ -43,8 +54,30 @@
     border: 2px solid var(--icon-redesigned);
     border-radius: 34px;
 
-    &:hover {
-        border: 2px solid var(--accent-redesigned);
+    &.normal {
+        border: 2px solid var(--icon-redesigned);
+
+        &:hover {
+            border: 2px solid var(--accent-redesigned);
+        }
+    }
+
+    &.success {
+        border: 2px solid var(--save-redesigned);
+        color: var(--save-redesigned);
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &.error {
+        border: 2px solid var(--cancel-redesigned);
+        color: var(--cancel-redesigned);
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
 

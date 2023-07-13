@@ -5,12 +5,19 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { HStack } from '@/shared/ui/redesigned/Stack';
-import { Text } from '@/shared/ui/deprecated/Text';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
+import {
+    Button as ButtonDeprecated,
+    ButtonTheme,
+} from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
 import { profileActions } from '../../model/slice/ProfileSlice';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { Card } from '@/shared/ui/redesigned/Card';
 
 export const EditableProfileCardHeader = memo(
     ({ className }: { className?: string }) => {
@@ -34,41 +41,88 @@ export const EditableProfileCardHeader = memo(
         }, [dispatch]);
 
         return (
-            <HStack
-                justify="between"
-                max
-                className={classNames('', {}, [className])}
-            >
-                <Text title={t('Профіль')} />
-                {canEdit && (
-                    <HStack gap="4">
-                        <Button
-                            theme={
-                                readonly
-                                    ? ButtonTheme.OUTLINE
-                                    : ButtonTheme.OUTLINE_RED
-                            }
-                            onClick={readonly ? onEdit : onCancel}
-                            data-testid={
-                                readonly
-                                    ? 'EditableProfileCardHeader.EditButton'
-                                    : 'EditableProfileCardHeader.CancelButton'
-                            }
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                on={
+                    <Card
+                        padding="24"
+                        max
+                    >
+                        <HStack
+                            justify="between"
+                            max
+                            className={classNames('', {}, [className])}
                         >
-                            {t(readonly ? 'Редагувати' : 'Скасувати')}
-                        </Button>
-                        {!readonly && (
-                            <Button
-                                theme={ButtonTheme.OUTLINE}
-                                onClick={onSave}
-                                data-testid="EditableProfileCardHeader.SaveButton"
-                            >
-                                {t('Зберегти')}
-                            </Button>
+                            <Text title={t('Профіль')} />
+                            {canEdit && (
+                                <HStack gap="8">
+                                    <Button
+                                        color={readonly ? 'normal' : 'error'}
+                                        onClick={readonly ? onEdit : onCancel}
+                                        data-testid={
+                                            readonly
+                                                ? 'EditableProfileCardHeader.EditButton'
+                                                : 'EditableProfileCardHeader.CancelButton'
+                                        }
+                                    >
+                                        {t(
+                                            readonly
+                                                ? 'Редагувати'
+                                                : 'Скасувати',
+                                        )}
+                                    </Button>
+                                    {!readonly && (
+                                        <Button
+                                            color="success"
+                                            onClick={onSave}
+                                            data-testid="EditableProfileCardHeader.SaveButton"
+                                        >
+                                            {t('Зберегти')}
+                                        </Button>
+                                    )}
+                                </HStack>
+                            )}
+                        </HStack>
+                    </Card>
+                }
+                off={
+                    <HStack
+                        justify="between"
+                        max
+                        className={classNames('', {}, [className])}
+                    >
+                        <TextDeprecated title={t('Профіль')} />
+                        {canEdit && (
+                            <HStack gap="4">
+                                <ButtonDeprecated
+                                    theme={
+                                        readonly
+                                            ? ButtonTheme.OUTLINE
+                                            : ButtonTheme.OUTLINE_RED
+                                    }
+                                    onClick={readonly ? onEdit : onCancel}
+                                    data-testid={
+                                        readonly
+                                            ? 'EditableProfileCardHeader.EditButton'
+                                            : 'EditableProfileCardHeader.CancelButton'
+                                    }
+                                >
+                                    {t(readonly ? 'Редагувати' : 'Скасувати')}
+                                </ButtonDeprecated>
+                                {!readonly && (
+                                    <ButtonDeprecated
+                                        theme={ButtonTheme.OUTLINE}
+                                        onClick={onSave}
+                                        data-testid="EditableProfileCardHeader.SaveButton"
+                                    >
+                                        {t('Зберегти')}
+                                    </ButtonDeprecated>
+                                )}
+                            </HStack>
                         )}
                     </HStack>
-                )}
-            </HStack>
+                }
+            />
         );
     },
 );

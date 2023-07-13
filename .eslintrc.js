@@ -73,6 +73,7 @@ module.exports = {
                     'overflow',
                     'size',
                     'wrap',
+                    'color',
                 ],
             },
         ],
