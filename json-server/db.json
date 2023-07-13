@@ -1869,7 +1869,7 @@
         "isArticlesPageWasOpened": true
       },
       "features": {
-        "isAppRedesigned": false
+        "isAppRedesigned": true
       },
       "roles": [
         "ADMIN"

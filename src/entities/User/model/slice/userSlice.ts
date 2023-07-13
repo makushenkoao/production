@@ -3,7 +3,10 @@ import { UserSchema, User } from '../types/user';
 import { setFeatureFlags } from '@/shared/lib/features';
 import { saveJsonSettings } from '../services/saveJsonSettings';
 import { JsonSettings } from '../types/jsonSettings';
-import { USER_LOCAL_STORAGE_KEY } from '@/shared/const/localStorage';
+import {
+    LOCAL_STORAGE_LAST_DESIGN_KEY,
+    USER_LOCAL_STORAGE_KEY,
+} from '@/shared/const/localStorage';
 import { initAuthData } from '../services/initAuthData';
 
 const initialState: UserSchema = {
@@ -18,6 +21,10 @@ export const userSlice = createSlice({
             state.authData = payload;
             setFeatureFlags(payload.features);
             localStorage.setItem(USER_LOCAL_STORAGE_KEY, payload.id);
+            localStorage.setItem(
+                LOCAL_STORAGE_LAST_DESIGN_KEY,
+                payload.features?.isAppRedesigned ? 'new' : 'old',
+            );
         },
         logout: (state) => {
             state.authData = undefined;
