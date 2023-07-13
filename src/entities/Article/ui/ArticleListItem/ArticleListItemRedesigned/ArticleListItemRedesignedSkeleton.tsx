@@ -101,6 +101,7 @@ export const ArticleListItemRedesignedSkeleton = memo(
                 <Card
                     className={cls.card}
                     border="round"
+                    padding="0"
                 >
                     <Skeleton
                         height={140}
