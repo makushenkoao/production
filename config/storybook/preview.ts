@@ -8,6 +8,7 @@ import {
 import 'app/styles/index.scss';
 import { Theme } from '../../src/shared/const/theme';
 import { StoreDecorator } from '../../src/shared/config/storybook/decorators/StoreDecorator';
+import { FeaturesFlagsDecorator } from '../../src/shared/config/storybook/decorators/FeaturesFlagsDecorator';
 
 const preview: Preview = {
     parameters: {
@@ -45,7 +46,7 @@ const preview: Preview = {
         ThemeDecorator(Theme.LIGHT),
         RouterDecorator,
         SuspenseDecorator,
-        StoreDecorator({}),
+        FeaturesFlagsDecorator({}),
     ],
 };
 
