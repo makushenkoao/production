@@ -53,13 +53,12 @@ export function ListBox(props: ListBoxProps) {
                 value={value}
                 onChange={onChange}
             >
-                <HListBox.Button as={Fragment}>
-                    <Button
-                        theme={ButtonTheme.OUTLINE}
-                        disabled={readonly}
-                    >
-                        {value ?? defaultValue}
-                    </Button>
+                <HListBox.Button
+                    as={Button}
+                    theme={ButtonTheme.OUTLINE}
+                    disabled={readonly}
+                >
+                    {value ?? defaultValue}
                 </HListBox.Button>
                 <HListBox.Options
                     className={classNames(cls.options, {}, optionsClasses)}
