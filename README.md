@@ -190,7 +190,6 @@ For asynchronous connection of reducers (so as not to pull them into a common bu
 
 - [Article](/src/entities/Article)
 - [Comment](/src/entities/Comment)
-- [Counter](/src/entities/Counter)
 - [Country](/src/entities/Country)
 - [Currency](/src/entities/Currency)
 - [Notification](/src/entities/Notification)
@@ -201,14 +200,19 @@ For asynchronous connection of reducers (so as not to pull them into a common bu
 ## Features
 
 - [addCommentForm](/src/features/addCommentForm)
-- [articleEditForm](/src/features/articleEditForm)
+- [articlePageGreeting](/src/features/articlePageGreeting)
 - [articleRating](/src/features/articleRating)
 - [articleRecommendationsList](/src/features/articleRecommendationsList)
+- [articleSortSelector](/src/features/articleSortSelector)
+- [articleTypeTabs](/src/features/articleTypeTabs)
+- [articleViewSelector](/src/features/articleViewSelector)
 - [AuthByUsername](/src/features/AuthByUsername)
 - [avatarDropdown](/src/features/avatarDropdown)
 - [editableProfileCard](/src/features/editableProfileCard)
 - [LangSwitcher](/src/features/LangSwitcher)
 - [notificationButton](/src/features/notificationButton)
 - [profileRating](/src/features/profileRating)
+- [scrollToTopButton](/src/features/scrollToTopButton)
 - [ThemeSwitcher](/src/features/ThemeSwitcher)
 - [UI](/src/features/UI)
+- [uiDesignSwitcher](/src/features/uiDesignSwitcher)

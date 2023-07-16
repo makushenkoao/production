@@ -7,7 +7,6 @@ import {
 } from '../../src/shared/config/storybook';
 import 'app/styles/index.scss';
 import { Theme } from '../../src/shared/const/theme';
-import { StoreDecorator } from '../../src/shared/config/storybook/decorators/StoreDecorator';
 import { FeaturesFlagsDecorator } from '../../src/shared/config/storybook/decorators/FeaturesFlagsDecorator';
 
 const preview: Preview = {

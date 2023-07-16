@@ -56,7 +56,7 @@ export function ListBox(props: ListBoxProps) {
                 <HListBox.Button
                     as={Button}
                     theme={ButtonTheme.OUTLINE}
-                    disabled={readonly}
+                    // disabled={readonly}
                 >
                     {value ?? defaultValue}
                 </HListBox.Button>
