@@ -87,7 +87,7 @@ const ProfileRating = (props: ProfileRatingProps) => {
     return (
         <RatingCard
             className={classNames('', {}, [className])}
-            title={t('Оцініть статтю')}
+            title={t('Оцініть профіль')}
             feedbackTitle={t(
                 'Напишіть свій відгук, який допоможе стати нам краще',
             )}
