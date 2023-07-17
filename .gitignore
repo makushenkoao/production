@@ -1,7 +1,6 @@
 /build
 node_modules
 .idea
-notes.txt
 /storybook-static
 coverage
 reports/unit
