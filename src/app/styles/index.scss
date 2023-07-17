@@ -1,8 +1,14 @@
 @import "reset";
 @import "variables/global";
+@import "themes/blue";
+@import "themes/brown";
 @import "themes/dark";
+@import "themes/green";
 @import "themes/normal";
 @import "themes/orange";
+@import "themes/purple";
+@import "themes/red";
+@import "themes/yellow";
 
 .app {
     color: var(--primary-color);
