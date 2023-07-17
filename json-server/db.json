@@ -1986,18 +1986,18 @@
   ],
   "profile-ratings": [
     {
-      "id": "1",
-      "rate": 4,
-      "feedback": "Хорошая статья",
       "userId": "1",
-      "profileId": "1"
+      "profileId": "1",
+      "rate": 1,
+      "feedback": "bad",
+      "id": 1
     },
     {
-      "id": "2",
-      "rate": 4,
-      "feedback": "Хорошая статья",
       "userId": "1",
-      "profileId": "2"
+      "profileId": "2",
+      "rate": 5,
+      "feedback": "nice profile!",
+      "id": 2
     }
   ]
 }

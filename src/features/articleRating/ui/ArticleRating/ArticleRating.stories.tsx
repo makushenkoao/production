@@ -5,7 +5,7 @@ import { Theme } from '@/shared/const/theme';
 import { StoreDecorator } from '@/shared/config/storybook/decorators/StoreDecorator';
 
 const meta: Meta<typeof ArticleRating> = {
-    title: 'pages/ArticleRating',
+    title: 'pages/ProfileRating',
     component: ArticleRating,
     decorators: [StoreDecorator({})],
     parameters: {

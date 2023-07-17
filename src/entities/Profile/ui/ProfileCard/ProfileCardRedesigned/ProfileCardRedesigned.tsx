@@ -1,14 +1,17 @@
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Input } from '@/shared/ui/redesigned/Input';
 import { CurrencySelect } from '@/entities/Currency';
 import { CountrySelect } from '@/entities/Country';
+// TODO
+// eslint-disable-next-line
+import { ProfileRating } from '@/features/profileRating';
+import { Input } from '@/shared/ui/redesigned/Input';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
-import { ProfileCardProps } from '../ProfileCard';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
+import { ProfileCardProps } from '../ProfileCard';
 
 export const ProfileCardRedesigned = (props: ProfileCardProps) => {
     const {
@@ -208,6 +211,7 @@ export const ProfileCardRedesigned = (props: ProfileCardProps) => {
                     </VStack>
                 </HStack>
             </VStack>
+            <ProfileRating />
         </Card>
     );
 };
