@@ -49,6 +49,7 @@ const ProfileRating = (props: ProfileRatingProps) => {
     const onAccept = useCallback(
         (starsCount: number, feedback?: string) => {
             handleRateArticle(starsCount, feedback);
+            window.location.reload();
         },
         [handleRateArticle],
     );
@@ -56,6 +57,7 @@ const ProfileRating = (props: ProfileRatingProps) => {
     const onCancel = useCallback(
         (starsCount: number) => {
             handleRateArticle(starsCount);
+            window.location.reload();
         },
         [handleRateArticle],
     );

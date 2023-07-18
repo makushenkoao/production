@@ -1871,7 +1871,7 @@
       "username": "admin",
       "password": "111",
       "jsonSettings": {
-        "theme": "app_orange_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageWasOpened": true
       },
       "features": {
@@ -2026,6 +2026,13 @@
       "rate": 1,
       "feedback": "omg",
       "id": 6
+    },
+    {
+      "userId": "1",
+      "profileId": "3",
+      "rate": 3,
+      "feedback": "sdf",
+      "id": 7
     }
   ]
 }

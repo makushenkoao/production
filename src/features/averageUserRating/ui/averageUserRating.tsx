@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useGetProfileRatingByIdQuery } from '../api/averageProfileRatingApi';
 import { HStack } from '@/shared/ui/redesigned/Stack';
-import StarIcon from '@/shared/assets/icons/star.svg';
 import { Icon } from '@/shared/ui/redesigned/Icon';
+import StarIcon from '@/shared/assets/icons/star.svg';
 
 export const AverageUserRating = ({ className }: { className?: string }) => {
     const { id } = useParams<{
@@ -23,8 +23,11 @@ export const AverageUserRating = ({ className }: { className?: string }) => {
             (total, rating) => total + rating,
             0,
         );
-        const averageRating = Number((sumOfRatings / ratings.length).toFixed(2));
+        const averageRating = Number(
+            (sumOfRatings / ratings.length).toFixed(2),
+        );
         setAverageRating(averageRating || 0);
+        console.log(data);
     }, [data]);
 
     return (
