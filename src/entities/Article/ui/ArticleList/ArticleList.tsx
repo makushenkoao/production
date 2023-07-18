@@ -70,7 +70,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
             feature="isAppRedesigned"
             on={
                 <HStack
-                    gap="16"
+                    gap="8"
                     className={classNames(cls.ArticleListRedesigned, {}, [
                         className,
                     ])}
