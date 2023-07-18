@@ -12,6 +12,10 @@ import { Text } from '@/shared/ui/redesigned/Text';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 import { ProfileCardProps } from '../ProfileCard';
+// TODO
+// eslint-disable-next-line
+import { AverageUserRating } from '@/features/averageUserRating';
+import cls from './ProfileCardRedesigned.module.scss';
 
 export const ProfileCardRedesigned = (props: ProfileCardProps) => {
     const {
@@ -127,7 +131,7 @@ export const ProfileCardRedesigned = (props: ProfileCardProps) => {
         <Card
             max
             padding="24"
-            className={classNames('', {}, [className])}
+            className={classNames(cls.ProfileCardRedesigned, {}, [className])}
         >
             <VStack gap="32">
                 <HStack
@@ -212,6 +216,7 @@ export const ProfileCardRedesigned = (props: ProfileCardProps) => {
                 </HStack>
             </VStack>
             <ProfileRating />
+            <AverageUserRating className={cls.averageUserRating} />
         </Card>
     );
 };

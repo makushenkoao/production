@@ -7,7 +7,7 @@ import { RatingCard } from '@/entities/Rating';
 import {
     useGetProfileRatingQuery,
     useRateProfileMutation,
-} from '../../api/articleRatingApi';
+} from '../../api/profileRatingApi';
 import { getUserAuthData } from '@/entities/User';
 import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';

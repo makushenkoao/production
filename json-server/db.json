@@ -1871,7 +1871,7 @@
       "username": "admin",
       "password": "111",
       "jsonSettings": {
-        "theme": "app_red_theme",
+        "theme": "app_orange_theme",
         "isArticlesPageWasOpened": true
       },
       "features": {
@@ -1987,17 +1987,45 @@
   "profile-ratings": [
     {
       "userId": "1",
-      "profileId": "1",
-      "rate": 1,
-      "feedback": "bad",
-      "id": 1
-    },
-    {
-      "userId": "1",
       "profileId": "2",
       "rate": 5,
       "feedback": "nice profile!",
+      "id": 1
+    },
+    {
+      "userId": "2",
+      "profileId": "1",
+      "rate": 4,
+      "feedback": "good",
       "id": 2
+    },
+    {
+      "userId": "3",
+      "profileId": "1",
+      "rate": 5,
+      "feedback": "better profile",
+      "id": 3
+    },
+    {
+      "userId": "4",
+      "profileId": "1",
+      "rate": 4,
+      "feedback": "good",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "profileId": "4",
+      "rate": 4,
+      "feedback": "good",
+      "id": 5
+    },
+    {
+      "userId": "2",
+      "profileId": "4",
+      "rate": 1,
+      "feedback": "omg",
+      "id": 6
     }
   ]
 }
