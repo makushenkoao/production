@@ -12,8 +12,6 @@ export const RecentArticlesList = () => {
         ?.slice(0, 3)
         .sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
 
-    console.log(recentArticles);
-
     if (!recentArticles) return null;
 
     return (

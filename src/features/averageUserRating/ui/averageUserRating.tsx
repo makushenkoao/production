@@ -24,10 +24,9 @@ export const AverageUserRating = ({ className }: { className?: string }) => {
             0,
         );
         const averageRating = Number(
-            (sumOfRatings / ratings.length).toFixed(2),
+            (sumOfRatings / ratings.length).toFixed(1),
         );
         setAverageRating(averageRating || 0);
-        console.log(data);
     }, [data]);
 
     return (
