@@ -10,6 +10,7 @@ interface AppLinkProps extends LinkProps {
     variant?: AppLinkVariant;
     children?: ReactNode;
     activeClassName?: string;
+    max?: boolean
 }
 
 export const AppLink = forwardRef(
@@ -20,6 +21,7 @@ export const AppLink = forwardRef(
             children,
             variant = 'primary',
             activeClassName = '',
+            max,
             ...otherProps
         } = props;
 
@@ -27,7 +29,7 @@ export const AppLink = forwardRef(
             <NavLink
                 to={to}
                 className={({ isActive }) =>
-                    classNames(cls.AppLink, { [activeClassName]: isActive }, [
+                    classNames(cls.AppLink, { [activeClassName]: isActive, [cls.max]: max }, [
                         className,
                         cls[variant],
                     ])

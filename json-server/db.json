@@ -1871,7 +1871,7 @@
       "username": "admin",
       "password": "111",
       "jsonSettings": {
-        "theme": "app_blue_theme",
+        "theme": "app_light_theme",
         "isArticlesPageWasOpened": true
       },
       "features": {

@@ -55,7 +55,7 @@ export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {
                         <Avatar
                             width={30}
                             height={30}
-                            src={article.user.avatar}
+                            src={article.user?.avatar}
                             rounded
                         />
                         <Text

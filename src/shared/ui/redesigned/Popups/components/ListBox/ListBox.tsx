@@ -4,11 +4,11 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/types/ui';
 import { HStack } from '../../../../redesigned/Stack';
 import { Button } from '../../../Button/Button';
-import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
+import { Icon } from '../../../Icon';
 import popupCls from '../../styles/popup.module.scss';
 import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
-import { Icon } from '../../../Icon';
+import cls from './ListBox.module.scss';
 
 export interface ListBoxItem<T extends string> {
     value: string;

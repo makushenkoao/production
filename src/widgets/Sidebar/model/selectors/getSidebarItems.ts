@@ -5,12 +5,14 @@ import ArticleIconDeprecated from '@/shared/assets/icons/article.svg';
 import MainIcon from '@/shared/assets/icons/home.svg';
 import AboutIcon from '@/shared/assets/icons/info.svg';
 import ArticleIcon from '@/shared/assets/icons/article-re.svg';
+import SearchIcon from '@/shared/assets/icons/search.svg';
 import { getUserAuthData } from '@/entities/User';
 import { SidebarItemTypes } from '../types/sidebar';
 import {
     getRouteAbout,
     getRouteArticles,
     getRouteMain,
+    getRouteSearch,
 } from '@/shared/const/router';
 import { toggleFeatures } from '@/shared/lib/features';
 
@@ -37,16 +39,27 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
     ];
 
     if (userData) {
-        sidebarItemsList.push({
-            path: getRouteArticles(),
-            text: 'Статті',
-            icon: toggleFeatures({
-                name: 'isAppRedesigned',
-                off: () => ArticleIconDeprecated,
-                on: () => ArticleIcon,
-            }),
-            authOnly: true,
-        });
+        sidebarItemsList.push(
+            {
+                path: getRouteArticles(),
+                text: 'Статті',
+                icon: toggleFeatures({
+                    name: 'isAppRedesigned',
+                    off: () => ArticleIconDeprecated,
+                    on: () => ArticleIcon,
+                }),
+                authOnly: true,
+            },
+            {
+                path: getRouteSearch(),
+                text: 'Пошук користувача',
+                icon: toggleFeatures({
+                    name: 'isAppRedesigned',
+                    off: () => SearchIcon,
+                    on: () => SearchIcon,
+                }),
+            },
+        );
     }
 
     return sidebarItemsList;

@@ -10,3 +10,4 @@ export {
     ArticleBlockType,
 } from './model/consts/consts';
 export { ARRAY_ARTICLE_MOCK, ARTICLE_MOCK } from './model/consts/mock';
+export { useGetArticlesQuery } from './api/article'

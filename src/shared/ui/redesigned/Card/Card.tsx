@@ -3,7 +3,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Card.module.scss';
 
 export type CardVariant = 'default' | 'outlined' | 'light';
-export type CardPadding = '0' | '1' | '8' | '16' | '24';
+export type CardPadding = '0' | '1' | '4' | '8' | '16' | '24';
 export type CardBorder = 'round' | 'normal' | 'partial';
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
@@ -19,6 +19,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
 const mapPaddingToClass: Record<CardPadding, string> = {
     '0': 'gap_0',
     '1': 'gap_1',
+    '4': 'gap_4',
     '8': 'gap_8',
     '16': 'gap_16',
     '24': 'gap_24',

@@ -21,6 +21,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
     const { t } = useTranslation();
 
+
     const userInfo = (
         <>
             <Avatar
@@ -105,7 +106,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                             to={getRouteArticleDetails(article.id)}
                         >
                             <Button variant="outline">
-                                {t('Читать далее...')}
+                                {t('Читати далі')}
                             </Button>
                         </AppLink>
                         {views}
