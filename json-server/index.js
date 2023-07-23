@@ -47,6 +47,55 @@ server.post('/login', (req, res) => {
     }
 });
 
+server.post('/register', (req, res) => {
+    try {
+        const { username, firstname, lastname, password } = req.body;
+        const db = JSON.parse(
+            fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'),
+        );
+        const { users = [] } = db;
+
+        // const existingUser = users.find((user) => user.username === username);
+        //
+        // if (existingUser) {
+        //     return res.status(409).json({
+        //         message: 'User with the same username already exists',
+        //     });
+        // }
+
+        const id = String(Date.now());
+
+        const newUser = {
+            id,
+            username,
+            password,
+            features: {
+                isAppRedesigned: true,
+            },
+        };
+
+        const newProfile = {
+            id,
+            username,
+            firstname,
+            lastname,
+        };
+
+        db.users.push(newUser);
+        db.profile.push(newProfile);
+
+        fs.writeFileSync(
+            path.resolve(__dirname, 'db.json'),
+            JSON.stringify(db, null, 2),
+        );
+
+        return res.status(201).json(newUser);
+    } catch (e) {
+        console.log(e);
+        return res.status(500).json({ message: e.message });
+    }
+});
+
 server.use((req, res, next) => {
     if (!req.headers.authorization) {
         return res.status(403).json({ message: 'AUTH ERROR' });

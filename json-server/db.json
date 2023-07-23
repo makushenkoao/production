@@ -77,6 +77,29 @@
       "city": "Cherkasy",
       "username": "testuser",
       "avatar": "https://www.shareicon.net/data/512x512/2016/09/01/822726_user_512x512.png"
+    },
+    {
+      "id": "1690116539675",
+      "username": "aaa",
+      "firstname": "aaaa",
+      "lastname": "aaaa",
+      "avatar": "https://cdn.vox-cdn.com/thumbor/MbYxeyxG82sFlibdnv9Br1aCLg8=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/24395697/bkq6gtrpcnw43vsm5zm62q3z.png",
+      "age": 12,
+      "city": "Bob",
+      "currency": "EUR",
+      "country": "USA"
+    },
+    {
+      "id": "1690122879171",
+      "username": "ggg",
+      "firstname": "df",
+      "lastname": "fas"
+    },
+    {
+      "id": "1690123631680",
+      "username": "box",
+      "firstname": "box",
+      "lastname": "box"
     }
   ],
   "articles": [
@@ -1871,7 +1894,7 @@
       "username": "admin",
       "password": "111",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageWasOpened": true
       },
       "features": {
@@ -1924,6 +1947,30 @@
         "ADMIN"
       ],
       "avatar": "https://www.shareicon.net/data/512x512/2016/09/01/822726_user_512x512.png"
+    },
+    {
+      "id": "1690116539675",
+      "username": "aaa",
+      "password": "aaa",
+      "features": {
+        "isAppRedesigned": true
+      }
+    },
+    {
+      "id": "1690122879171",
+      "username": "ggg",
+      "password": "bbb",
+      "features": {
+        "isAppRedesigned": true
+      }
+    },
+    {
+      "id": "1690123631680",
+      "username": "box",
+      "password": "box",
+      "features": {
+        "isAppRedesigned": true
+      }
     }
   ],
   "article-ratings": [
@@ -2033,6 +2080,13 @@
       "rate": 3,
       "feedback": "sdf",
       "id": 7
+    },
+    {
+      "userId": "1690123631680",
+      "profileId": "1690116539675",
+      "rate": 4,
+      "feedback": "000",
+      "id": 8
     }
   ]
 }

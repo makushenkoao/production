@@ -83,8 +83,7 @@ const ProfileRating = (props: ProfileRatingProps) => {
     }
 
     const rating = data?.[0];
-
-    if (userData?.id === id) return null;
+    if (String(userData?.id) === id) return null;
 
     return (
         <RatingCard

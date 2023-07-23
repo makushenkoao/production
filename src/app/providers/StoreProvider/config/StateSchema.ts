@@ -7,7 +7,7 @@ import {
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 import { UserSchema } from '@/entities/User';
-import { LoginSchema } from '@/features/AuthByUsername';
+import { LoginSchema, RegisterSchema } from '@/features/AuthByUsername';
 import { ArticleDetailsSchema } from '@/entities/Article';
 import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '@/features/AddCommentForm';
@@ -21,6 +21,7 @@ export interface StateSchema {
     ui: UISchema;
     [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
     loginForm?: LoginSchema;
+    registerForm?: RegisterSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
     addCommentForm?: AddCommentFormSchema;

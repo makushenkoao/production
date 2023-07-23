@@ -24,8 +24,8 @@ export const PopularArticlesList = () => {
             >
                 <Skeleton height={30} />
                 <VStack gap="16">
-                    {[...Array(5)].map((_) => (
-                        <Card padding="0">
+                    {[...Array(5)].map((_, index) => (
+                        <Card padding="0" key={index}>
                             <VStack gap="4">
                                 <Skeleton
                                     width="100%"
@@ -51,7 +51,10 @@ export const PopularArticlesList = () => {
             <Text text={t('Популярне')} />
             <VStack gap="16">
                 {popularArticles?.slice(0, 6).map((item) => (
-                    <AppLink to={getRouteArticleDetails(item.id)}>
+                    <AppLink
+                        key={item.id}
+                        to={getRouteArticleDetails(item.id)}
+                    >
                         <Card padding="0">
                             <VStack gap="4">
                                 <AppImage
