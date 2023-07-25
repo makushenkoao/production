@@ -31,6 +31,7 @@ import {
 import { renderBlock } from './renderBlock';
 import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
+import {formatDate} from "@/shared/lib/utils/formatDate/formatDate";
 
 interface ArticleDetailsProps {
     className?: string;
@@ -86,7 +87,7 @@ const Deprecated = () => {
                         className={cls.icon}
                         svg={CalendarIcon}
                     />
-                    <TextDeprecated text={article?.createdAt} />
+                    <TextDeprecated text={formatDate(article?.createdAt)} />
                 </HStack>
             </VStack>
             {article?.blocks.map(renderBlock)}

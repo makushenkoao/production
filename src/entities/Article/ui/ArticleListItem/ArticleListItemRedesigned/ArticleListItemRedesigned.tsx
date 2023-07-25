@@ -16,6 +16,7 @@ import { Button } from '@/shared/ui/redesigned/Button';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import EyeIcon from '@/shared/assets/icons/eye-re.svg';
 import cls from './ArticleListItemRedesigned.module.scss';
+import {formatDate} from "@/shared/lib/utils/formatDate/formatDate";
 
 export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
@@ -70,7 +71,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                         max
                     >
                         {userInfo}
-                        <Text text={article.createdAt} />
+                        <Text text={formatDate(article.createdAt)} />
                     </HStack>
                     <Text
                         title={article.title}
@@ -160,7 +161,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                             max
                         >
                             <Text
-                                text={article.createdAt}
+                                text={formatDate(article.createdAt)}
                                 className={cls.date}
                             />
                             {views}

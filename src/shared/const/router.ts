@@ -19,7 +19,7 @@ export const getRouteAbout = () => '/about';
 export const getRouteProfile = (id: string) => `/profile/${id}`;
 export const getRouteArticles = () => '/articles';
 export const getRouteArticleDetails = (id: string) => `/articles/${id}`;
-export const getRouteArticleCreate = () => '/articles/new';
+export const getRouteArticleCreate = () => '/article/new';
 export const getRouteArticleEdit = (id: string) => `/articles/${id}/edit`;
 export const getRouteAdmin = () => '/admin';
 export const getRouteForbidden = () => '/forbidden';
@@ -35,5 +35,6 @@ export const AppRouteByPathPattern: Record<string, AppRoutes> = {
     [getRouteArticleCreate()]: AppRoutes.ARTICLE_CREATE,
     [getRouteArticleEdit(':id')]: AppRoutes.ARTICLE_EDIT,
     [getRouteAdmin()]: AppRoutes.ADMIN,
+    [getRouteSearch()]: AppRoutes.SEARCH,
     [getRouteForbidden()]: AppRoutes.FORBIDDEN,
 };

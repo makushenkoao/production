@@ -5,11 +5,12 @@ import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Button } from '@/shared/ui/redesigned/Button';
+import {formatDate} from "@/shared/lib/utils/formatDate/formatDate";
 
 interface ArticleAdditionalInfoProps {
     className?: string;
     author: User;
-    createdAt: string;
+    createdAt: number;
     views: number;
     onEdit: () => void;
 }
@@ -34,7 +35,7 @@ export const ArticleAdditionalInfo = memo(
                         text={author.username}
                         bold
                     />
-                    <Text text={createdAt} />
+                    <Text text={formatDate(createdAt)} />
                 </HStack>
                 <Button onClick={onEdit}>{t('Редагувати')}</Button>
                 <Text text={t('{{count}} переглядів', { count: views })} />

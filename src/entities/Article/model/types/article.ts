@@ -35,7 +35,7 @@ export interface Article {
     subtitle: string;
     img: string;
     views: number;
-    createdAt: string;
+    createdAt: number;
     type: ArticleType[];
     blocks: ArticleBlock[];
 }

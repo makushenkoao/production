@@ -16,6 +16,7 @@ import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { ArticleListItemProps } from '../ArticleListItem';
 import EyeIcon from '@/shared/assets/icons/eye.svg';
 import cls from './ArticleListItemDeprecated.module.scss';
+import {formatDate} from "@/shared/lib/utils/formatDate/formatDate";
 
 export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
@@ -63,7 +64,7 @@ export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {
                             className={cls.username}
                         />
                         <Text
-                            text={article.createdAt}
+                            text={formatDate(article.createdAt)}
                             className={cls.date}
                         />
                     </div>
@@ -129,7 +130,7 @@ export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {
                         }
                     />
                     <Text
-                        text={article.createdAt}
+                        text={formatDate(article.createdAt)}
                         className={cls.date}
                     />
                 </div>

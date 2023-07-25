@@ -99,7 +99,9 @@
       "id": "1690123631680",
       "username": "box",
       "firstname": "box",
-      "lastname": "box"
+      "lastname": "box",
+      "currency": "USD",
+      "age": 23
     }
   ],
   "articles": [
@@ -109,7 +111,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
-      "createdAt": "06.06.2023",
+      "createdAt": 433412341234,
       "userId": "1",
       "type": [
         "IT"
@@ -181,7 +183,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://miro.medium.com/v2/resize:fit:1400/1*m0H6-tUbW6grMlezlb52yw.png",
       "views": 1,
-      "createdAt": "03.06.2023",
+      "createdAt": 1690198991775,
       "userId": "2",
       "type": [
         "IT"
@@ -253,7 +255,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://kotlinlang.org/assets/images/twitter/general.png",
       "views": 3233,
-      "createdAt": "01.01.2023",
+      "createdAt": 1690198991775,
       "userId": "1",
       "type": [
         "IT"
@@ -325,7 +327,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://contentstatic.techgig.com/photo/83117460.cms",
       "views": 400003,
-      "createdAt": "22.04.2023",
+      "createdAt": 1690198991775,
       "userId": "1",
       "type": [
         "IT"
@@ -397,7 +399,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://prutor.ai/wp-content/uploads/c-programming-2.jpg",
       "views": 853888,
-      "createdAt": "05.06.2023",
+      "createdAt": 1690198991775,
       "userId": "1",
       "type": [
         "IT"
@@ -469,7 +471,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_CPP.jpg",
       "views": 9000,
-      "createdAt": "02.03.2023",
+      "createdAt": 1690198991775,
       "userId": "1",
       "type": [
         "IT"
@@ -541,7 +543,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://img-c.udemycdn.com/course/750x422/1793712_7b4d.jpg",
       "views": 321000,
-      "createdAt": "12.04.2023",
+      "createdAt": 1690198971075,
       "userId": "1",
       "type": [
         "IT"
@@ -613,7 +615,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://www.devopsschool.com/blog/wp-content/uploads/2022/03/eb9e3b7dab09358e7cf13f188f64f9f4.png",
       "views": 3212,
-      "createdAt": "13.06.2023",
+      "createdAt": 1690198971075,
       "userId": "1",
       "type": [
         "IT"
@@ -685,7 +687,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png",
       "views": 100003,
-      "createdAt": "26.01.2023",
+      "createdAt": 1690198971075,
       "userId": "1",
       "type": [
         "IT"
@@ -757,7 +759,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
-      "createdAt": "06.06.2023",
+      "createdAt": 1690198991775,
       "userId": "1",
       "type": [
         "IT"
@@ -829,7 +831,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://uploads-ssl.webflow.com/63fda77e5fd49598bbf00892/6416e5ccdbc0d68da0d7727d_swift.jpg",
       "views": 1232111,
-      "createdAt": "03.03.2023",
+      "createdAt": 1690198991075,
       "userId": "1",
       "type": [
         "IT"
@@ -901,7 +903,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://1.bp.blogspot.com/-AY03pFteSck/XhQt2fmhkXI/AAAAAAAAcbY/HATDhhxg3w4D4BRPYkDDciV1ymlsLP1yQCEwYBhgL/w1200-h630-p-k-no-nu/Top%2B5%2Bbookd%2BandCourses%2Bto%2Blearn%2BRust%2BProgramming%2Blangauge%2Bfor%2Bbeginners.png",
       "views": 122,
-      "createdAt": "03.05.2023",
+      "createdAt": 169019899331075,
       "userId": "1",
       "type": [
         "IT"
@@ -973,7 +975,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://res.cloudinary.com/dyd911kmh/image/upload/v1646566163/about_sql_5dcf267e9c.jpg",
       "views": 3204130,
-      "createdAt": "02.02.2023",
+      "createdAt": 1690198991075,
       "userId": "2",
       "type": [
         "IT"
@@ -1045,7 +1047,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://cdn.thenewstack.io/media/2022/01/10b88c68-typescript-logo.png",
       "views": 3202034,
-      "createdAt": "01.02.2023",
+      "createdAt": 1690198971075,
       "userId": "2",
       "type": [
         "IT"
@@ -1117,7 +1119,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Perl_Programming_for_Beginners.jpg",
       "views": 230,
-      "createdAt": "03.06.2023",
+      "createdAt": 1690198471075,
       "userId": "1",
       "type": [
         "IT"
@@ -1189,7 +1191,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://media.licdn.com/dms/image/C4E12AQH3llJ1OoR4jg/article-cover_image-shrink_720_1280/0/1592657827432?e=2147483647&v=beta&t=UApkADEcjdfcFchNtyh-Q3MqJTh4eDrLD9wWlddSHLU",
       "views": 10003,
-      "createdAt": "23.04.2023",
+      "createdAt": 1690198991075,
       "userId": "1",
       "type": [
         "IT"
@@ -1261,7 +1263,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://media.geeksforgeeks.org/wp-content/uploads/20220222162246/h.png",
       "views": 10,
-      "createdAt": "29.05.2023",
+      "createdAt": 1690198991075,
       "userId": "1",
       "type": [
         "IT"
@@ -1333,7 +1335,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://cdn.activestate.com/wp-content/uploads/2016/11/Lua-not-your-average-scripting-language-blog-hero.jpg",
       "views": 333,
-      "createdAt": "01.06.2023",
+      "createdAt": 1690198991075,
       "userId": "2",
       "type": [
         "IT"
@@ -1405,7 +1407,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Scala-full-color.svg/1200px-Scala-full-color.svg.png",
       "views": 123,
-      "createdAt": "11.06.2023",
+      "createdAt": 1690198991075,
       "userId": "2",
       "type": [
         "IT"
@@ -1477,7 +1479,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 832,
-      "createdAt": "01.03.2023",
+      "createdAt": 1690198991075,
       "userId": "1",
       "type": [
         "IT"
@@ -1549,7 +1551,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "hhttps://camo.githubusercontent.com/364f9810201f5ab8ade9331ef6caa47c88447da9967bfa04f307beb496d7b0de/687474703a2f2f692e696d6775722e636f6d2f5a4d7a506761382e706e67",
       "views": 10,
-      "createdAt": "01.04.2023",
+      "createdAt": 630198571075,
       "userId": "2",
       "type": [
         "IT"
@@ -1621,7 +1623,7 @@
       "subtitle": "Прости репецт печива за 2023 рік",
       "img": "https://images.unian.net/photos/2020_08/thumb_files/1000_545_1597136891-7944.jpg",
       "views": 20012,
-      "createdAt": "20.05.2021",
+      "createdAt": 1690198971075,
       "userId": "2",
       "type": [
         "COOKIE"
@@ -1693,7 +1695,7 @@
       "subtitle": "Простий рецепт млинців",
       "img": "https://img1.russianfood.com/dycontent/images_upl/457/big_456172.jpg",
       "views": 103,
-      "createdAt": "20.03.2022",
+      "createdAt": 1690198971075,
       "userId": "1",
       "type": [
         "COOKIE"
@@ -1765,7 +1767,7 @@
       "subtitle": "Що нового за 2023 рік?",
       "img": "https://i0.wp.com/calmatters.org/wp-content/uploads/2021/08/math-curriculum.jpg?fit=1200%2C900&ssl=1",
       "views": 12434,
-      "createdAt": "13.06.2023",
+      "createdAt": 1690198971075,
       "userId": "1",
       "type": [
         "SCIENCE"
@@ -1827,6 +1829,55 @@
           "title": "Заголовок цього блоку",
           "paragraphs": [
             "JavaScript - це мова, програми на якій можна виконувати в різних середовищах. У нашому випадку йдеться про браузери та про серверну платформу Node.js. Якщо досі ви не написали жодного рядка коду на JS і читаєте цей текст у браузері, на настільному комп'ютері, це означає, що ви буквально за лічені секунди від своєї першої JavaScript-програми."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1690198991775",
+      "title": "Title",
+      "userId": "1690123631680",
+      "subtitle": "Subtitle",
+      "img": "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+      "type": [
+        "SCIENCE"
+      ],
+      "createdAt": 1690198991775,
+      "views": 0,
+      "blocks": [
+        {
+          "type": "TEXT",
+          "id": "1690199012988",
+          "title": "Title",
+          "paragraphs": [
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690199031331",
+          "code": "code code code code"
+        },
+        {
+          "type": "IMAGE",
+          "id": "1690199035880",
+          "src": "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+          "title": "Title"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690199038650",
+          "title": "Title",
+          "paragraphs": [
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+          ]
+        },
+        {
+          "type": "TEXT",
+          "id": "1690199040257",
+          "title": "Title",
+          "paragraphs": [
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
           ]
         }
       ]
@@ -1970,6 +2021,10 @@
       "password": "box",
       "features": {
         "isAppRedesigned": true
+      },
+      "jsonSettings": {
+        "isArticlesPageWasOpened": true,
+        "theme": "app_dark_theme"
       }
     }
   ],

@@ -55,7 +55,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
 
     return (
         <HStack gap="4">
-            {label && <span>{`${label}>`}</span>}
+            {label && <span>{label}</span>}
             <HListBox
                 disabled={readonly}
                 as="div"
@@ -73,7 +73,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
                     // disabled={readonly}
                     addonRight={<Icon svg={ArrowIcon} />}
                 >
-                    {selectedItem?.content ?? defaultValue}
+                    {selectedItem?.content || defaultValue}
                 </HListBox.Button>
                 <HListBox.Options
                     className={classNames(cls.options, {}, optionsClasses)}

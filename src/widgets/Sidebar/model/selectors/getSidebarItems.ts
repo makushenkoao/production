@@ -6,10 +6,11 @@ import MainIcon from '@/shared/assets/icons/home.svg';
 import AboutIcon from '@/shared/assets/icons/info.svg';
 import ArticleIcon from '@/shared/assets/icons/article-re.svg';
 import SearchIcon from '@/shared/assets/icons/search.svg';
+import CreateIcon from '@/shared/assets/icons/create.svg';
 import { getUserAuthData } from '@/entities/User';
 import { SidebarItemTypes } from '../types/sidebar';
 import {
-    getRouteAbout,
+    getRouteAbout, getRouteArticleCreate,
     getRouteArticles,
     getRouteMain,
     getRouteSearch,
@@ -51,13 +52,14 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
                 authOnly: true,
             },
             {
+                path: getRouteArticleCreate(),
+                text: 'Створити статтю',
+                icon: CreateIcon,
+            },
+            {
                 path: getRouteSearch(),
                 text: 'Пошук користувача',
-                icon: toggleFeatures({
-                    name: 'isAppRedesigned',
-                    off: () => SearchIcon,
-                    on: () => SearchIcon,
-                }),
+                icon: SearchIcon,
             },
         );
     }

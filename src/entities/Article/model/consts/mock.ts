@@ -7,7 +7,7 @@ export const ARTICLE_MOCK: Article = {
     subtitle: 'Що нового в JS за 2023 рік?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
-    createdAt: '06.06.2023',
+    createdAt: 1690201388,
     user: {
         id: '1',
         username: 'admin',
