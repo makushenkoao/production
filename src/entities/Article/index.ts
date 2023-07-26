@@ -2,7 +2,11 @@ export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 export type { Article, ArticleBlock } from './model/types/article';
 export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
 export { ArticleList } from './ui/ArticleList/ArticleList';
-export { getArticleDetailsData } from './model/selectors/articleDetails';
+export {
+    getArticleDetailsData,
+    getArticleDetailsIsLoading,
+    getArticleDetailsError,
+} from './model/selectors/articleDetails';
 export {
     ArticleType,
     ArticleSortField,
@@ -11,3 +15,6 @@ export {
 } from './model/consts/consts';
 export { ARRAY_ARTICLE_MOCK, ARTICLE_MOCK } from './model/consts/mock';
 export { useGetArticlesQuery } from './api/article';
+export { articleDetailsReducer } from './model/slice/articleDetailsSlice';
+export { fetchArticleById } from './model/services/fetchArticleById/fetchArticleById';
+export { updateArticleDetails } from './model/services/updateArticleDetails/updateArticleDetails';

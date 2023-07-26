@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useState } from 'react';
+import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
@@ -14,12 +14,8 @@ interface ArticleBlockEditorProps {
     onDeleteBlock: (index: number) => void;
 }
 
-export const ArticleBlockEditor: FC<ArticleBlockEditorProps> = ({
-    index,
-    block,
-    updateBlock,
-    onDeleteBlock,
-}) => {
+export const ArticleBlockEditor = memo((props: ArticleBlockEditorProps) => {
+    const { block, updateBlock, onDeleteBlock, index } = props;
     const { t } = useTranslation();
     const [paragraphs, setParagraphs] = useState<string[]>(
         block.paragraphs || [],
@@ -59,7 +55,10 @@ export const ArticleBlockEditor: FC<ArticleBlockEditorProps> = ({
         >
             {block.type === 'TEXT' && (
                 <>
-                    <HStack justify="between" max>
+                    <HStack
+                        justify="between"
+                        max
+                    >
                         <Text title={t('Блок тексту')} />
                         <Icon
                             svg={DeleteIcon}
@@ -96,7 +95,10 @@ export const ArticleBlockEditor: FC<ArticleBlockEditorProps> = ({
             )}
             {block.type === 'IMAGE' && (
                 <>
-                    <HStack justify="between" max>
+                    <HStack
+                        justify="between"
+                        max
+                    >
                         <Text title={t('Блок зображення')} />
                         <Icon
                             svg={DeleteIcon}
@@ -120,7 +122,10 @@ export const ArticleBlockEditor: FC<ArticleBlockEditorProps> = ({
             )}
             {block.type === 'CODE' && (
                 <>
-                    <HStack justify="between" max>
+                    <HStack
+                        justify="between"
+                        max
+                    >
                         <Text title={t('Блок коду')} />
                         <Icon
                             svg={DeleteIcon}
@@ -137,4 +142,4 @@ export const ArticleBlockEditor: FC<ArticleBlockEditorProps> = ({
             )}
         </VStack>
     );
-};
+});
