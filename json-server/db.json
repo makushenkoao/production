@@ -1939,6 +1939,279 @@
           "code": "ТУТ КОД ДЛЯ ВЗЛОМА ПЛОВА"
         }
       ]
+    },
+    {
+      "id": "1690544739378",
+      "title": "React",
+      "userId": "1",
+      "subtitle": "Welcome to the React documentation! This page will give you an introduction to the 80% of React concepts that you will use on a daily basis.",
+      "img": "https://react.dev/images/og-home.png",
+      "type": [
+        "IT"
+      ],
+      "createdAt": 1690544739378,
+      "views": 0,
+      "blocks": [
+        {
+          "type": "TEXT",
+          "id": "1690544740537",
+          "title": "Creating and nesting components ",
+          "paragraphs": [
+            "React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page.",
+            "React components are JavaScript functions that return markup:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690544789883",
+          "code": "function MyButton() {\n  return (\n    <button>I'm a button</button>\n  );\n}"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545034839",
+          "title": "",
+          "paragraphs": [
+            "Now that you’ve declared MyButton, you can nest it into another component:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545047476",
+          "code": "export default function MyApp() {\n  return (\n    <div>\n      <h1>Welcome to my app</h1>\n      <MyButton />\n    </div>\n  );\n}"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545056793",
+          "title": "",
+          "paragraphs": [
+            "Notice that <MyButton /> starts with a capital letter. That’s how you know it’s a React component. React component names must always start with a capital letter, while HTML tags must be lowercase.",
+            "Have a look at the result:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545373187",
+          "code": "  return (\n    <button>\n      I'm a button\n    </button>\n  );\n}\n\nexport default function MyApp() {\n  return (\n    <div>\n      <h1>Welcome to my app</h1>\n      <MyButton />\n    </div>\n  );\n}"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545388861",
+          "title": "",
+          "paragraphs": [
+            "The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references."
+          ]
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545394834",
+          "title": "Writing markup with JSX ",
+          "paragraphs": [
+            "The markup syntax you’ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.",
+            "JSX is stricter than HTML. You have to close tags like <br />. Your component also can’t return multiple JSX tags. You have to wrap them into a shared parent, like a <div>...</div> or an empty <>...</> wrapper:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545411621",
+          "code": "function AboutPage() {\n  return (\n    <>\n      <h1>About</h1>\n      <p>Hello there.<br />How do you do?</p>\n    </>\n  );\n}"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545448348",
+          "title": "",
+          "paragraphs": [
+            "If you have a lot of HTML to port to JSX, you can use an online converter."
+          ]
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545457079",
+          "title": "Adding styles ",
+          "paragraphs": [
+            "In React, you specify a CSS class with className. It works the same way as the HTML class attribute:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545468520",
+          "code": "<img className=\"avatar\" />"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545478197",
+          "title": "Then you write the CSS rules for it in a separate CSS file:",
+          "paragraphs": []
+        },
+        {
+          "type": "CODE",
+          "id": "1690545483243",
+          "code": "/* In your CSS */\n.avatar {\n  border-radius: 50%;\n}"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545488116",
+          "title": "",
+          "paragraphs": [
+            "React does not prescribe how you add CSS files. In the simplest case, you’ll add a <link> tag to your HTML. If you use a build tool or a framework, consult its documentation to learn how to add a CSS file to your project."
+          ]
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545543716",
+          "title": "Displaying data ",
+          "paragraphs": [
+            "JSX lets you put markup into JavaScript. Curly braces let you “escape back” into JavaScript so that you can embed some variable from your code and display it to the user. For example, this will display user.name:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545553735",
+          "code": "return (\n  <h1>\n    {user.name}\n  </h1>\n);"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545558323",
+          "title": "",
+          "paragraphs": [
+            "You can also “escape into JavaScript” from JSX attributes, but you have to use curly braces instead of quotes. For example, className=\"avatar\" passes the \"avatar\" string as the CSS class, but src={user.imageUrl} reads the JavaScript user.imageUrl variable value, and then passes that value as the src attribute:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545565780",
+          "code": "return (\n  <img\n    className=\"avatar\"\n    src={user.imageUrl}\n  />\n);"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545570674",
+          "title": "",
+          "paragraphs": [
+            "You can put more complex expressions inside the JSX curly braces too, for example, string concatenation:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545585171",
+          "code": "const user = {\n  name: 'Hedy Lamarr',\n  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',\n  imageSize: 90,\n};\n\nexport default function Profile() {\n  return (\n    <>\n      <h1>{user.name}</h1>\n      <img\n        className=\"avatar\"\n        src={user.imageUrl}\n        alt={'Photo of ' + user.name}\n        style={{\n          width: user.imageSize,\n          height: user.imageSize\n        }}\n      />\n    </>\n  );\n}\n"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545591886",
+          "title": "",
+          "paragraphs": [
+            "In the above example, style={{}} is not a special syntax, but a regular {} object inside the style={ } JSX curly braces. You can use the style attribute when your styles depend on JavaScript variables.\n"
+          ]
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545668872",
+          "title": "Conditional rendering ",
+          "paragraphs": [
+            "In React, there is no special syntax for writing conditions. Instead, you’ll use the same techniques as you use when writing regular JavaScript code. For example, you can use an if statement to conditionally include JSX:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545692609",
+          "code": "let content;\nif (isLoggedIn) {\n  content = <AdminPanel />;\n} else {\n  content = <LoginForm />;\n}\nreturn (\n  <div>\n    {content}\n  </div>\n);"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545697967",
+          "title": "",
+          "paragraphs": [
+            "If you prefer more compact code, you can use the conditional ? operator. Unlike if, it works inside JSX:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545792919",
+          "code": "<div>\n  {isLoggedIn ? (\n    <AdminPanel />\n  ) : (\n    <LoginForm />\n  )}\n</div>"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545798334",
+          "title": "",
+          "paragraphs": [
+            "When you don’t need the else branch, you can also use a shorter logical && syntax:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545807361",
+          "code": "<div>\n  {isLoggedIn && <AdminPanel />}\n</div>"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545812347",
+          "title": "",
+          "paragraphs": [
+            "All of these approaches also work for conditionally specifying attributes. If you’re unfamiliar with some of this JavaScript syntax, you can start by always using if...else."
+          ]
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545820532",
+          "title": "Rendering lists ",
+          "paragraphs": [
+            "You will rely on JavaScript features like for loop and the array map() function to render lists of components.",
+            "For example, let’s say you have an array of products:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545844798",
+          "code": "const products = [\n  { title: 'Cabbage', id: 1 },\n  { title: 'Garlic', id: 2 },\n  { title: 'Apple', id: 3 },\n];"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545848626",
+          "title": "",
+          "paragraphs": [
+            "Inside your component, use the map() function to transform an array of products into an array of <li> items:"
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545855037",
+          "code": "const listItems = products.map(product =>\n  <li key={product.id}>\n    {product.title}\n  </li>\n);\n\nreturn (\n  <ul>{listItems}</ul>\n);"
+        },
+        {
+          "type": "TEXT",
+          "id": "1690545860940",
+          "title": "",
+          "paragraphs": [
+            "Notice how <li> has a key attribute. For each item in a list, you should pass a string or a number that uniquely identifies that item among its siblings. Usually, a key should be coming from your data, such as a database ID. React uses your keys to know what happened if you later insert, delete, or reorder the items."
+          ]
+        },
+        {
+          "type": "CODE",
+          "id": "1690545873200",
+          "code": "const products = [\n  { title: 'Cabbage', isFruit: false, id: 1 },\n  { title: 'Garlic', isFruit: false, id: 2 },\n  { title: 'Apple', isFruit: true, id: 3 },\n];\n\nexport default function ShoppingList() {\n  const listItems = products.map(product =>\n    <li\n      key={product.id}\n      style={{\n        color: product.isFruit ? 'magenta' : 'darkgreen'\n      }}\n    >\n      {product.title}\n    </li>\n  );\n\n  return (\n    <ul>{listItems}</ul>\n  );\n}"
+        },
+        {
+          "type": "IMAGE",
+          "id": "1690545882619",
+          "src": "https://dan-it.com.ua/wp-content/uploads/2019/01/javascript.png",
+          "title": "Thank you fro your attention"
+        }
+      ],
+      "user": {
+        "id": "1",
+        "username": "admin",
+        "password": "111",
+        "jsonSettings": {
+          "theme": "app_light_theme",
+          "isArticlesPageWasOpened": true
+        },
+        "features": {
+          "isAppRedesigned": true
+        },
+        "roles": [
+          "ADMIN"
+        ],
+        "avatar": "https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-blue-tie-and-beard-face-png-image_5809515.png"
+      }
     }
   ],
   "comments": [
@@ -2015,7 +2288,7 @@
       "username": "admin",
       "password": "111",
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isArticlesPageWasOpened": true
       },
       "features": {

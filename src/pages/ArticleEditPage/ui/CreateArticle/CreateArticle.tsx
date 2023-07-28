@@ -1,4 +1,4 @@
-import {memo, useState} from 'react';
+import { memo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/entities/User';
 import { Article } from '@/entities/Article';

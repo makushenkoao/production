@@ -6,6 +6,7 @@ import { Input } from '@/shared/ui/redesigned/Input';
 import AddIcon from '@/shared/assets/icons/create.svg';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import DeleteIcon from '@/shared/assets/icons/delete.svg';
+import {TextArea} from "@/shared/ui/redesigned/TextArea";
 
 interface ArticleBlockEditorProps {
     index: number;
@@ -72,7 +73,7 @@ export const ArticleBlockEditor = memo((props: ArticleBlockEditorProps) => {
                         placeholder={t('Заголовок')}
                     />
                     {paragraphs.map((paragraph, paragraphIndex) => (
-                        <Input
+                        <TextArea
                             key={paragraphIndex}
                             value={paragraph}
                             onChange={(v) =>
@@ -107,13 +108,11 @@ export const ArticleBlockEditor = memo((props: ArticleBlockEditorProps) => {
                         />
                     </HStack>
                     <Input
-                        type="text"
                         value={block.title || ''}
                         onChange={handleNameChange}
                         placeholder={t('Заголовок')}
                     />
                     <Input
-                        type="text"
                         value={block.src || ''}
                         onChange={handleImageChange}
                         placeholder={t('Посилання на зображення')}
@@ -133,7 +132,7 @@ export const ArticleBlockEditor = memo((props: ArticleBlockEditorProps) => {
                             onClick={() => onDeleteBlock(index)}
                         />
                     </HStack>
-                    <Input
+                    <TextArea
                         value={block.code || ''}
                         onChange={handleCodeChange}
                         placeholder={t('Код')}
