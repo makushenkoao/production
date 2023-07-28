@@ -15,8 +15,6 @@ type HTMLTextAreaProps = Omit<
     'value' | 'onChange' | 'readOnly' | 'size'
 >;
 
-type TextareaSize = 's' | 'm' | 'l';
-
 interface TextareaProps extends HTMLTextAreaProps {
     className?: string;
     value?: string | number;
@@ -24,7 +22,6 @@ interface TextareaProps extends HTMLTextAreaProps {
     onChange?: (value: string) => void;
     autofocus?: boolean;
     readonly?: boolean;
-    size?: TextareaSize;
 }
 
 export const TextArea = memo((props: TextareaProps) => {
@@ -36,7 +33,6 @@ export const TextArea = memo((props: TextareaProps) => {
         autofocus,
         readonly,
         label,
-        size = 'm',
         ...otherProps
     } = props;
     const ref = useRef<HTMLTextAreaElement>(null);
