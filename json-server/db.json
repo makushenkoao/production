@@ -2313,7 +2313,7 @@
       ],
       "avatar": "https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png",
       "features": {
-        "isAppRedesigned": false
+        "isAppRedesigned": true
       }
     },
     {
@@ -2327,7 +2327,10 @@
       "roles": [
         "MANAGER"
       ],
-      "avatar": "https://www.shareicon.net/data/512x512/2016/09/01/822726_user_512x512.png"
+      "avatar": "https://www.shareicon.net/data/512x512/2016/09/01/822726_user_512x512.png",
+      "features": {
+        "isAppRedesigned": true
+      }
     },
     {
       "id": "4",
@@ -2340,7 +2343,10 @@
       "roles": [
         "ADMIN"
       ],
-      "avatar": "https://www.shareicon.net/data/512x512/2016/09/01/822726_user_512x512.png"
+      "avatar": "https://www.shareicon.net/data/512x512/2016/09/01/822726_user_512x512.png",
+      "features": {
+        "isAppRedesigned": true
+      }
     },
     {
       "id": "1690116539675",
@@ -2485,6 +2491,134 @@
       "rate": 4,
       "feedback": "000",
       "id": 8
+    }
+  ],
+  "messages": [
+    {
+      "id": "1",
+      "toUser": "2",
+      "fromUser": "1",
+      "message": "Hello. How are you?",
+      "sendAt": 1690821300000
+    },
+    {
+      "id": "2",
+      "toUser": "1",
+      "fromUser": "2",
+      "message": "Not bad. What about you?",
+      "sendAt": 1690821404300
+    },
+    {
+      "id": "3",
+      "toUser": "2",
+      "fromUser": "1",
+      "message": "I am ok",
+      "sendAt": 1690821404342
+    },
+    {
+      "id": "4",
+      "toUser": "1",
+      "fromUser": "2",
+      "message": "GOOOOOD!",
+      "sendAt": 1690821404350
+    },
+    {
+      "sendAt": 1690831508303,
+      "message": "Write test message",
+      "id": "1690831508303",
+      "fromUser": "2",
+      "toUser": "1"
+    },
+    {
+      "sendAt": 1690831544785,
+      "message": "Fdsfsdf",
+      "id": "1690831544785",
+      "fromUser": "2",
+      "toUser": "1"
+    },
+    {
+      "sendAt": 1690831633359,
+      "message": "asd",
+      "id": "1690831633359",
+      "fromUser": "2",
+      "toUser": "1"
+    },
+    {
+      "sendAt": 1690831662009,
+      "message": "fasdf",
+      "id": "1690831662009",
+      "fromUser": "2",
+      "toUser": "1"
+    },
+    {
+      "sendAt": 1690831703163,
+      "message": "123",
+      "id": "1690831703163",
+      "fromUser": "2",
+      "toUser": "1"
+    },
+    {
+      "sendAt": 1690852684146,
+      "message": "tete",
+      "id": "1690852684146",
+      "fromUser": "1",
+      "toUser": "2"
+    },
+    {
+      "sendAt": 1690853199639,
+      "message": "real time",
+      "id": "1690853199639",
+      "fromUser": "1",
+      "toUser": "2"
+    },
+    {
+      "sendAt": 1690853208756,
+      "message": "qqq",
+      "id": "1690853208756",
+      "fromUser": "1",
+      "toUser": "2"
+    },
+    {
+      "sendAt": 1690887554870,
+      "message": "asd",
+      "id": "1690887554870",
+      "fromUser": "1",
+      "toUser": "2"
+    },
+    {
+      "sendAt": 1690887560376,
+      "message": "fasdfasdfsad",
+      "id": "1690887560376",
+      "fromUser": "1",
+      "toUser": "2"
+    },
+    {
+      "sendAt": 1690897089120,
+      "message": "111",
+      "id": "1690897089120",
+      "fromUser": "1",
+      "toUser": "2"
+    },
+    {
+      "sendAt": 1690897250829,
+      "message": "check realtime",
+      "id": "1690897250829",
+      "fromUser": "1",
+      "toUser": "2"
+    },
+    {
+      "sendAt": 1690897304252,
+      "message": "asdfasdf",
+      "id": "1690897304252",
+      "fromUser": "1",
+      "toUser": "2"
+    },
+    {
+      "sendAt": 1690897770412,
+      "message": "check",
+      "id": "1690897770412",
+      "fromUser": "1",
+      "toUser": "2"
     }
   ]
 }

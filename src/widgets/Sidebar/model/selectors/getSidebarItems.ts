@@ -7,11 +7,14 @@ import AboutIcon from '@/shared/assets/icons/info.svg';
 import ArticleIcon from '@/shared/assets/icons/article-re.svg';
 import SearchIcon from '@/shared/assets/icons/search.svg';
 import CreateIcon from '@/shared/assets/icons/create.svg';
+import ChatIcon from '@/shared/assets/icons/chat.svg';
 import { getUserAuthData } from '@/entities/User';
 import { SidebarItemTypes } from '../types/sidebar';
 import {
-    getRouteAbout, getRouteArticleCreate,
+    getRouteAbout,
+    getRouteArticleCreate,
     getRouteArticles,
+    getRouteChats,
     getRouteMain,
     getRouteSearch,
 } from '@/shared/const/router';
@@ -50,6 +53,12 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
                     on: () => ArticleIcon,
                 }),
                 authOnly: true,
+            },
+
+            {
+                path: getRouteChats(),
+                text: 'Чати',
+                icon: ChatIcon,
             },
             {
                 path: getRouteArticleCreate(),

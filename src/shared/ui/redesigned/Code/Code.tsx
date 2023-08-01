@@ -30,7 +30,6 @@ export const Code = memo((props: CodeProps) => {
                         clickable
                         onClick={onCopy}
                         className={cls.copyBtn}
-                        // @ts-ignore
                         svg={CopyIconNew}
                     />
                     <code>{text}</code>

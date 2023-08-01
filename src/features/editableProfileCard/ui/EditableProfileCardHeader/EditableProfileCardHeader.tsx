@@ -1,6 +1,7 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -18,10 +19,12 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Card } from '@/shared/ui/redesigned/Card';
+import { getRouteChat } from '@/shared/const/router';
 
 export const EditableProfileCardHeader = memo(
     ({ className }: { className?: string }) => {
         const { t } = useTranslation();
+        const navigate = useNavigate();
         const authData = useSelector(getUserAuthData);
         const profileData = useSelector(getProfileData);
         const canEdit = authData?.id === profileData?.id;
@@ -40,6 +43,12 @@ export const EditableProfileCardHeader = memo(
             dispatch(updateProfileData());
         }, [dispatch]);
 
+        const onNavigateToChat = useCallback(() => {
+            if (profileData?.id) {
+                navigate(getRouteChat(profileData?.id));
+            }
+        }, [navigate, profileData?.id]);
+
         return (
             <ToggleFeatures
                 feature="isAppRedesigned"
@@ -54,7 +63,7 @@ export const EditableProfileCardHeader = memo(
                             className={classNames('', {}, [className])}
                         >
                             <Text title={t('Профіль')} />
-                            {canEdit && (
+                            {canEdit ? (
                                 <HStack gap="8">
                                     <Button
                                         color={readonly ? 'normal' : 'error'}
@@ -81,6 +90,10 @@ export const EditableProfileCardHeader = memo(
                                         </Button>
                                     )}
                                 </HStack>
+                            ) : (
+                                <Button onClick={onNavigateToChat}>
+                                    {t('Написати')}
+                                </Button>
                             )}
                         </HStack>
                     </Card>

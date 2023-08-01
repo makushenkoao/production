@@ -19,11 +19,16 @@ import {
     getRouteArticles,
     getRouteMain,
     getRouteProfile,
-    getRouteSettings, getRouteSearch,
+    getRouteSettings,
+    getRouteSearch,
+    getRouteChats,
+    getRouteChat,
 } from '@/shared/const/router';
 import { AppRoutesProps } from '@/shared/types/router';
 import { SettingsPage } from '@/pages/SettingsPage';
-import {SearchPage} from "@/pages/SearchPage";
+import { SearchPage } from '@/pages/SearchPage';
+import { ChatsPage } from '@/pages/ChatsPage';
+import { ChatPage } from '@/pages/ChatPage';
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.MAIN]: {
@@ -72,6 +77,14 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.SEARCH]: {
         path: getRouteSearch(),
         element: <SearchPage />,
+    },
+    [AppRoutes.CHATS]: {
+        path: getRouteChats(),
+        element: <ChatsPage />,
+    },
+    [AppRoutes.CHAT]: {
+        path: getRouteChat(':id'),
+        element: <ChatPage />,
     },
     [AppRoutes.FORBIDDEN]: {
         path: getRouteForbidden(),
