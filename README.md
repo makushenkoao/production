@@ -1,3 +1,22 @@
+# MAO - Platform for Knowledge Sharing and Articles
+
+MAO is a web application designed for creating, sharing, and discussing knowledge and articles. The platform enables users to discover interesting articles, create their own publications, engage in discussions, and interact with other participants.
+
+## Key Features
+
+- **Article Browsing:** Explore diverse topics, read articles covering a wide range of knowledge domains.
+- **Article Creation:** Registered users can create their own articles using an intuitive editor.
+- **Engage in Discussions:** Each article comes with a comment section, allowing you to express your thoughts and join discussions.
+- **Private Messaging:** Communicate with other users via private messages for more personalized conversations.
+- **Search and Filtering:** Find relevant articles using a convenient search tool.
+- **User Profiles:** Each user has a profile displaying their activity information.
+
+## Contact Us
+
+If you have any questions, suggestions, or inquiries, please don't hesitate to contact our team at [antonmak2046@gmail.com](mailto:antonmak2046@gmail.com). We value your feedback and are excited to hear from you!
+
+---
+
 ## Start project
 
 ```
@@ -124,7 +143,6 @@ export const Clear: Story = {
     },
 };
 ```
-
 
 ----
 
