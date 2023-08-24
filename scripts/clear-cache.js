@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const nodeModulesPath = path.join(__dirname, 'node_modules');
+const nodeModulesPath = path.join(__dirname, '..', 'node_modules');
 const cacheFolderPath = path.join(nodeModulesPath, '.cache');
 
 fs.rm(cacheFolderPath, { recursive: true }, (err) => {

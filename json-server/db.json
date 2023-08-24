@@ -2280,6 +2280,12 @@
       "userId": "1690123631680",
       "text": "ГУД РЕЦЕПТ, ПРИГОТОВИЛ, ОЧЕНЬ ВКУСНО!!!",
       "id": "aLPuewP"
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "text": "Comment",
+      "id": "aUqIJMR"
     }
   ],
   "users": [
@@ -2617,6 +2623,13 @@
       "sendAt": 1690897770412,
       "message": "check",
       "id": "1690897770412",
+      "fromUser": "1",
+      "toUser": "2"
+    },
+    {
+      "sendAt": 1692889333703,
+      "message": "no",
+      "id": "1692889333703",
       "fromUser": "1",
       "toUser": "2"
     }
